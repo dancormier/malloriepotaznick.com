@@ -1,12 +1,19 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
 // import { Link, graphql } from 'gatsby'
+import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
 
 export default class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
+        <Helmet>
+          <meta
+            name="google-site-verification"
+            content="qvbZgNAq97PJ5oLAOwHLVDZA1PXG8tPjybFIhZ_37WU"
+          />
+        </Helmet>
         <section className="section">
           <div className="container">
             <div className="content">
