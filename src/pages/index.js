@@ -8,7 +8,9 @@ export default class IndexPage extends React.Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
-    return (
+    const showDefault = false;
+
+    return showDefault ? (
       <Layout>
         <section className="section">
           <div className="container">
@@ -39,6 +41,21 @@ export default class IndexPage extends React.Component {
                   </p>
                 </div>
               ))}
+          </div>
+        </section>
+      </Layout>
+    ) : (
+      <Layout>
+        <section className="section">
+          <div className="container">
+            <div className="content">
+              <h1 className="has-text-weight-bold is-size-3">More coming soon</h1>
+            </div>
+            <div className="content">
+              <a href="https://www.psychologytoday.com/us/therapists/mallorie-potaznick-coral-springs-fl/429831">
+                View Mallorie Potaznick's Psychology Today profile
+              </a>
+            </div>
           </div>
         </section>
       </Layout>
