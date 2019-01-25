@@ -1,6 +1,9 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx } from '@emotion/core'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from "gatsby"
+import { ThemeProvider } from 'emotion-theming'
+import theme from './theme'
 
 import Navbar from '../components/Navbar'
 import './all.sass'
@@ -35,9 +38,21 @@ const TemplateWrapper = ({ children }) => (
           <meta property="og:title" content={data.site.siteMetadata.title} />
           <meta property="og:url" content="/" />
           <meta property="og:image" content="/img/og-image.jpg" />
+          <meta
+            name="google-site-verification"
+            content="qvbZgNAq97PJ5oLAOwHLVDZA1PXG8tPjybFIhZ_37WU"
+          />
         </Helmet>
-        <Navbar />
-        <div>{children}</div>
+        <ThemeProvider theme={theme}>
+          <div
+            css={{
+              fontFamily: theme.font('sans'),
+            }}
+          >
+            <Navbar />
+            <div>{children}</div>
+          </div>
+        </ThemeProvider>
       </div>
     )}
   />
