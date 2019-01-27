@@ -34,6 +34,15 @@ module.exports = {
         trackingId: "UA-132742457-1",
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `lora`,
+          `sarabun`,
+        ]
+      }
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {

@@ -46,7 +46,7 @@ const TemplateWrapper = ({ children }) => (
         <ThemeProvider theme={theme}>
           <div
             css={{
-              fontFamily: theme.font('sans'),
+              fontFamily: theme.font('serif'),
             }}
           >
             <Navbar />

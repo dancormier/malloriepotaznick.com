@@ -44,8 +44,8 @@ const colors = {
 };
 
 const fonts = {
-  sans: '"Helvetica Neue",Arial,sans-serif',
-  serif: 'Georgia, serif',
+  sans: 'sarabun, "Helvetica Neue",Arial,sans-serif',
+  serif: 'Lora, Georgia, serif',
 };
 
 const breakPoints = {

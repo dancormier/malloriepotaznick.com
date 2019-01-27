@@ -15,18 +15,22 @@ export default class IndexPage extends React.Component {
           <section>
             <div
               css={{
+                textAlign: 'center',
                 margin: 'auto',
                 maxWidth: theme.prop('max'),
               }}
             >
-              <div className="content">
-                <h1 className="has-text-weight-bold is-size-3">More coming soon</h1>
+              <div
+                css={{
+                  fontSize: theme.size(6),
+                  marginBottom: theme.size(6),
+                }}
+              >
+                More coming soon
               </div>
-              <div className="content">
-                <a href="https://www.psychologytoday.com/us/therapists/mallorie-potaznick-coral-springs-fl/429831">
-                  View Mallorie Potaznick's Psychology Today profile
-                </a>
-              </div>
+              <a href="https://www.psychologytoday.com/us/therapists/mallorie-potaznick-coral-springs-fl/429831">
+                View Mallorie Potaznick's Psychology Today profile
+              </a>
             </div>
           </section>
         </ThemeProvider>
