@@ -6,8 +6,6 @@ import Button from './Button'
 import Container from './Container'
 import theme from './theme'
 import { Link } from 'gatsby'
-// import github from '../img/github-icon.svg'
-// import logo from '../img/logo.svg'
 
 const navLinks = [
   {
@@ -66,6 +64,7 @@ const Navbar = class extends React.Component {
           >
             {contactBarItems.map(c =>
               <div
+                key={c.label}
                 css={{
                   alignItems: 'center',
                   display: 'flex',
@@ -123,6 +122,7 @@ const Navbar = class extends React.Component {
             >
               {navLinks.map(l => l.button ? (
                 <Button
+                  key={l.label}
                   url={l.url}
                   customCSS={{
                     marginLeft: theme.size(4),
