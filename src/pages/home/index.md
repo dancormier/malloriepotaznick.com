@@ -9,6 +9,6 @@ heroes:
     subheading: >-
       There is help. Therapy will provide you with the tools to make you the
       best you. Also, there’s other benefits.
-  - {}
+  - heading: Another section
 ---
 
