@@ -39,28 +39,20 @@ collections:
             label: "Heroes",
             name: "heroes",
             required: true,
-            widget: "object",
+            widget: "list",
             fields:
               [
+                { label: "Heading", name: "heading", widget: "string" },
+                { label: "Subheading", name: "subheading", required: false, widget: "string" },
+                { label: "Body", name: "body", required: false, widget: "markdown" },
                 {
-                  label: "Main Hero",
-                  name: "heroMain",
-                  required: true,
-                  widget: list,
+                  label: "Button",
+                  name: "button",
+                  widget: "object",
+                  required: false,
                   fields: [
-                    { label: "Heading", name: "heading", widget: "string" },
-                    { label: "Subheading", name: "subheading", required: false, widget: "string" },
-                    { label: "Body", name: "body", required: false, widget: "markdown" },
-                    {
-                      label: "Button",
-                      name: "button",
-                      widget: "object",
-                      required: false,
-                      fields: [
-                        { label: "Text", name: "text", widget: "string" },
-                        { label: "URL", name: "url", widget: "string" }
-                      ]
-                    }
+                    { label: "Text", name: "text", widget: "string" },
+                    { label: "URL", name: "url", widget: "string" }
                   ]
                 }
               ]
