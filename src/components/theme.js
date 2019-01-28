@@ -37,7 +37,7 @@ const modularscale = (value, ratio = 'golden') => {
 const getFromScale = x => modularscale(x - 1, 'minor third');
 
 const colors = {
-  accent: '#dc5044',
+  accent: '#ea3934',
   primary: '#444444',
   white: '#ffffff',
   black: '#000000',
@@ -70,13 +70,3 @@ export default {
   size: size => `${getFromScale(size)}rem`,
   relative: size => `${getFromScale(size)}em`,
 };
-
-// const theme = {
-//   color: {
-//     primary: '#444444',
-//     accent: '#dc5044',
-//   },
-
-// }
-
-// export default theme;

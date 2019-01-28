@@ -3,37 +3,56 @@ import { jsx } from '@emotion/core'
 import React from 'react'
 // import PropTypes from 'prop-types'
 // import { Link, graphql } from 'gatsby'
-import { ThemeProvider } from 'emotion-theming'
 import theme from '../components/theme'
+import Button from '../components/Button'
+import Container from '../components/Container'
+import Heading from '../components/Heading'
 import Layout from '../components/Layout'
 
 export default class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <ThemeProvider theme={theme}>
-          <section>
+        <section>
+          <Container
+            customCSS={{
+              position: 'relative',
+            }}
+          >
             <div
               css={{
-                textAlign: 'center',
-                margin: 'auto',
-                maxWidth: theme.prop('max'),
+                maxWidth: '66%',
+                paddingTop: theme.size(8),
+                position: 'relative',
               }}
             >
+              <Heading>
+                Treatment begins with you
+              </Heading>
               <div
                 css={{
-                  fontSize: theme.size(6),
-                  marginBottom: theme.size(6),
+                  fontSize: theme.size(3),
+                  lineHeight: theme.size(5),
+                  marginBottom: theme.size(8),
                 }}
               >
-                More coming soon
+                There is help. Therapy will provide you with the tools to make you the best you. Also, there’s other benefits.
               </div>
-              <a href="https://www.psychologytoday.com/us/therapists/mallorie-potaznick-coral-springs-fl/429831">
-                View Mallorie Potaznick's Psychology Today profile
-              </a>
             </div>
-          </section>
-        </ThemeProvider>
+            <div>
+              <Button
+                url="#"
+              />
+              <span
+                css={{
+                  marginLeft: theme.size(3),
+                }}
+              >
+                or call (561) 536-3980‬
+              </span>
+            </div>
+          </Container>
+        </section>
       </Layout>
     )
   }
