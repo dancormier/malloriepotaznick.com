@@ -1,18 +1,15 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React from 'react'
-// import PropTypes from 'prop-types'
-// import { graphql } from 'gatsby'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 import { ThemeProvider } from 'emotion-theming'
 import theme from '../components/theme'
 import Layout from '../components/Layout'
 
 export default class IndexPage extends React.Component {
   render() {
-    const { data } = this.props
-    // const { edges: posts } = data.allMarkdownRemark
-
-    console.log(data)
+    console.log(this.props.data.allMarkdownRemark.edges[0].node.frontmatter.heroes);
     return (
       <Layout>
         <ThemeProvider theme={theme}>
@@ -43,35 +40,35 @@ export default class IndexPage extends React.Component {
   }
 }
 
-// IndexPage.propTypes = {
-//   data: PropTypes.shape({
-//     allMarkdownRemark: PropTypes.shape({
-//       edges: PropTypes.array,
-//     }),
-//   }),
-// }
+IndexPage.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array,
+    }),
+  }),
+}
 
-// export const pageQuery = graphql`
-//   query IndexQuery {
-//     allMarkdownRemark(
-//       sort: { order: DESC, fields: [frontmatter___date] },
-//       filter: { frontmatter: { templateKey: { eq: "home-page" } }}
-//     ) {
-//       edges {
-//         node {
-//           html
-//           frontmatter {
-//             heroes {
-//               heading
-//               subheading
-//               button {
-//                 text
-//                 url
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
+export const pageQuery = graphql`
+  query IndexQuery {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] },
+      filter: { frontmatter: { templateKey: { eq: "home-page" } }}
+    ) {
+      edges {
+        node {
+          frontmatter {
+            heroes {
+              body
+              heading
+              subheading
+              button {
+                text
+                url
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
