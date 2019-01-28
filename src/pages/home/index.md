@@ -1,7 +1,7 @@
 ---
 templateKey: home-page
 heroes:
-  hero-main:
+  heroMain:
     - button:
         text: Book a session
         url: '#'
