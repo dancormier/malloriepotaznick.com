@@ -1,91 +1,67 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React from 'react'
-// import PropTypes from 'prop-types'
-// import { Link, graphql } from 'gatsby'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
+import { ThemeProvider } from 'emotion-theming'
 import theme from '../components/theme'
-import Button from '../components/Button'
-import Container from '../components/Container'
-import Heading from '../components/Heading'
 import Layout from '../components/Layout'
 
 export default class IndexPage extends React.Component {
   render() {
+    console.log(this.props);
+
     return (
       <Layout>
-        <section>
-          <Container
-            customCSS={{
-              position: 'relative',
-            }}
-          >
+        <ThemeProvider theme={theme}>
+          <section>
             <div
               css={{
-                maxWidth: '66%',
-                paddingTop: theme.size(8),
-                position: 'relative',
+                textAlign: 'center',
+                margin: 'auto',
+                maxWidth: theme.prop('max'),
               }}
             >
-              <Heading>
-                Treatment begins with you
-              </Heading>
               <div
                 css={{
-                  fontSize: theme.size(3),
-                  lineHeight: theme.size(5),
-                  marginBottom: theme.size(8),
+                  fontSize: theme.size(6),
+                  marginBottom: theme.size(6),
                 }}
               >
-                There is help. Therapy will provide you with the tools to make you the best you. Also, there’s other benefits.
+                More coming soon
               </div>
+              <a href="https://www.psychologytoday.com/us/therapists/mallorie-potaznick-coral-springs-fl/429831">
+                View Mallorie Potaznick's Psychology Today profile
+              </a>
             </div>
-            <div>
-              <Button
-                url="#"
-              />
-              <span
-                css={{
-                  marginLeft: theme.size(3),
-                }}
-              >
-                or call (561) 536-3980‬
-              </span>
-            </div>
-          </Container>
-        </section>
+          </section>
+        </ThemeProvider>
       </Layout>
     )
   }
 }
 
-// IndexPage.propTypes = {
-//   data: PropTypes.shape({
-//     allMarkdownRemark: PropTypes.shape({
-//       edges: PropTypes.array,
-//     }),
-//   }),
-// }
+IndexPage.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array,
+    }),
+  }),
+}
 
-// export const pageQuery = graphql`
-//   query IndexQuery {
-//     allMarkdownRemark(
-//       sort: { order: DESC, fields: [frontmatter___date] },
-//       filter: { frontmatter: { templateKey: { eq: "blog-post" } }}
-//     ) {
-//       edges {
-//         node {
-//           excerpt(pruneLength: 400)
-//           id
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             title
-//             templateKey
-//             date(formatString: "MMMM DD, YYYY")
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
+export const pageQuery = graphql`
+  query IndexQuery {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] },
+      filter: { frontmatter: { templateKey: { eq: "about-page" } }}
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  }
+`
