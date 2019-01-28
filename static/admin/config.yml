@@ -50,7 +50,7 @@ collections:
                   fields: [
                     { label: "Heading", name: "heading", widget: "string" },
                     { label: "Subheading", name: "subheading", required: false, widget: "string" },
-                    { label: "Body", name: "body", required: false, widget: "markdown" }
+                    { label: "Body", name: "body", required: false, widget: "markdown" },
                     {
                       label: "Button",
                       name: "button",
