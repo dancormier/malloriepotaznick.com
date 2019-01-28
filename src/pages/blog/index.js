@@ -3,14 +3,12 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 
-export default class IndexPage extends React.Component {
+export default class BlogPage extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
-    const showDefault = true;
-
-    return showDefault ? (
+    return (
       <Layout>
         <section className="section">
           <div className="container">
@@ -44,26 +42,11 @@ export default class IndexPage extends React.Component {
           </div>
         </section>
       </Layout>
-    ) : (
-      <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-3">More coming soon</h1>
-            </div>
-            <div className="content">
-              <a href="https://www.psychologytoday.com/us/therapists/mallorie-potaznick-coral-springs-fl/429831">
-                View Mallorie Potaznick's Psychology Today profile
-              </a>
-            </div>
-          </div>
-        </section>
-      </Layout>
     )
   }
 }
 
-IndexPage.propTypes = {
+BlogPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -72,7 +55,7 @@ IndexPage.propTypes = {
 }
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query BlogQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
       filter: { frontmatter: { templateKey: { eq: "blog-post" } }}

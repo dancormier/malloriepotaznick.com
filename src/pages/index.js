@@ -1,14 +1,16 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React from 'react'
-// import PropTypes from 'prop-types'
-// import { Link, graphql } from 'gatsby'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 import { ThemeProvider } from 'emotion-theming'
 import theme from '../components/theme'
 import Layout from '../components/Layout'
 
 export default class IndexPage extends React.Component {
   render() {
+    console.log(this.props);
+
     return (
       <Layout>
         <ThemeProvider theme={theme}>
@@ -39,34 +41,27 @@ export default class IndexPage extends React.Component {
   }
 }
 
-// IndexPage.propTypes = {
-//   data: PropTypes.shape({
-//     allMarkdownRemark: PropTypes.shape({
-//       edges: PropTypes.array,
-//     }),
-//   }),
-// }
+IndexPage.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array,
+    }),
+  }),
+}
 
-// export const pageQuery = graphql`
-//   query IndexQuery {
-//     allMarkdownRemark(
-//       sort: { order: DESC, fields: [frontmatter___date] },
-//       filter: { frontmatter: { templateKey: { eq: "blog-post" } }}
-//     ) {
-//       edges {
-//         node {
-//           excerpt(pruneLength: 400)
-//           id
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             title
-//             templateKey
-//             date(formatString: "MMMM DD, YYYY")
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
+export const pageQuery = graphql`
+  query IndexQuery {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] },
+      filter: { frontmatter: { templateKey: { eq: "about-page" } }}
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  }
+`
