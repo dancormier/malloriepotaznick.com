@@ -1,7 +1,12 @@
 ---
 templateKey: home-page
 heroes:
-  - body: This is a body section 123
+  - body: |-
+      This is a **body** section _123_
+
+      _test_
+
+      ## _test_
     button:
       text: Book a session
       url: '#'
