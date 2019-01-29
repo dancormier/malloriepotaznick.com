@@ -81,5 +81,6 @@ collections:
                 },
                 {label: "Alternative Background", name: "altBg", widget: "boolean", default: false},
                 {label: "Super Hero", name: "super", widget: "boolean", default: false}
+                {label: "Context", name: "context", required: false, widget: "string"},
               ]
             }
