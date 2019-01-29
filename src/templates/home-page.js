@@ -34,7 +34,6 @@ HomePageTemplate.propTypes = {
 const HomePage = ({ data }) => {
   const { markdownRemark: post } = data
 
-  console.log(data, 'hp-data')
   return (
     <Layout>
       <HomePageTemplate
@@ -52,7 +51,7 @@ HomePage.propTypes = {
 
 export default HomePage
 
-export const aboutPageQuery = graphql`
+export const homePageQuery = graphql`
   query HomePage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html

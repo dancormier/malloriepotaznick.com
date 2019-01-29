@@ -9,8 +9,7 @@ import Layout from '../components/Layout'
 
 export default class IndexPage extends React.Component {
   render() {
-    console.log(this.props);
-
+    console.log(this.props.data.allMarkdownRemark.edges[0].node.frontmatter.homeHeroes);
     return (
       <Layout>
         <ThemeProvider theme={theme}>
@@ -53,12 +52,28 @@ export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "about-page" } }}
+      filter: { frontmatter: { templateKey: { eq: "home-page" } }}
     ) {
       edges {
         node {
           frontmatter {
-            title
+            homeHeroes {
+              body
+              heading
+              subheading
+              button {
+                text
+                url
+              }
+              background {
+                image {
+                  size
+                }
+                align
+              }
+              altBg
+              super
+            }
           }
         }
       }

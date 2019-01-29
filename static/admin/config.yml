@@ -35,5 +35,42 @@ collections:
         name: "home"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {
+            label: "Home Sections",
+            name: "homeHeroes",
+            required: true,
+            widget: "list",
+            fields:
+              [
+                {label: "Heading", name: "heading", widget: "string"},
+                {label: "Subheading", name: "subheading", required: false, widget: "string"},
+                {label: "Body", name: "body", required: false, widget: "markdown"},
+                {
+                  label: "Button",
+                  name: "button",
+                  widget: "object",
+                  required: false,
+                  fields: [
+                    {label: "Text", name: "text", widget: "string" },
+                    {label: "URL", name: "url", widget: "string" }
+                  ]
+                },
+                {
+                  label: "Background Image",
+                  name: "background",
+                  widget: "object",
+                  required: false,
+                  fields: [
+                    {label: "Image", name: "image", widget: "image", allow_multiple: false},
+                    {
+                      label: "Alignment",
+                      name: "align",
+                      widget: "select",
+                      options: ["right", "left", "cover"]
+                    }
+                  ]
+                },
+                {label: "Alternative Background", name: "altBg", widget: "boolean", default: false},
+                {label: "Super Hero", name: "super", widget: "boolean", default: false}
+              ]
+            }
