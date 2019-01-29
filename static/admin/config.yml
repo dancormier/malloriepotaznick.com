@@ -67,7 +67,7 @@ collections:
                 {
                   label: "Background Image",
                   name: "background",
-                  widget: "object",
+                  widget: "list",
                   required: false,
                   fields: [
                     {label: "Image", name: "image", widget: "image", allow_multiple: false},
