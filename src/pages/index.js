@@ -9,7 +9,7 @@ import Layout from '../components/Layout'
 
 export default class IndexPage extends React.Component {
   render() {
-    console.log(this.props.data.allMarkdownRemark.edges[0].node.frontmatter.heroes);
+    // console.log(this.props.data.allMarkdownRemark.edges[0].node.frontmatter.heroes);
     return (
       <Layout>
         <ThemeProvider theme={theme}>
@@ -48,33 +48,33 @@ IndexPage.propTypes = {
   }),
 }
 
-export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "home-page" } }}
-    ) {
-      edges {
-        node {
-          frontmatter {
-            heroes {
-              body
-              heading
-              subheading
-              button {
-                text
-                url
-              }
-              background {
-                image
-                align
-              }
-              altBg
-              super
-            }
-          }
-        }
-      }
-    }
-  }
-`
+// export const pageQuery = graphql`
+//   query IndexQuery {
+//     allMarkdownRemark(
+//       sort: { order: DESC, fields: [frontmatter___date] },
+//       filter: { frontmatter: { templateKey: { eq: "home-page" } }}
+//     ) {
+//       edges {
+//         node {
+//           frontmatter {
+//             heroes {
+//               body
+//               heading
+//               subheading
+//               button {
+//                 text
+//                 url
+//               }
+//               background {
+//                 image
+//                 align
+//               }
+//               altBg
+//               super
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
