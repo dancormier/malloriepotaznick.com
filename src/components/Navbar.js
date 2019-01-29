@@ -90,8 +90,8 @@ const Navbar = class extends React.Component {
               margin: 'auto',
               paddingTop: theme.size(8),
               paddingBottom: theme.size(10),
-              // textAlign: 'center', // temporary
-              // width: '100%', // temporary
+              textAlign: 'center', // temporary
+              width: '100%', // temporary
             }}
           >
             <Link
@@ -99,7 +99,7 @@ const Navbar = class extends React.Component {
               title="Mallorie Potaznick, LMHC | Home"
               css={{
                 color: theme.color('primary'),
-                // margin: 'auto', // temporary
+                margin: 'auto', // temporary
                 textDecoration: 'none',
                 whiteSpace: 'nowrap',
               }}
@@ -117,7 +117,7 @@ const Navbar = class extends React.Component {
             <div
               css={{
                 alignItems: 'center',
-                display: 'flex',
+                display: 'none', // 'flex',
               }}
             >
               {navLinks.map(l => l.button ? (
