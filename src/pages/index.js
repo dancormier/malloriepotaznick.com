@@ -65,6 +65,12 @@ export const pageQuery = graphql`
                 text
                 url
               }
+              background {
+                image
+                align
+              }
+              altBg
+              super
             }
           }
         }
