@@ -60,7 +60,6 @@ export const pageQuery = graphql`
             homeHeroes {
               body
               heading
-              subheading
               button {
                 text
                 url

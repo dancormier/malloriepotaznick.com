@@ -10,7 +10,6 @@ homeHeroes:
       text: How about a button
       url: '#'
     heading: Testing A Heading
-    subheading: Subheading here
     super: true
   - altBg: true
     body: |-
