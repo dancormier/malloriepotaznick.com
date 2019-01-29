@@ -1,20 +1,24 @@
 ---
 templateKey: home-page
-heroes:
-  - body: |-
-      This is a **body** section _123_
-
-      _test_
-
-      ## _test_
+homeHeroes:
+  - altBg: false
+    background:
+      align: left
+      image: /img/apple-touch-icon.png
+    body: Some body stuff here
     button:
-      text: Book a session
+      text: How about a button
       url: '#'
-    heading: Treatment begins with you
-    subheading: >-
-      There is help. Therapy will provide you with the tools to make you the
-      best you. Also, there’s other benefits.
-  - body: This is the second body section. Will it work?
-    heading: Another section
+    heading: Testing A Heading
+    subheading: Subheading here
+    super: true
+  - altBg: true
+    body: |-
+      Hey now!
+
+      Hey now!
+
+      Neyyyyy How!
+    heading: Heading for second section
 ---
 
