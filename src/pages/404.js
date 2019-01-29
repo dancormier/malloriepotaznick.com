@@ -1,12 +1,19 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import Container from '../components/Container'
+import theme from '../components/theme';
 
 const NotFoundPage = () => (
   <Layout>
-    <div>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </div>
+    <Container
+      customCSS={{
+        fontSize: theme.size(4),
+        paddingTop: theme.size(8),
+        textAlign: 'center',
+      }}
+    >
+      <h2>Sorry! We couldn't find that page.</h2>
+    </Container>
   </Layout>
 )
 

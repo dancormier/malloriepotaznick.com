@@ -2,8 +2,8 @@ import React from 'react'
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
-import { ThemeProvider } from 'emotion-theming'
 import Button from './Button'
+import Container from './Container'
 import theme from './theme'
 import { Link } from 'gatsby'
 
@@ -46,22 +46,18 @@ const contactBarItems = [
 const Navbar = class extends React.Component {
   render() {
     return (
-      <ThemeProvider theme={theme}>
+      <div>
         <div
           css={{
             backgroundColor: theme.color('accent'),
             color: theme.color('white'),
           }}
         >
-          <div
-            css={{
+          <Container
+            customCSS={{
               display: 'flex',
               fontFamily: theme.font('sans'),
               fontSize: theme.size(0),
-              // alignItems: 'center',
-              // justifyContent: 'space-between',
-              maxWidth: theme.prop('max'),
-              margin: 'auto',
               paddingTop: theme.size(1),
               paddingBottom: theme.size(1),
             }}
@@ -82,7 +78,7 @@ const Navbar = class extends React.Component {
                 </span>
               </div>
             )}
-          </div>
+          </Container>
         </div>
         <nav role="navigation" aria-label="main-navigation">
           <div
@@ -121,13 +117,16 @@ const Navbar = class extends React.Component {
             <div
               css={{
                 alignItems: 'center',
-                display: 'none'// 'flex',
+                display: 'none', // 'flex',
               }}
             >
               {navLinks.map(l => l.button ? (
                 <Button
                   key={l.label}
                   url={l.url}
+                  customCSS={{
+                    marginLeft: theme.size(4),
+                  }}
                 />
               ) : (
                 <Link
@@ -147,7 +146,7 @@ const Navbar = class extends React.Component {
             </div>
           </div>
         </nav>
-      </ThemeProvider>
+      </div>
     )
   }
 }
