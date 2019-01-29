@@ -12,7 +12,6 @@ homeHeroes:
       text: Book a session
       url: '#'
     heading: Treatment begins with you
-    super: true
   - altBg: true
     body: >-
       Based out of Coral Springs, FL, Mallorie Potaznick specializes in treating
