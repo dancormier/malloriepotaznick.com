@@ -47,7 +47,7 @@ collections:
                   label: "Subsections",
                   name: "subsections",
                   required: false,
-                  widget: "object",
+                  widget: "list",
                   fields: [
                     {label: "Heading", name: "heading", widget: "string"},
                     {label: "Body", name: "body", widget: "markdown"},
@@ -67,7 +67,7 @@ collections:
                 {
                   label: "Background Image",
                   name: "background",
-                  widget: "list",
+                  widget: "object",
                   required: false,
                   fields: [
                     {label: "Image", name: "image", widget: "image", allow_multiple: false},
