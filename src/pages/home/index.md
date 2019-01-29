@@ -11,6 +11,7 @@ homeHeroes:
     button:
       text: Book a session
       url: '#'
+    context: featured
     heading: Treatment begins with you
   - altBg: true
     body: >-
@@ -30,8 +31,10 @@ homeHeroes:
       amet purus congue convallis.
     button:
       text: More about mallorie
+    context: about
     heading: About Mallorie
   - body: ''
+    context: specialties
     heading: Mallorie's Specialties
     subsections:
       - body: >-
@@ -61,6 +64,7 @@ homeHeroes:
     body: |+
 
 
+    context: contact
     heading: Contact Mallorie
     subsections:
       - body: >-
