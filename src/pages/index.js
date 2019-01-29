@@ -70,7 +70,6 @@ export const pageQuery = graphql`
                 text
                 url
               }
-              context
               heading
               subsections {
                 heading
