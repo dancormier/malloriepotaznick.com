@@ -62,7 +62,6 @@ export const pageQuery = graphql`
                 image {
                   size
                 }
-                imageAlign
               }
               body
               button {
