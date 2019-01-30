@@ -2,8 +2,8 @@
 templateKey: home-page
 homeHeroes:
   - background:
-      imageAlign: left
       image: /img/apple-touch-icon.png
+      imageAlign: left
     body: >-
       There is help. Therapy will provide you with the tools to make you the
       best you. Also, there’s other benefits.
@@ -29,6 +29,7 @@ homeHeroes:
       amet purus congue convallis.
     button:
       text: More about mallorie
+      url: /about
     context: about
     heading: About Mallorie
   - body: ''
