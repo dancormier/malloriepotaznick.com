@@ -64,9 +64,7 @@ homeHeroes:
           to an e-meter and have a spin at some pseudoscience. Wait, that’s
           something else.
         heading: Other Specialties
-  - body: |+
-
-
+  - body: ''
     context: contact
     heading: Contact Mallorie
     subsections:
