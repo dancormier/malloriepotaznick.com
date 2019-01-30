@@ -2,8 +2,8 @@
 templateKey: home-page
 homeHeroes:
   - background:
-      image: /img/apple-touch-icon.png
-      imageAlign: left
+      image: /img/bg-flower-feature.png
+      imageAlign: right
     body: >-
       There is help. Therapy will provide you with the tools to make you the
       best you. Also, there’s other benefits.
