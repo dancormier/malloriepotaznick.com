@@ -70,7 +70,6 @@ collections:
                   widget: "object",
                   required: false,
                   fields: [
-                    {label: "Color", name: "color", widget: "color"},
                     {label: "Image", name: "image", widget: "image", allow_multiple: false},
                     {
                       label: "Image Alignment",
