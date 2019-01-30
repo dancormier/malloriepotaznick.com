@@ -6,8 +6,8 @@ homeHeroes:
       align: left
       image: /img/apple-touch-icon.png
     body: >-
-      #### There is help. Therapy will provide you with the tools to make you
-      the best you. Also, there’s other benefits.
+      There is help. Therapy will provide you with the tools to make you the
+      best you. Also, there’s other benefits.
     button:
       text: Book a session
       url: '#'
