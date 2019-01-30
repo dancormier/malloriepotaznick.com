@@ -2,6 +2,7 @@
 templateKey: home-page
 homeHeroes:
   - background:
+      align: contain
       image: /img/bg-flower-feature.png
     body: >-
       There is help. Therapy will provide you with the tools to make you the
