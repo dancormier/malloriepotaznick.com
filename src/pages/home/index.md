@@ -3,7 +3,6 @@ templateKey: home-page
 homeHeroes:
   - background:
       image: /img/bg-flower-feature.png
-      imageAlign: right
     body: >-
       There is help. Therapy will provide you with the tools to make you the
       best you. Also, there’s other benefits.
@@ -13,8 +12,7 @@ homeHeroes:
     context: featured
     heading: Treatment begins with you
   - background:
-      image: /img/mp-headshot.jpg
-      imageAlign: right
+      image: ''
     body: >-
       Based out of Coral Springs, FL, Mallorie Potaznick specializes in treating
       anxiety, eating disorders, and other things. Mallorie Potaznick, LMHC is a
@@ -35,6 +33,9 @@ homeHeroes:
       url: /about
     context: about
     heading: About Mallorie
+    image:
+      align: after
+      image: /img/mp-headshot.jpg
   - body: ''
     context: specialties
     heading: Mallorie's Specialties
