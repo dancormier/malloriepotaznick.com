@@ -65,21 +65,20 @@ collections:
                   ]
                 },
                 {
-                  label: "Background Image",
+                  label: "Background",
                   name: "background",
                   widget: "object",
                   required: false,
                   fields: [
                     {label: "Image", name: "image", widget: "image", allow_multiple: false},
                     {
-                      label: "Alignment",
-                      name: "align",
+                      label: "Image Alignment",
+                      name: "imageAlign",
                       widget: "select",
                       options: ["right", "left", "cover"]
                     }
                   ]
                 },
-                {label: "Alternative Background", name: "altBg", widget: "boolean", default: false},
                 {
                   label: "Context",
                   name: "context",

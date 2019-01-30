@@ -58,18 +58,18 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             homeHeroes {
-              altBg
               background {
                 image {
                   size
                 }
-                align
+                imageAlign
               }
               body
               button {
                 text
                 url
               }
+              context
               heading
               subsections {
                 heading
