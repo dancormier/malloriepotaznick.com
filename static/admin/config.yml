@@ -72,8 +72,8 @@ collections:
                   fields: [
                     {label: "Image", name: "image", widget: "image", allow_multiple: false},
                     {
-                      label: "Image Alignment",
-                      name: "imageAlign",
+                      label: "Alignment",
+                      name: "align",
                       widget: "select",
                       options: ["cover", "contain"]
                     }
@@ -87,10 +87,10 @@ collections:
                   fields: [
                     {label: "Image", name: "image", widget: "image", allow_multiple: false},
                     {
-                      label: "Image Alignment",
-                      name: "imageAlign",
+                      label: "Alignment",
+                      name: "align",
                       widget: "select",
-                      options: ["above", "below", "left", "right",]
+                      options: ["above", "below", "before", "after",]
                     }
                   ]
                 },
