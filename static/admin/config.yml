@@ -20,7 +20,7 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
-  - name: "data"
+  - name: "Data"
     label: "data"
     files:
       - file: "src/data/home/index.md"
