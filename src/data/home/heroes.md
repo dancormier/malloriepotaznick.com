@@ -1,5 +1,6 @@
 ---
-templateKey: home-page
+templateKey: heroes
+published: false
 homeHeroes:
   - background:
       align: contain

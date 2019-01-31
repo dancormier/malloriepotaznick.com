@@ -23,11 +23,11 @@ collections:
   - name: "Data"
     label: "data"
     files:
-      - file: "src/data/home/index.md"
-        label: "Home"
+      - file: "src/data/home/heroes.md"
+        label: "Home Sections"
         name: "home"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "heroes"}
           - {
             label: "Home Sections",
             name: "homeHeroes",
