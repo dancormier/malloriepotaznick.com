@@ -1,5 +1,5 @@
 ---
-templateKey: heroes
+templateKey: _heroes
 published: false
 homeHeroes:
   - background:

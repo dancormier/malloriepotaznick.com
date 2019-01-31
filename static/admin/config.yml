@@ -27,7 +27,7 @@ collections:
         label: "Home Sections"
         name: "home"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "heroes"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_heroes"}
           - {
             label: "Home Sections",
             name: "homeHeroes",
