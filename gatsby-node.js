@@ -31,6 +31,9 @@ exports.createPages = ({ actions, graphql }) => {
 
     const posts = result.data.allMarkdownRemark.edges
 
+    // new line for prettier output
+    console.log('\nPages');
+
     posts.forEach(edge => {
       const id = edge.node.id
 
@@ -38,6 +41,8 @@ exports.createPages = ({ actions, graphql }) => {
       const preventRender = edge.node.frontmatter.templateKey.charAt(0) === '_';
 
       if (!preventRender) {
+        console.log(`Create path: ${edge.node.fields.slug}`);
+
         createPage({
           path: edge.node.fields.slug,
           tags: edge.node.frontmatter.tags,
@@ -51,6 +56,9 @@ exports.createPages = ({ actions, graphql }) => {
         })
       }
     })
+
+    // new line for prettier output
+    console.log('\nTag Pages');
 
     // Tag pages:
     let tags = []
@@ -67,6 +75,8 @@ exports.createPages = ({ actions, graphql }) => {
     tags.forEach(tag => {
       const tagPath = `/tags/${_.kebabCase(tag)}/`
 
+      console.log(`Create path: ${tagPath}`);
+
       createPage({
         path: tagPath,
         component: path.resolve(`src/templates/tags.js`),
@@ -75,6 +85,9 @@ exports.createPages = ({ actions, graphql }) => {
         },
       })
     })
+
+    // new line for prettier output
+    console.log('\n');
   })
 }
 
