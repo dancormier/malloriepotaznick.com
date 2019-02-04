@@ -46,7 +46,12 @@ const contactBarItems = [
 const Navbar = class extends React.Component {
   render() {
     return (
-      <div>
+      <div
+        css={{
+          position: 'relative',
+          zIndex: 10,
+        }}
+      >
         <div
           css={{
             backgroundColor: theme.color('accent'),
@@ -80,7 +85,13 @@ const Navbar = class extends React.Component {
             )}
           </Container>
         </div>
-        <nav role="navigation" aria-label="main-navigation">
+        <nav
+          role="navigation"
+          aria-label="main-navigation"
+          css={{
+            background: 'linear-gradient(#ffffff, transparent)',
+          }}
+        >
           <div
             css={{
               alignItems: 'center',
@@ -90,8 +101,6 @@ const Navbar = class extends React.Component {
               margin: 'auto',
               paddingTop: theme.size(8),
               paddingBottom: theme.size(10),
-              textAlign: 'center', // temporary
-              width: '100%', // temporary
             }}
           >
             <Link
@@ -99,14 +108,14 @@ const Navbar = class extends React.Component {
               title="Mallorie Potaznick, LMHC | Home"
               css={{
                 color: theme.color('primary'),
-                margin: 'auto', // temporary
+                fontSize: theme.size(2),
                 textDecoration: 'none',
                 whiteSpace: 'nowrap',
               }}
             >
               <h1
                 css={{
-                  fontSize: theme.size(5),
+                  fontSize: theme.size(6),
                   marginBottom: theme.size(-5),
                 }}
               >
@@ -117,7 +126,7 @@ const Navbar = class extends React.Component {
             <div
               css={{
                 alignItems: 'center',
-                display: 'none', // 'flex',
+                display: 'flex',
               }}
             >
               {navLinks.map(l => l.button ? (
@@ -125,7 +134,7 @@ const Navbar = class extends React.Component {
                   key={l.label}
                   url={l.url}
                   customCSS={{
-                    marginLeft: theme.size(4),
+                    marginLeft: theme.size(6),
                   }}
                 />
               ) : (
@@ -135,9 +144,13 @@ const Navbar = class extends React.Component {
                   title={l.label}
                   css={{
                     color: theme.color('primary'),
-                    marginLeft: theme.size(4),
+                    fontSize: theme.size(2),
+                    marginLeft: theme.size(6),
                     textDecoration: 'none',
                     whiteSpace: 'nowrap',
+                    '&:hover': {
+                      color: theme.color('accent'),
+                    }
                   }}
                 >
                   {l.label}
@@ -150,4 +163,4 @@ const Navbar = class extends React.Component {
     )
   }
 }
-export default Navbar
+export default Navbar;
