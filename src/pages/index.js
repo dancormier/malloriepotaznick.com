@@ -6,32 +6,47 @@ import { graphql } from 'gatsby'
 import { ThemeProvider } from 'emotion-theming'
 import theme from '../components/theme'
 import Layout from '../components/Layout'
+import Hero from '../components/Hero'
 
 export default class IndexPage extends React.Component {
   render() {
+    const { data } = this.props;
+    const { edges } = data.allMarkdownRemark;
+    const heroes = edges[0].node.frontmatter.homeHeroes;
+
     return (
       <Layout>
         <ThemeProvider theme={theme}>
           <section>
-            <div
-              css={{
-                textAlign: 'center',
-                margin: 'auto',
-                maxWidth: theme.prop('max'),
-              }}
-            >
-              <div
-                css={{
-                  fontSize: theme.size(6),
-                  marginBottom: theme.size(6),
-                }}
-              >
-                More coming soon
-              </div>
-              <a href="https://www.psychologytoday.com/us/therapists/mallorie-potaznick-coral-springs-fl/429831">
-                View Mallorie Potaznick's Psychology Today profile
-              </a>
-            </div>
+            {heroes.map((hero, i) => {
+              const {
+                background: bg,
+                body,
+                button,
+                context,
+                heading,
+                image,
+                subsections,
+              } = hero;
+
+              return (
+                <Hero
+                  key={heading}
+                  altBG={i % 2 !== 0}
+                  bgAlign={bg && bg.align}
+                  bgImage={bg && bg.image && bg.image.childImageSharp.fixed.src}
+                  buttonText={button && button.text}
+                  buttonURL={button && button.url}
+                  context={context}
+                  heading={heading}
+                  image={image && image.image.childImageSharp.fixed.src}
+                  imageAlign={image && image.align}
+                  subsections={subsections}
+                >
+                  {body}
+                </Hero>
+              )
+            })}
           </section>
         </ThemeProvider>
       </Layout>
