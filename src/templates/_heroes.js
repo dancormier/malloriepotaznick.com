@@ -1,62 +1,129 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx } from '@emotion/core'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import { ThemeProvider } from 'emotion-theming'
+import theme from '../components/theme'
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import Hero from '../components/Hero'
+import { HTMLContent } from '../components/Content'
 
-export const HomePageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
+export const HomeHeroesTemplate = ({ heroes }) => {
+  // const PageContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <ThemeProvider theme={theme}>
+      <section>
+        {heroes.map((hero, i) => {
+          const {
+            background: bg,
+            body,
+            button,
+            context,
+            heading,
+            image,
+            subsections,
+          } = hero;
+
+          return (
+            <Hero
+              key={heading}
+              altBG={i % 2 !== 0}
+              bgAlign={bg && bg.align}
+              bgImage={bg && bg.image}
+              buttonText={button && button.text}
+              buttonURL={button && button.url}
+              context={context}
+              heading={heading}
+              image={image && image.image}
+              imageAlign={image && image.align}
+              subsections={subsections}
+            >
+              {body}
+            </Hero>
+          )
+        })}
+      </section>
+    </ThemeProvider>
   )
 }
 
-HomePageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
+HomeHeroesTemplate.propTypes = {
+  heroes: PropTypes.shape({
+    context: PropTypes.string,
+  }),
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 }
 
-const HomePage = ({ data }) => {
-  const { markdownRemark: post } = data
+const HomeHeroes = ({ data }) => {
+  // const { markdownRemark: post } = data
+  // const { edges } = data.allMarkdownRemark;
+  // const heroes = edges[0].node.frontmatter.homeHeroes;
 
+  console.log(data, 'data HomeHeroes')
   return (
     <Layout>
-      <HomePageTemplate
+      <h1>HomeHeroes Component Loaded</h1>
+      <HomeHeroesTemplate
+        heroes={data}
+        content={data.html}
         contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
       />
     </Layout>
   )
 }
 
-HomePage.propTypes = {
+HomeHeroes.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default HomePage
+export default HomeHeroes
 
 export const homePageQuery = graphql`
-  query HomePage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        title
+  query HomePage {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] },
+      filter: { frontmatter: { templateKey: { eq: "_heroes" } }}
+    ) {
+      edges {
+        node {
+          frontmatter {
+            homeHeroes {
+              background {
+                align
+                image {
+                  childImageSharp {
+                    fixed(width: 1000) {
+                      src
+                    }
+                  }
+                }
+              }
+              body
+              button {
+                text
+                url
+              }
+              context
+              heading
+              image {
+                align
+                image {
+                  childImageSharp {
+                    fixed(width: 400) {
+                      src
+                    }
+                  }
+                }
+              }
+              subsections {
+                heading
+                body
+              }
+            }
+          }
+        }
       }
     }
   }
