@@ -38,9 +38,10 @@ exports.createPages = ({ actions, graphql }) => {
       const id = edge.node.id
 
       // exclude files prefixed with '_'
-      const preventRender = edge.node.frontmatter.templateKey.charAt(0) === '_';
+      const templateKey = edge.node.frontmatter.templateKey;
+      const shouldRender = templateKey && edge.node.frontmatter.templateKey.charAt(0) !== '_';
 
-      if (!preventRender) {
+      if (shouldRender) {
         console.log(`Create path: ${edge.node.fields.slug}`);
 
         createPage({

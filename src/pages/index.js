@@ -58,8 +58,13 @@ export const pageQuery = graphql`
           frontmatter {
             homeHeroes {
               background {
+                align
                 image {
-                  size
+                  childImageSharp {
+                    fixed(width: 1000) {
+                      src
+                    }
+                  }
                 }
               }
               body
@@ -69,6 +74,16 @@ export const pageQuery = graphql`
               }
               context
               heading
+              image {
+                align
+                image {
+                  childImageSharp {
+                    fixed(width: 400) {
+                      src
+                    }
+                  }
+                }
+              }
               subsections {
                 heading
                 body

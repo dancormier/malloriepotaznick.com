@@ -1,6 +1,5 @@
 ---
 templateKey: _heroes
-published: false
 homeHeroes:
   - background:
       align: contain
