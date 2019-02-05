@@ -34,10 +34,10 @@ collections:
         label: "Homepage"
         name: "home"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_heroes"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_home-page"}
           - {
             label: "Home Sections",
-            name: "homeHeroes",
+            name: "heroes",
             required: true,
             widget: "list",
             fields:
