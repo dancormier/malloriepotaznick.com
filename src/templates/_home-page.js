@@ -78,7 +78,7 @@ HomePage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default HomeHeroes
+export default HomePage
 
 export const homePageQuery = graphql`
   query HomePage {
