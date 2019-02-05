@@ -3,10 +3,7 @@ import { jsx } from '@emotion/core'
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import { ThemeProvider } from 'emotion-theming'
-import theme from '../components/theme'
-import Layout from '../components/Layout'
-import Hero from '../components/Hero'
+import HomePage from '../templates/_home-page'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -14,43 +11,7 @@ export default class IndexPage extends React.Component {
     const { edges } = data.allMarkdownRemark;
     const heroes = edges[0].node.frontmatter.heroes;
 
-    return (
-      <Layout>
-        <ThemeProvider theme={theme}>
-          <section>
-            {heroes.map((hero, i) => {
-              const {
-                background: bg,
-                body,
-                button,
-                context,
-                heading,
-                image,
-                subsections,
-              } = hero;
-
-              return (
-                <Hero
-                  key={heading}
-                  altBG={i % 2 !== 0}
-                  bgAlign={bg && bg.align}
-                  bgImage={bg && bg.image && bg.image.childImageSharp.fixed.src}
-                  buttonText={button && button.text}
-                  buttonURL={button && button.url}
-                  context={context}
-                  heading={heading}
-                  image={image && image.image.childImageSharp.fixed.src}
-                  imageAlign={image && image.align}
-                  subsections={subsections}
-                >
-                  {body}
-                </Hero>
-              )
-            })}
-          </section>
-        </ThemeProvider>
-      </Layout>
-    )
+    return <HomePage heroes={heroes} />
   }
 }
 

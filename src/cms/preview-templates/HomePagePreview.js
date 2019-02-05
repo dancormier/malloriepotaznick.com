@@ -5,6 +5,7 @@ import { HomePageTemplate } from '../../templates/_home-page';
 const HomePagePreview = ({ entry }) => (
   <HomePageTemplate
     heroes={entry.getIn(['data', 'heroes']).toJS()}
+    isPreview
   />
 );
 
