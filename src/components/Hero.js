@@ -1,11 +1,11 @@
 // import React from 'react'
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import theme from './theme'
+import theme from './Utility/theme'
 import Button from './Button'
 import Container from './Container'
 import Heading from './Heading'
-import Markdown from './Markdown'
+import Markdown from './Utility/Markdown'
 import Subsection from './Subsection'
 
 const imageStyle = (type) => {

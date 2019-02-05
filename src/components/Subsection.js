@@ -1,9 +1,9 @@
 // import React from 'react'
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import theme from './theme'
+import theme from './Utility/theme'
 import Heading from './Heading'
-import Markdown from './Markdown'
+import Markdown from './Utility/Markdown'
 
 const Subsection = ({
   customCSS,

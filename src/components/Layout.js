@@ -3,10 +3,10 @@ import { jsx } from '@emotion/core'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from "gatsby"
 import { ThemeProvider } from 'emotion-theming'
-import theme from './theme'
+import theme from './Utility/theme'
 
-import Navbar from '../components/Navbar'
-import './all.sass'
+import Navbar from '../components/Navbar/index'
+import './Utility/all.sass'
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery

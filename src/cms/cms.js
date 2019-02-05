@@ -2,7 +2,7 @@ import React from 'react'
 import CMS from 'netlify-cms'
 import * as ColorWidget from "netlify-cms-widget-color";
 
-import CSSInjector from '../components/CSSInjector';
+import CSSInjector from '../components/Utility/CSSInjector';
 
 import AboutPagePreview from './preview-templates/AboutPagePreview'
 import BlogPostPreview from './preview-templates/BlogPostPreview'

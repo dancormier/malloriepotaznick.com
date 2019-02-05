@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core'
 import PropTypes from 'prop-types'
 import { ThemeProvider } from 'emotion-theming'
-import theme from '../components/theme'
+import theme from '../components/Utility/theme'
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 
@@ -20,7 +20,6 @@ export const HomePageTemplate = ({ heroes, isPreview = false }) => (
           subsections,
         } = hero;
 
-        console.log(test, isPreview, image, bg, 'image');
         const img = image && (
           isPreview ? image.image : image.image.childImageSharp.fixed.src
         );

@@ -2,9 +2,9 @@ import React from 'react'
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
-import Button from './Button'
-import Container from './Container'
-import theme from './theme'
+import Button from '../Button'
+import Container from '../Container'
+import theme from '../Utility/theme'
 import { Link } from 'gatsby'
 
 const navLinks = [
