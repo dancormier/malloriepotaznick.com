@@ -6,7 +6,7 @@ import CSSInjector from '../components/CSSInjector';
 
 import AboutPagePreview from './preview-templates/AboutPagePreview'
 import BlogPostPreview from './preview-templates/BlogPostPreview'
-import HomeHeroesPreview from './preview-templates/HomeHeroesPreview'
+import HomePagePreview from './preview-templates/HomePagePreview'
 
 CMS.registerWidget("color", ColorWidget.Control);
 
@@ -15,6 +15,6 @@ CMS.registerPreviewTemplate('blog', BlogPostPreview)
 
 CMS.registerPreviewTemplate('home', props => (
   <CSSInjector>
-    <HomeHeroesPreview {...props} />
+    <HomePagePreview {...props} />
   </CSSInjector>
 ))

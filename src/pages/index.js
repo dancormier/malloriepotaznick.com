@@ -12,7 +12,7 @@ export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
     const { edges } = data.allMarkdownRemark;
-    const heroes = edges[0].node.frontmatter.homeHeroes;
+    const heroes = edges[0].node.frontmatter.heroes;
 
     return (
       <Layout>
@@ -66,12 +66,12 @@ export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "_heroes" } }}
+      filter: { frontmatter: { templateKey: { eq: "_home-page" } }}
     ) {
       edges {
         node {
           frontmatter {
-            homeHeroes {
+            heroes {
               background {
                 align
                 image {

@@ -8,7 +8,7 @@ import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import { HTMLContent } from '../components/Content'
 
-export const HomeHeroesTemplate = ({ heroes }) => {
+export const HomePageTemplate = ({ heroes }) => {
   // const PageContent = contentComponent || Content
 
   return (
@@ -48,7 +48,7 @@ export const HomeHeroesTemplate = ({ heroes }) => {
   )
 }
 
-HomeHeroesTemplate.propTypes = {
+HomePageTemplate.propTypes = {
   heroes: PropTypes.shape({
     context: PropTypes.string,
   }),
@@ -56,16 +56,16 @@ HomeHeroesTemplate.propTypes = {
   contentComponent: PropTypes.func,
 }
 
-const HomeHeroes = ({ data }) => {
+const HomePage = ({ data }) => {
   // const { markdownRemark: post } = data
   // const { edges } = data.allMarkdownRemark;
-  // const heroes = edges[0].node.frontmatter.homeHeroes;
+  // const heroes = edges[0].node.frontmatter.heroes;
 
-  console.log(data, 'data HomeHeroes')
+  console.log(data, 'data HomePage')
   return (
     <Layout>
-      <h1>HomeHeroes Component Loaded</h1>
-      <HomeHeroesTemplate
+      <h1>HomePage Component Loaded</h1>
+      <HomePageTemplate
         heroes={data}
         content={data.html}
         contentComponent={HTMLContent}
@@ -74,7 +74,7 @@ const HomeHeroes = ({ data }) => {
   )
 }
 
-HomeHeroes.propTypes = {
+HomePage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
@@ -84,12 +84,12 @@ export const homePageQuery = graphql`
   query HomePage {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "_heroes" } }}
+      filter: { frontmatter: { templateKey: { eq: "_home-page" } }}
     ) {
       edges {
         node {
           frontmatter {
-            homeHeroes {
+            heroes {
               background {
                 align
                 image {

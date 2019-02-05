@@ -1,6 +1,6 @@
 ---
-templateKey: _heroes
-homeHeroes:
+templateKey: _home-page
+heroes:
   - background:
       align: contain
       image: /img/bg-flower-feature.png
