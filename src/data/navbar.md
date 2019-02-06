@@ -1,7 +1,7 @@
 ---
 templateKey: _navbar
-title: Mallorie Potaznick, LMHC
-subtitle: Licensed Mental Health Counselor
+heading: Mallorie Potaznick, LMHC
+subheading: Licensed Mental Health Counselor
 links:
   - text: About
     url: /about

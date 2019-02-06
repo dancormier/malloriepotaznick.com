@@ -29,7 +29,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_navbar"}
           - {label: "Main Heading", name: "heading", widget: "string", required: true}
-          - {label: "Subeading", name: "subheading", widget: "string", required: true}
+          - {label: "Subheading", name: "subheading", widget: "string", required: true}
           - {
               label: "Links",
               name: "links",
@@ -38,7 +38,7 @@ collections:
               fields:
               [
                 {label: "Text", name: "text", widget: "string", required: true},
-                {label: "URL", name: "text", widget: "string", required: true},
+                {label: "URL", name: "url", widget: "string", required: true},
                 {label: "Apply Button Style", name: "button", widget: "boolean", default: false},
                 {label: "Show", name: "enabled", widget: "boolean", default: true}
               ]
