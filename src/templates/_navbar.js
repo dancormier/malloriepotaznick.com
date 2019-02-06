@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { ThemeProvider } from 'emotion-theming';
@@ -7,27 +8,11 @@ import Button from '../components/Button';
 import Container from '../components/Container'
 import theme from '../components/Utility/theme';
 
-const navLinks = [
-  {
-    label: 'About',
-    url: '/about',
-  }, {
-    label: 'Blog',
-    url: '/blog',
-  }, {
-    label: 'FAQ',
-    url: '/questions',
-  }, {
-    label: 'Contact',
-    url: '/contact',
-  }, {
-    label: 'Book a session',
-    url: '#',
-    button: true,
-  },
-];
-
-export const NavbarTemplate = () => (
+export const NavbarTemplate = ({
+  heading,
+  links,
+  subheading,
+}) => (
   <ThemeProvider theme={theme}>
     <nav
       role="navigation"
@@ -61,9 +46,9 @@ export const NavbarTemplate = () => (
               marginBottom: theme.size(-5),
             }}
           >
-            Mallorie Potaznick, LMHC
+            {heading}
           </h1>
-          <span>Licensed Mental Health Counselor</span>
+          <span>{subheading}</span>
         </Link>
         <div
           css={{
@@ -71,32 +56,36 @@ export const NavbarTemplate = () => (
             display: 'flex',
           }}
         >
-          {navLinks.map(l => l.button ? (
-            <Button
-              key={l.label}
-              url={l.url}
-              customCSS={{
-                marginLeft: theme.size(6),
-              }}
-            />
-          ) : (
-            <Link
-              key={l.url}
-              to={l.url}
-              title={l.label}
-              css={{
-                color: theme.color('primary'),
-                fontSize: theme.size(2),
-                marginLeft: theme.size(6),
-                textDecoration: 'none',
-                whiteSpace: 'nowrap',
-                '&:hover': {
-                  color: theme.color('accent'),
-                }
-              }}
-            >
-              {l.label}
-            </Link>
+          {links.map(l => l.enabled && (
+            l.button ? (
+              <Button
+                key={l.text}
+                url={l.url}
+                customCSS={{
+                  marginLeft: theme.size(6),
+                }}
+              >
+                {l.text}
+              </Button>
+            ) : (
+              <Link
+                key={l.url}
+                to={l.url}
+                title={l.text}
+                css={{
+                  color: theme.color('primary'),
+                  fontSize: theme.size(2),
+                  marginLeft: theme.size(6),
+                  textDecoration: 'none',
+                  whiteSpace: 'nowrap',
+                  '&:hover': {
+                    color: theme.color('accent'),
+                  }
+                }}
+              >
+                {l.text}
+              </Link>
+            )
           ))}
         </div>
       </Container>
@@ -105,15 +94,54 @@ export const NavbarTemplate = () => (
 );
 
 NavbarTemplate.propTypes = {
-  nothing: PropTypes.any,
+  heading: PropTypes.string,
+  links: PropTypes.any,
+  subheading: PropTypes.string,
 };
 
 const Navbar = () => (
-  <NavbarTemplate />
-);
+  <StaticQuery
+    query={graphql`
+      query Navbar {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] },
+          filter: { frontmatter: { templateKey: { eq: "_navbar" } }}
+        ) {
+          edges {
+            node {
+              frontmatter {
+                heading
+                links {
+                  button
+                  enabled
+                  text
+                  url
+                }
+                subheading
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => {
+      const { edges } = data.allMarkdownRemark;
+      const frontmatter = edges[0].node.frontmatter;
+      const {
+        heading,
+        links,
+        subheading,
+      } = frontmatter;
 
-Navbar.propTypes = {
-  nothing: PropTypes.any,
-};
+      return (
+        <NavbarTemplate
+          heading={heading}
+          links={links}
+          subheading={subheading}
+        />
+      );
+    }}
+  />
+);
 
 export default Navbar;
