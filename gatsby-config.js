@@ -21,6 +21,13 @@ module.exports = {
         name: 'pages',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/data`,
+        name: 'data',
+      },
+    },
     // '/src/img' is empty now. Gatsby complains.
     // {
     //   resolve: 'gatsby-source-filesystem',

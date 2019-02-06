@@ -5,7 +5,8 @@ import { StaticQuery, graphql } from "gatsby"
 import { ThemeProvider } from 'emotion-theming'
 import theme from './Utility/theme'
 
-import Navbar from '../components/Navbar/index'
+import Superbar from '../templates/_superbar'
+import Navbar from '../templates/_navbar'
 import './Utility/all.sass'
 
 const TemplateWrapper = ({ children }) => (
@@ -51,6 +52,7 @@ const TemplateWrapper = ({ children }) => (
           </Helmet>
           <ThemeProvider theme={theme}>
             <div css={{ fontFamily: theme.font('serif') }}>
+              <Superbar />
               <Navbar />
               <div>{children}</div>
             </div>
