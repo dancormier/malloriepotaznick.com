@@ -33,7 +33,7 @@ heroes:
     context: about
     heading: About Mallorie
     image:
-      align: before
+      align: after
       image: /img/mp-headshot.jpg
   - body: ''
     context: specialties
