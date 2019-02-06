@@ -65,83 +65,88 @@ const Hero = ({
     >
       <Container
         customCSS={{
-          alignItems: 'center',
-          display: imageAlign === 'after' || imageAlign === 'before' ? 'flex' : 'block',
-          flexDirection: imageAlign === 'left' && 'row-reverse',
+          paddingTop: theme.size(12),
+          paddingBottom: theme.size(isFeatured ? 14 : 12),
           position: 'relative',
         }}
       >
+        {Heading && (
+          <Heading
+            Tag={isFeatured ? 'h2' : 'h3'}
+          >
+            {heading}
+          </Heading>
+        )}
         <div
           css={{
-            paddingTop: theme.size(12),
-            paddingBottom: theme.size(isFeatured ? 14 : 12),
-            width: isFeatured ? '70%' : '100%',
-            zIndex: 1,
+            display: imageAlign === 'after' || imageAlign === 'before' ? 'flex' : 'block',
+            flexDirection: imageAlign === 'before' && 'row-reverse',  
           }}
         >
-          {Heading && (
-            <Heading
-              Tag={isFeatured ? 'h2' : 'h3'}
-            >
-              {heading}
-            </Heading>
-          )}
-          {children && (
-            <div
-              css={{
-                fontSize: theme.size(isFeatured ? 4 : 2),
-                lineHeight: theme.size(isFeatured ? 6 : 4),
-                marginBottom: theme.size(isFeatured ? 6 : 8),
-              }}
-            >
-              <Markdown>
-                {children}
-              </Markdown>
-            </div>
-          )}
-          {subsections && subsections.map(sub => {
-            return (
-              <Subsection
-                key={sub.heading}
-                heading={sub.heading}
-              >
-                {sub.body}
-              </Subsection>
-            )}
-          )}
-          {buttonText && buttonURL && (
-            <Button
-              url={buttonURL}
-            >
-              {buttonText}
-            </Button>
-          )}
-        </div>
-        {isFeatured && (
           <div
             css={{
-              backgroundImage: `url(${bgImage})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'contain',
-              position: 'relative',
-              width: '100%',
-              zIndex: -1,
-              ...imageStyle(context),
+              width: isFeatured ? '70%' : '100%',
+              zIndex: 1,
             }}
-          />
-        )}
-        {image && (
-          <img
-            src={image}
-            alt={context}
-            css={{
-              flexShrink: 0,
-              marginLeft: theme.size(12),
-              width: '33%',
-              ...imageStyle(context),
-            }}
-          />
-        )}
+          >
+            {children && (
+              <div
+                css={{
+                  fontSize: theme.size(isFeatured ? 4 : 2),
+                  lineHeight: theme.size(isFeatured ? 6 : 4),
+                  marginBottom: theme.size(isFeatured ? 6 : 8),
+                }}
+              >
+                <Markdown>
+                  {children}
+                </Markdown>
+              </div>
+            )}
+            {subsections && subsections.map(sub => {
+              return (
+                <Subsection
+                  key={sub.heading}
+                  heading={sub.heading}
+                >
+                  {sub.body}
+                </Subsection>
+              )}
+            )}
+            {buttonText && buttonURL && (
+              <Button
+                url={buttonURL}
+              >
+                {buttonText}
+              </Button>
+            )}
+          </div>
+          {isFeatured && (
+            <div
+              css={{
+                backgroundImage: `url(${bgImage})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'contain',
+                position: 'relative',
+                width: '100%',
+                zIndex: -1,
+                ...imageStyle(context),
+              }}
+            />
+          )}
+          {image && (
+            <img
+              src={image}
+              alt={context}
+              css={{
+                flexShrink: 0,
+                marginLeft: imageAlign === 'after' && theme.size(12),
+                marginRight: imageAlign === 'before' && theme.size(12),
+                width: '33%',
+                ...imageStyle(context),
+              }}
+            />
+          )}
+        </div>
       </Container>
     </div>
   );
