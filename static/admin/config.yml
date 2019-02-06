@@ -38,7 +38,7 @@ collections:
               fields:
               [
                 {label: "Text", name: "text", widget: "string", required: true},
-                {label: "URL", name: "text", widget: "string", required: true},
+                {label: "URL", name: "url", widget: "string", required: true},
                 {label: "Apply Button Style", name: "button", widget: "boolean", default: false},
                 {label: "Show", name: "enabled", widget: "boolean", default: true}
               ]
