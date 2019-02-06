@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
+import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types'
 import { ThemeProvider } from 'emotion-theming'
 import theme from '../components/Utility/theme'
@@ -54,18 +55,63 @@ HomePageTemplate.propTypes = {
   isPreview: PropTypes.bool,
 }
 
-const HomePage = ({ heroes, isPreview = false }) => (
-  <Layout>
-    <HomePageTemplate
-      heroes={heroes}
-      isPreview={isPreview}
-    />
-  </Layout>
-)
+const HomePage = () => (
+  <StaticQuery
+    query={graphql`
+      query HomePageQuery {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] },
+          filter: { frontmatter: { templateKey: { eq: "_home-page" } }}
+        ) {
+          edges {
+            node {
+              frontmatter {
+                heroes {
+                  background {
+                    align
+                    image {
+                      childImageSharp {
+                        fixed(width: 1000) {
+                          src
+                        }
+                      }
+                    }
+                  }
+                  body
+                  button {
+                    text
+                    url
+                  }
+                  context
+                  heading
+                  image {
+                    align
+                    image {
+                      childImageSharp {
+                        fixed(width: 400) {
+                          src
+                        }
+                      }
+                    }
+                  }
+                  subsections {
+                    heading
+                    body
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => {
+      const { edges } = data.allMarkdownRemark;
+      const heroes = edges[0].node.frontmatter.heroes;
 
-HomePage.propTypes = {
-  heroes: PropTypes.array.isRequired,
-  isPreview: PropTypes.bool,
-}
+      return <HomePageTemplate heroes={heroes} />;
+    }}
+  />
+);
 
 export default HomePage;
