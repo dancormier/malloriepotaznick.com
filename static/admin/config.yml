@@ -29,7 +29,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_navbar"}
           - {label: "Main Heading", name: "heading", widget: "string", required: true}
-          - {label: "Subeading", name: "subheading", widget: "string", required: true}
+          - {label: "Subheading", name: "subheading", widget: "string", required: true}
           - {
               label: "Links",
               name: "links",
