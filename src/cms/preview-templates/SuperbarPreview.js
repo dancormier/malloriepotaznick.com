@@ -4,7 +4,7 @@ import { SuperbarTemplate } from '../../templates/_superbar';
 
 const SuperbarPreview = ({ entry }) => (
   <SuperbarTemplate
-    links={entry.getIn(['data', 'items']).toJS()}
+    items={entry.getIn(['data', 'items']).toJS()}
     isPreview
   />
 );
