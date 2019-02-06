@@ -6,19 +6,19 @@ links:
   - button: false
     enabled: true
     text: About
-    url: about/
+    url: about
   - button: false
     enabled: true
     text: Blog
-    url: blog/
+    url: blog
   - button: false
     enabled: true
     text: FAQ
-    url: questions/
+    url: questions
   - button: false
     enabled: true
     text: Contact
-    url: contact/
+    url: contact
   - button: true
     enabled: true
     text: Book a session
