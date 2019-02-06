@@ -29,11 +29,11 @@ heroes:
       amet purus congue convallis.
     button:
       text: More about mallorie
-      url: /about
+      url: about
     context: about
     heading: About Mallorie
     image:
-      align: after
+      align: before
       image: /img/mp-headshot.jpg
   - body: ''
     context: specialties
