@@ -1,27 +1,27 @@
 ---
 templateKey: _navbar
-heading: Mallorie Potaznick, LMHC
+heading: 'Mallorie Potaznick, LMHC'
 subheading: Licensed Mental Health Counselor
 links:
-  - text: About
-    url: /about
-    button: false
+  - button: false
     enabled: true
-  - text: Blog
+    text: About
+    url: about/
+  - button: false
+    enabled: true
+    text: Blog
     url: /blog
-    button: false
+  - button: false
     enabled: true
-  - text: FAQ
-    url: /questions
-    button: false
+    text: FAQ
+    url: questions/
+  - button: false
     enabled: true
-  - text: Contact
-    url: /contact
-    button: false
+    text: Contact
+    url: contact/
+  - button: true
     enabled: true
-  - text: Book a session
+    text: Book a session
     url: '#'
-    button: true
-    enabled: true
 ---
 
