@@ -1,7 +1,7 @@
 ---
 templateKey: _footer
 items:
-  - text: © Mallorie Potaznick, LMHC
+  - text: © 2019 Mallorie Potaznick
     align: left
 ---
 
