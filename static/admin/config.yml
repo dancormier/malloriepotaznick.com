@@ -23,6 +23,28 @@ collections:
   - name: "data"
     label: "Pieces"
     files:
+      - file: "src/data/footer.md"
+        label: "Footer"
+        name: "footer"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_footer"}
+          - {
+              label: "Items",
+              name: "items",
+              required: true,
+              widget: "list",
+              fields:
+              [
+                {label: "Text", name: "text", widget: "string", required: true},
+                {
+                  label: "Alignment",
+                  name: "align",
+                  widget: "select",
+                  options: ["left", "right"]
+                },
+                {label: "URL", name: "text", widget: "string"}
+              ]
+            }
       - file: "src/data/navbar.md"
         label: "Navbar"
         name: "navbar"
