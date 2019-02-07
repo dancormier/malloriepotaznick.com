@@ -3,28 +3,13 @@ import { jsx } from '@emotion/core';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'emotion-theming';
-import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 import Container from '../components/Container';
 import theme from '../components/Utility/theme';
 
-const icons = (name) => {
-  switch (name) {
-    case "envelope":
-      return <FaEnvelope />;
-    case "map":
-      return <FaMapMarkerAlt />
-    case "phone":
-      return <FaPhone />
-    default:
-      return null;
-  }
-};
-
 const group = (items, grouping) => items.filter(item => item.align === grouping);
-const SuperbarItem = ({ item }) => {
+const FooterItem = ({ item }) => {
   const {
     align,
-    icon,
     text,
   } = item;
 
@@ -39,16 +24,13 @@ const SuperbarItem = ({ item }) => {
           marginLeft: align === 'right' && theme.size(2),
         }}
       >
-        {icons(icon)}
-        <span css={{ marginLeft: theme.size(-1) }}>
-          {text}
-        </span>
+        {text}
       </div>
     </ThemeProvider>
   );
 }
 
-export const SuperbarTemplate = ({ items }) => (
+export const FooterTemplate = ({ items }) => (
   <ThemeProvider theme={theme}>
     <div
       css={{
@@ -66,14 +48,14 @@ export const SuperbarTemplate = ({ items }) => (
           paddingBottom: theme.size(1),
         }}
       >
-        <div css={{ display: 'flex' }}>
+        <div>
           {group(items, 'left').map(item =>
-            <SuperbarItem item={item} key={item.text} />
+            <FooterItem item={item} key={item.text} />
           )}
         </div>
         <div css={{ display: 'flex' }}>
           {group(items, 'right').map(item =>
-            <SuperbarItem item={item} key={item.text} />
+            <FooterItem item={item} key={item.text} />
           )}
         </div>
       </Container>
@@ -81,24 +63,23 @@ export const SuperbarTemplate = ({ items }) => (
   </ThemeProvider>
 );
 
-SuperbarTemplate.propTypes = {
+FooterTemplate.propTypes = {
   items: PropTypes.any,
 }
 
-const Superbar = () => (
+const Footer = () => (
   <StaticQuery
     query={graphql`
-      query Superbar {
+      query Footer {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] },
-          filter: { frontmatter: { templateKey: { eq: "_superbar" } }}
+          filter: { frontmatter: { templateKey: { eq: "_footer" } }}
         ) {
           edges {
             node {
               frontmatter {
                 items {
                   align
-                  icon
                   text
                 }
               }
@@ -115,10 +96,10 @@ const Superbar = () => (
       } = frontmatter;
 
       return (
-        <SuperbarTemplate items={items} />
+        <FooterTemplate items={items} />
       )
     }}
   />
 );
 
-export default Superbar;
+export default Footer;

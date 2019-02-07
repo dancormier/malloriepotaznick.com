@@ -4,9 +4,9 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from "gatsby"
 import { ThemeProvider } from 'emotion-theming'
 import theme from './Utility/theme'
-
-import Superbar from '../templates/_superbar'
+import Footer from '../templates/_footer'
 import Navbar from '../templates/_navbar'
+import Superbar from '../templates/_superbar'
 import './Utility/all.sass'
 
 const TemplateWrapper = ({ children }) => (
@@ -55,6 +55,7 @@ const TemplateWrapper = ({ children }) => (
               <Superbar />
               <Navbar />
               <div>{children}</div>
+              <Footer />
             </div>
           </ThemeProvider>
         </div>

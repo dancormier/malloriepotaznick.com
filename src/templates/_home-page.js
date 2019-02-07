@@ -4,7 +4,6 @@ import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types'
 import { ThemeProvider } from 'emotion-theming'
 import theme from '../components/Utility/theme'
-import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 
 export const HomePageTemplate = ({ heroes, isPreview = false }) => (
