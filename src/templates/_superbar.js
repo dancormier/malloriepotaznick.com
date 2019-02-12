@@ -54,6 +54,10 @@ export const SuperbarTemplate = ({ items }) => (
       css={{
         backgroundColor: theme.color('accent'),
         color: theme.color('white'),
+        display: 'none',
+        [theme.mq('md')]: {
+          display: 'block',
+        },
       }}
     >
       <Container

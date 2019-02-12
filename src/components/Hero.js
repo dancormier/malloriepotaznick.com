@@ -36,6 +36,24 @@ const imageStyle = (type) => {
   }
 }
 
+const FeaturedImage = ({ image, context }) => (
+  <div
+    css={{
+      backgroundImage: `url(${image})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'contain',
+      display: 'none',
+      position: 'relative',
+      width: '100%',
+      zIndex: -1,
+      [theme.mq('lg')]: {
+        display: 'block',
+      },
+      ...imageStyle(context),
+    }}
+  />
+);
+
 const Hero = ({
   customCSS,
   children,
@@ -51,23 +69,60 @@ const Hero = ({
   subsections,
 }) => {
   const isFeatured = context === 'featured';
+  const bgPos = isFeatured ? '-30%' : 0;
+
+  const flexArrange = (align) => {
+    switch(align) {
+      case 'above':
+        return 'column-reverse';
+      case 'after':
+        return 'row';
+      case 'before':
+        return 'row-reverse';
+      case 'below':
+        return 'column';
+      default:
+        return 'row';
+    }
+  };
 
   return (
     <div
       css={{
         backgroundColor: altBG && '#f9f9f9',
-        backgroundImage: !isFeatured && bgImage && `url(${bgImage})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: bgAlign,
         color: theme.color('primary'),
+        position: 'relative',
+        '&:after': {
+          backgroundImage: bgImage && `url(${bgImage})`,
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: isFeatured ? 'cover' : bgAlign,
+          content: '""',
+          opacity: isFeatured && '0.3',
+          top: bgPos,
+          left: bgPos,
+          bottom: bgPos,
+          right: bgPos,
+          position: 'absolute',
+          zIndex: '-1',
+        },
+        [theme.mq('lg')]: {
+          '&:after': {
+              backgroundImage: bgImage && `url(${isFeatured ? '' : bgImage})`,
+          },
+        },
         ...customCSS,
       }}
     >
       <Container
         customCSS={{
-          paddingTop: theme.size(12),
-          paddingBottom: theme.size(isFeatured ? 14 : 12),
+          paddingTop: theme.size(6),
+          paddingBottom: theme.size(6),
           position: 'relative',
+          [theme.mq('lg')]: {
+            paddingTop: theme.size(12),
+            paddingBottom: theme.size(12),
+          },
         }}
       >
         {Heading && (
@@ -79,8 +134,10 @@ const Hero = ({
         )}
         <div
           css={{
-            display: imageAlign === 'after' || imageAlign === 'before' ? 'flex' : 'block',
-            flexDirection: imageAlign === 'before' && 'row-reverse',  
+            display: 'flex',
+            [theme.mq('lg')]: {
+              flexDirection: flexArrange(imageAlign),
+            }
           }}
         >
           <div
@@ -121,16 +178,9 @@ const Hero = ({
             )}
           </div>
           {isFeatured && (
-            <div
-              css={{
-                backgroundImage: `url(${bgImage})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'contain',
-                position: 'relative',
-                width: '100%',
-                zIndex: -1,
-                ...imageStyle(context),
-              }}
+            <FeaturedImage
+              image={bgImage}
+              context={context}
             />
           )}
           {image && (
@@ -141,7 +191,7 @@ const Hero = ({
                 flexShrink: 0,
                 marginLeft: imageAlign === 'after' && theme.size(12),
                 marginRight: imageAlign === 'before' && theme.size(12),
-                width: '33%',
+                width: imageAlign === 'above' || imageAlign === 'below' ? '100%' : '33%',
                 ...imageStyle(context),
               }}
             />

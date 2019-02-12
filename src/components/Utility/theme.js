@@ -40,6 +40,8 @@ const colors = {
   accent: '#ea3934',
   primary: '#444444',
   white: '#ffffff',
+  whiteToTransparent: 'linear-gradient(#ffffff, transparent)',
+  // gray: '#999999', Add some gray in here
   black: '#000000',
 };
 
@@ -53,6 +55,8 @@ const breakPoints = {
   sm: '@media(min-width:700px)',
   md: '@media(min-width:900px)',
   lg: '@media(min-width:1200px)',
+  xl: '@media(min-width:1400px)',
+  xxl: '@media(min-width:1700px)',
 };
 
 const custom = {
