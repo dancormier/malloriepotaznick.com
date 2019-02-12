@@ -51,10 +51,15 @@ const TemplateWrapper = ({ children }) => (
             />
           </Helmet>
           <ThemeProvider theme={theme}>
-            <div css={{ fontFamily: theme.font('serif') }}>
+            <div css={{
+              fontFamily: theme.font('serif'),
+              overflow: 'hidden',
+            }}>
               <Superbar />
               <Navbar />
-              <div>{children}</div>
+              <div css={{ minHeight: '100vh' }}>
+                {children}
+              </div>
               <Footer />
             </div>
           </ThemeProvider>

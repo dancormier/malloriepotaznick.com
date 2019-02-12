@@ -17,19 +17,19 @@ const Subsection = ({
   >
     <Heading
       Tag='h4'
-      css={{
-        color: theme.color('accent'),
-        fontSize: theme.size(4),
-        marginBottom: theme.size(4),
-      }}
     >
       {heading}
     </Heading>
     <div
       css={{
-        fontSize: theme.size(2),
-        lineHeight: theme.size(4),
-        marginBottom: theme.size(8),
+        fontSize: theme.size(1),
+        lineHeight: theme.size(3),
+        marginBottom: theme.size(6),
+        [theme.mq('sm')]: {
+          fontSize: theme.size(2),
+          lineHeight: theme.size(4),
+          marginBottom: theme.size(8),
+        },
       }}
     >
       <Markdown>

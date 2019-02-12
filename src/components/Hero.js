@@ -8,52 +8,6 @@ import Heading from './Heading'
 import Markdown from './Utility/Markdown'
 import Subsection from './Subsection'
 
-const imageStyle = (type) => {
-  switch(type) {
-    case "featured":
-      return {
-        backgroundPosition: 'top right',
-        backgroundSize: 'cover',
-        bottom: 0,
-        left: 'auto',
-        marginLeft: 0,
-        position: 'absolute',
-        right: `-${theme.size(18)}`,
-        top: `-${theme.size(18)}`,
-        width: '100%',
-      }
-    case "about":
-      return {
-        borderRadius: '100%',
-        boxShadow: '0 0 30px rgba(0,0,0,.1)',
-        height: theme.size(18),
-        width: theme.size(18),
-      }
-    default:
-      return {
-        height: 'auto',
-      }
-  }
-}
-
-const FeaturedImage = ({ image, context }) => (
-  <div
-    css={{
-      backgroundImage: `url(${image})`,
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'contain',
-      display: 'none',
-      position: 'relative',
-      width: '100%',
-      zIndex: -1,
-      [theme.mq('lg')]: {
-        display: 'block',
-      },
-      ...imageStyle(context),
-    }}
-  />
-);
-
 const Hero = ({
   customCSS,
   children,
@@ -69,7 +23,7 @@ const Hero = ({
   subsections,
 }) => {
   const isFeatured = context === 'featured';
-  const bgPos = isFeatured ? '-30%' : 0;
+  const isAbout = context === 'about';
 
   const flexArrange = (align) => {
     switch(align) {
@@ -99,10 +53,10 @@ const Hero = ({
           backgroundSize: isFeatured ? 'cover' : bgAlign,
           content: '""',
           opacity: isFeatured && '0.3',
-          top: bgPos,
-          left: bgPos,
-          bottom: bgPos,
-          right: bgPos,
+          top: isFeatured ? '-60%' : 0,
+          left: isFeatured ? '-30%' : 0,
+          bottom: isFeatured ? '-100%' : 0,
+          right: isFeatured ? '-30%' : 0,
           position: 'absolute',
           zIndex: '-1',
         },
@@ -116,7 +70,7 @@ const Hero = ({
     >
       <Container
         customCSS={{
-          paddingTop: theme.size(6),
+          paddingTop: isFeatured ? theme.size(2) : theme.size(8),
           paddingBottom: theme.size(6),
           position: 'relative',
           [theme.mq('lg')]: {
@@ -135,6 +89,7 @@ const Hero = ({
         <div
           css={{
             display: 'flex',
+            flexDirection: imageAlign === 'after' ? 'column-reverse' : 'column',
             [theme.mq('lg')]: {
               flexDirection: flexArrange(imageAlign),
             }
@@ -142,16 +97,31 @@ const Hero = ({
         >
           <div
             css={{
-              width: isFeatured ? '70%' : '100%',
               zIndex: 1,
+              [theme.mq('lg')]: {
+                width: isFeatured ? '70%' : '100%',
+              },
             }}
           >
             {children && (
               <div
-                css={{
-                  fontSize: theme.size(isFeatured ? 4 : 2),
-                  lineHeight: theme.size(isFeatured ? 6 : 4),
-                  marginBottom: theme.size(isFeatured ? 6 : 8),
+                css={isFeatured ? {
+                  fontSize: theme.size(2),
+                  lineHeight: theme.size(4),
+                  marginBottom: theme.size(6),
+                  [theme.mq('sm')]: {
+                    fontSize: theme.size(4),
+                    lineHeight: theme.size(6),
+                  },
+                } : {
+                  fontSize: theme.size(1),
+                  lineHeight: theme.size(3),
+                  marginBottom: theme.size(4),
+                  [theme.mq('sm')]: {
+                    fontSize: theme.size(2),
+                    lineHeight: theme.size(4),
+                    marginBottom: theme.size(8),
+                  },
                 }}
               >
                 <Markdown>
@@ -178,9 +148,25 @@ const Hero = ({
             )}
           </div>
           {isFeatured && (
-            <FeaturedImage
-              image={bgImage}
-              context={context}
+            <div
+              css={{
+                backgroundImage: `url(${bgImage})`,
+                backgroundPosition: 'top right',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                bottom: 0,
+                display: 'none',
+                left: 'auto',
+                marginLeft: 0,
+                position: 'absolute',
+                right: `-${theme.size(18)}`,
+                top: `-${theme.size(18)}`,
+                width: '100%',
+                zIndex: -1,
+                [theme.mq('lg')]: {
+                  display: 'block',
+                },
+              }}
             />
           )}
           {image && (
@@ -188,11 +174,22 @@ const Hero = ({
               src={image}
               alt={context}
               css={{
+                alignSelf: 'center',
                 flexShrink: 0,
-                marginLeft: imageAlign === 'after' && theme.size(12),
-                marginRight: imageAlign === 'before' && theme.size(12),
-                width: imageAlign === 'above' || imageAlign === 'below' ? '100%' : '33%',
-                ...imageStyle(context),
+                height: 'auto',
+                marginBottom: theme.size(4),
+                maxWidth: theme.size(18),
+                width: imageAlign === 'above' || imageAlign === 'below' || isAbout ? '100%' : '33%',
+                [theme.mq('lg')]: {
+                  alignSelf: 'flex-start',
+                  borderRadius: isAbout && '100%',
+                  boxShadow: isAbout && '0 0 30px rgba(0,0,0,.1)',
+                  marginBottom: 0,
+                  marginLeft: imageAlign === 'after' && theme.size(12),
+                  marginRight: imageAlign === 'before' && theme.size(12),
+                  height: isAbout && theme.size(18),
+                  width: isAbout && theme.size(18),
+                },
               }}
             />
           )}
