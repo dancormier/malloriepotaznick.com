@@ -70,12 +70,12 @@ const Hero = ({
     >
       <Container
         customCSS={{
-          paddingTop: isFeatured ? theme.size(2) : theme.size(8),
+          paddingTop: theme.size(isFeatured ? 2 : 8),
           paddingBottom: theme.size(6),
           position: 'relative',
           [theme.mq('lg')]: {
-            paddingTop: theme.size(12),
-            paddingBottom: theme.size(12),
+            paddingTop: theme.size(isFeatured ? 8 : 11),
+            paddingBottom: theme.size(11),
           },
         }}
       >
@@ -160,7 +160,7 @@ const Hero = ({
                 marginLeft: 0,
                 position: 'absolute',
                 right: `-${theme.size(18)}`,
-                top: `-${theme.size(18)}`,
+                top: `-${theme.size(19)}`,
                 width: '100%',
                 zIndex: -1,
                 [theme.mq('lg')]: {

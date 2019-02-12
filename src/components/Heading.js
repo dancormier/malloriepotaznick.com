@@ -39,7 +39,6 @@ const style = (tag) => {
         },
         [theme.mq('lg')]: {
           fontSize: theme.size(8),
-          marginBottom: theme.size(10),
           '&:after': {
             width: theme.size(13),
             height: theme.size(-4),
