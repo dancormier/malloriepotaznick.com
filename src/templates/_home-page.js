@@ -17,7 +17,6 @@ export const HomePageTemplate = ({ heroes, isPreview = false }) => (
           context,
           heading,
           image,
-          subsections,
         } = hero;
 
         const img = image && (

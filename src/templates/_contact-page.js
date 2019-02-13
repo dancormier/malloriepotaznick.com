@@ -7,43 +7,16 @@ import theme from '../components/Utility/theme'
 import Markdown from '../components/Utility/Markdown'
 import ContactForm from '../components/Contact-form'
 import Heading from '../components/Heading'
-import Subsection from '../components/Subsection'
 
 export const ContactPageTemplate = ({
   body,
   heading,
-  subsections,
   isPreview = false,
 }) => (
   <ThemeProvider theme={theme}>
-    <div
-      css={{
-        marginBottom: theme.size(4),
-      }}
-    >
-      <Heading Tag='h2'>
-        {heading}
-      </Heading>
-      {body && (
-        <Markdown
-          customCSS={{
-            'p': {
-              fontSize: theme.size(1),
-              lineHeight: theme.size(3),
-            },
-            [theme.mq('sm')]: {
-              marginBottom: theme.size(8),
-              'p': {
-                fontSize: theme.size(2),
-                lineHeight: theme.size(5),
-              }
-            },
-          }}
-        >
-          {body}
-        </Markdown>
-      )}
-    </div>
+    <Heading Tag='h2'>
+      {heading}
+    </Heading>
     <section
       css={{
         display: 'flex',
@@ -70,13 +43,25 @@ export const ContactPageTemplate = ({
       >
         <ContactForm />
       </div>
-      {subsections.map(sub =>
-        <Subsection
-          key={sub.heading}
-          heading={sub.heading}
+      {body && (
+        <Markdown
+          customCSS={{
+            marginBottom: theme.size(4),
+            'p': {
+              fontSize: theme.size(1),
+              lineHeight: theme.size(3),
+            },
+            [theme.mq('sm')]: {
+              marginBottom: theme.size(8),
+              'p': {
+                fontSize: theme.size(2),
+                lineHeight: theme.size(5),
+              }
+            },
+          }}
         >
-          {sub.body}
-        </Subsection>
+          {body}
+        </Markdown>
       )}
     </section>
   </ThemeProvider>
@@ -85,7 +70,6 @@ export const ContactPageTemplate = ({
 ContactPageTemplate.propTypes = {
   body: PropTypes.string,
   heading: PropTypes.string.isRequired,
-  subsections: PropTypes.array.isRequired,
   isPreview: PropTypes.bool,
 }
 
@@ -101,10 +85,6 @@ const ContactPage = () => (
             node {
               frontmatter {
                 heading
-                subsections {
-                  heading
-                  body
-                }
               }
               rawMarkdownBody
             }
@@ -115,16 +95,11 @@ const ContactPage = () => (
     render={data => {
       const { edges } = data.allMarkdownRemark;
       const { rawMarkdownBody: body, frontmatter } = edges[0].node;
-      const {
-        heading,
-        subsections,
-      } = frontmatter;
 
       return (
         <ContactPageTemplate
           body={body}
-          heading={heading}
-          subsections={subsections}
+          heading={frontmatter.heading}
         />
       );
     }}

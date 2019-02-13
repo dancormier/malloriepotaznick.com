@@ -6,7 +6,6 @@ const ContactPagePreview = ({ entry }) => (
   <ContactPageTemplate
     body={entry.getIn(['data', 'body'])}
     heading={entry.getIn(['data', 'heading'])}
-    subsections={entry.getIn(['data', 'subsections']).toJS()}
     isPreview
   />
 );

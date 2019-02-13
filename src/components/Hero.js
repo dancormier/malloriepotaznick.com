@@ -45,6 +45,7 @@ const Hero = ({
       id={context}
       css={{
         backgroundColor: altBG && theme.color('gray-ll'),
+        paddingBottom: theme.size(2),
         position: 'relative',
         '&:after': {
           backgroundImage: bgImage && `url(${bgImage})`,
@@ -63,7 +64,8 @@ const Hero = ({
         [theme.mq('lg')]: {
           '&:after': {
               backgroundImage: bgImage && `url(${isFeatured ? '' : bgImage})`,
-          },
+              paddingBottom: theme.size(0),
+            },
         },
         ...customCSS,
       }}
