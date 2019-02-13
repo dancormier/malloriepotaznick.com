@@ -34,7 +34,7 @@ heroes:
     heading: About Mallorie
     image:
       align: after
-      image: /img/mal-headshot-2-dan-edited-cropped.png
+      image: /img/mp-headshot-800.jpg
   - body: ''
     context: specialties
     heading: Mallorie's Specialties
