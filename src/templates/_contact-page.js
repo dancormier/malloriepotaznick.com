@@ -17,59 +17,74 @@ export const ContactPageTemplate = ({
   isPreview = false,
 }) => (
   <ThemeProvider theme={theme}>
-    <Container>
-      <div
-        css={{
-          marginBottom: theme.size(4),
-        }}
-      >
-        <Heading Tag='h2'>
-          {heading}
-        </Heading>
-        <Markdown>
-          {body}
-        </Markdown>
-      </div>
-      <section
-        css={{
-          display: 'flex',
-          flexDirection: 'column-reverse',
-          [theme.mq('md')]: {
-            flexDirection: 'row',
-          },
-        }}
-      >
-        <div
-          css={{
-            boxSizing: 'border-box',
-            flexShrink: 0,
-            maxWidth: theme.size(21),
-            width: '100%',
-            [theme.mq('md')]: {
-              paddingRight: '6%',
-              width: '40%',
+    <div
+      css={{
+        marginBottom: theme.size(4),
+      }}
+    >
+      <Heading Tag='h2'>
+        {heading}
+      </Heading>
+      {body && (
+        <Markdown
+          customCSS={{
+            'p': {
+              fontSize: theme.size(1),
+              lineHeight: theme.size(3),  
             },
-            [theme.mq('lg')]: {
-              width: '60%',
+            [theme.mq('sm')]: {
+              marginBottom: theme.size(8),
+              'p': {
+                fontSize: theme.size(2),
+                lineHeight: theme.size(5),  
+              }
             },
           }}
         >
-          <ContactForm />
-        </div>
-        {subsections.map(sub =>
-          <Subsection
-            key={sub.heading}
-            heading={sub.heading}
-          >
-            {sub.body}
-          </Subsection>
-        )}
-      </section>
-    </Container>
+          {body}
+        </Markdown>
+      )}
+    </div>
+    <section
+      css={{
+        display: 'flex',
+        flexDirection: 'column-reverse',
+        [theme.mq('md')]: {
+          flexDirection: 'row',
+        },
+      }}
+    >
+      <div
+        css={{
+          boxSizing: 'border-box',
+          flexShrink: 0,
+          maxWidth: theme.size(21),
+          width: '100%',
+          [theme.mq('md')]: {
+            paddingRight: '6%',
+            width: '40%',
+          },
+          [theme.mq('lg')]: {
+            width: '60%',
+          },
+        }}
+      >
+        <ContactForm />
+      </div>
+      {subsections.map(sub =>
+        <Subsection
+          key={sub.heading}
+          heading={sub.heading}
+        >
+          {sub.body}
+        </Subsection>
+      )}
+    </section>
   </ThemeProvider>
 );
 
 ContactPageTemplate.propTypes = {
+  body: PropTypes.string,
   heading: PropTypes.string.isRequired,
   subsections: PropTypes.array.isRequired,
   isPreview: PropTypes.bool,
@@ -92,6 +107,9 @@ const ContactPage = () => (
                   body
                 }
               }
+              excerpt(
+                format: PLAIN
+              )
             }
           }
         }
@@ -99,14 +117,12 @@ const ContactPage = () => (
     `}
     render={data => {
       const { edges } = data.allMarkdownRemark;
-      const { frontmatter } = edges[0].node;
+      const { excerpt: body, frontmatter } = edges[0].node;
       const {
         heading,
         subsections,
-        body,
       } = frontmatter;
 
-      console.log(edges, 'edges');
       return (
         <ContactPageTemplate
           body={body}

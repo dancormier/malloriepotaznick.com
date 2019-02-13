@@ -9,7 +9,7 @@ import Navbar from '../templates/_navbar'
 import Superbar from '../templates/_superbar'
 import './Utility/all.sass'
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ children, altBG }) => (
   <StaticQuery
     query={graphql`
       query HeadingQuery {
@@ -52,6 +52,8 @@ const TemplateWrapper = ({ children }) => (
           </Helmet>
           <ThemeProvider theme={theme}>
             <div css={{
+              backgroundColor: altBG && theme.color('gray-ll'),
+              color: theme.color('primary'),
               fontFamily: theme.font('serif'),
               overflow: 'hidden',
             }}>

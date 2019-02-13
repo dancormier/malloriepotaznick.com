@@ -47,7 +47,6 @@ const Hero = ({
       id={context}
       css={{
         backgroundColor: altBG && theme.color('gray-ll'),
-        color: theme.color('primary'),
         position: 'relative',
         '&:after': {
           backgroundImage: bgImage && `url(${bgImage})`,
@@ -138,21 +137,31 @@ const Hero = ({
             {children && (
               <div
                 css={isFeatured ? {
-                  fontSize: theme.size(2),
-                  lineHeight: theme.size(4),
                   marginBottom: theme.size(6),
+                  'h3': {
+                    fontSize: theme.size(2),
+                    fontWeight: 500,
+                    lineHeight: theme.size(4),
+                  },
                   [theme.mq('sm')]: {
-                    fontSize: theme.size(4),
-                    lineHeight: theme.size(6),
+                    'h3': {
+                      fontSize: theme.size(4),
+                      fontWeight: 500,
+                      lineHeight: theme.size(6),
+                    },
                   },
                 } : {
-                  fontSize: theme.size(1),
-                  lineHeight: theme.size(3),
                   marginBottom: theme.size(4),
+                  'p': {
+                    fontSize: theme.size(1),
+                    lineHeight: theme.size(3),  
+                  },
                   [theme.mq('sm')]: {
-                    fontSize: theme.size(2),
-                    lineHeight: theme.size(4),
                     marginBottom: theme.size(8),
+                    'p': {
+                      fontSize: theme.size(2),
+                      lineHeight: theme.size(5),  
+                    }
                   },
                 }}
               >

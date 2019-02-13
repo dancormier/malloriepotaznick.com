@@ -15,20 +15,22 @@ const Subsection = ({
       ...customCSS,
     }}
   >
-    <Heading
-      Tag='h4'
-    >
+    <Heading Tag='h4'>
       {heading}
     </Heading>
     <div
       css={{
-        fontSize: theme.size(1),
-        lineHeight: theme.size(3),
         marginBottom: theme.size(6),
+        'p': {
+          fontSize: theme.size(1),
+          lineHeight: theme.size(3),
+        },
         [theme.mq('sm')]: {
-          fontSize: theme.size(2),
-          lineHeight: theme.size(4),
           marginBottom: theme.size(8),
+          'p': {
+            fontSize: theme.size(2),
+            lineHeight: theme.size(5),
+          },
         },
       }}
     >

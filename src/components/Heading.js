@@ -22,7 +22,7 @@ const style = (tag) => {
       return {
         fontSize: theme.size(5),
         fontWeight: 700,
-        marginBottom: theme.size(6),
+        marginBottom: theme.size(4),
         '&:after': {
           background: theme.color('accent'),
           content: '""',

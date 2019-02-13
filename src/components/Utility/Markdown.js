@@ -8,8 +8,8 @@ const converter = new showdown.Converter({tables: true});
 converter.setOption('noHeaderId', true);
 
 const Markdown = ({
-  customCSS,
   children,
+  customCSS,
 }) => (
   <div
     className="markdown-body"
