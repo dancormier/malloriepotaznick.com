@@ -9,13 +9,14 @@ const style = (tag) => {
       return {
         fontSize: theme.size(5),
         fontWeight: 700,
-        marginBottom: theme.size(2),
+        marginBottom: theme.size(4),
         [theme.mq('sm')]: {
           fontSize: theme.size(7),
           fontWeight: 400,
         },
         [theme.mq('lg')]: {
           fontSize: theme.size(8),
+          marginBottom: theme.size(8),
         },
       }
     case 'h3':

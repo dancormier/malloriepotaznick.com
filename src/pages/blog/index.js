@@ -1,7 +1,14 @@
 import React from 'react'
+/** @jsx jsx */
+import { jsx } from '@emotion/core'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import { ThemeProvider } from 'emotion-theming'
+import theme from '../../components/Utility/theme'
 import Layout from '../../components/Layout'
+import Button from '../../components/Button'
+import Container from '../../components/Container';
+import Heading from '../../components/Heading'
 
 export default class BlogPage extends React.Component {
   render() {
@@ -9,39 +16,65 @@ export default class BlogPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-            </div>
-            {posts
-              .map(({ node: post }) => (
+      <ThemeProvider theme={theme}>
+        <Layout>
+          <Container>
+            <Heading Tag='h2'>
+              Latest Blog Posts
+            </Heading>
+            <div>
+              {posts.map(({ node: post }) => (
                 <div
-                  className="content"
-                  style={{ border: '1px solid #333', padding: '2em 4em' }}
                   key={post.id}
+                  css={{
+                    paddingBottom: theme.size(11),
+                    '&:last-child': {
+                      paddingBottom: 0,
+                    },
+                  }}
                 >
-                  <p>
-                    <Link className="has-text-primary" to={post.fields.slug}>
+                  <Heading Tag="h4">
+                    <Link
+                      css={{
+                        color: theme.color('accent'),
+                      }}
+                      to={post.fields.slug}
+                    >
                       {post.frontmatter.title}
                     </Link>
-                    <span> &bull; </span>
-                    <small>{post.frontmatter.date}</small>
-                  </p>
-                  <p>
+                  </Heading>
+                  <div
+                    css={{
+                      color: theme.color('gray'),
+                      fontSize: theme.size(0),
+                      marginBottom: theme.size(2),
+                    }}
+                  >
+                    {post.frontmatter.date}
+                  </div>
+                  <div
+                    css={{
+                      fontSize: theme.size(2),
+                      lineHeight: theme.size(4),
+                      marginBottom: theme.size(2),
+                    }}
+                  >
                     {post.excerpt}
-                    <br />
-                    <br />
-                    <Link className="button is-small" to={post.fields.slug}>
-                      Keep Reading →
-                    </Link>
-                  </p>
+                  </div>
+                  <Link
+                    css={{
+                      color: theme.color('accent'),
+                    }}
+                    to={post.fields.slug}
+                  >
+                    Read more →
+                  </Link>
                 </div>
               ))}
-          </div>
-        </section>
-      </Layout>
+            </div>
+          </Container>
+        </Layout>
+      </ThemeProvider>
     )
   }
 }

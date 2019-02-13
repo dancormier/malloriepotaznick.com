@@ -171,7 +171,7 @@ export const NavbarTemplate = class extends React.Component {
             position: 'relative',
             [theme.mq('lg')]: {
               paddingTop: theme.size(8),
-              paddingBottom: theme.size(10),
+              paddingBottom: theme.size(9),
             },
           }}
         >

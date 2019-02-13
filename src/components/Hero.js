@@ -45,7 +45,6 @@ const Hero = ({
       id={context}
       css={{
         backgroundColor: altBG && theme.color('gray-ll'),
-        paddingBottom: theme.size(2),
         position: 'relative',
         '&:after': {
           backgroundImage: bgImage && `url(${bgImage})`,
@@ -64,7 +63,6 @@ const Hero = ({
         [theme.mq('lg')]: {
           '&:after': {
               backgroundImage: bgImage && `url(${isFeatured ? '' : bgImage})`,
-              paddingBottom: theme.size(0),
             },
         },
         ...customCSS,
@@ -72,17 +70,25 @@ const Hero = ({
     >
       <Container
         customCSS={{
+          paddingBottom: theme.size(4),
           paddingTop: theme.size(isFeatured ? 2 : 8),
           position: 'relative',
           [theme.mq('lg')]: {
             paddingTop: theme.size(isFeatured ? 8 : 11),
-            paddingBottom: theme.size(11),
+            paddingBottom: theme.size(isFeatured ? 12 : 9),
           },
         }}
       >
         {Heading && (
           <Heading
             Tag={isFeatured ? 'h2' : 'h3'}
+            customCSS={isFeatured && {
+              marginBottom: theme.size(2),
+              [theme.mq('lg')]: {
+                fontSize: theme.size(8),
+                marginBottom: theme.size(2),
+              },
+            }}
           >
             {heading}
           </Heading>

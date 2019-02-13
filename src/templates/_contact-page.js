@@ -21,8 +21,10 @@ export const ContactPageTemplate = ({
       css={{
         display: 'flex',
         flexDirection: 'column-reverse',
+        marginTop: theme.size(4),
         [theme.mq('md')]: {
           flexDirection: 'row',
+          marginTop: theme.size(8),
         },
       }}
     >
