@@ -95,7 +95,6 @@ heroes:
       have a spin at some pseudoscience. Wait, that’s something else.
     context: specialties
     heading: Mallorie's Specialties
-    subsections: []
   - body: >-
       ## Have Questions?
 
@@ -108,6 +107,5 @@ heroes:
       the first step towards a happier you.
     context: contact
     heading: Contact Mallorie
-    subsections: []
 ---
 
