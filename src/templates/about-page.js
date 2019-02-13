@@ -1,55 +1,80 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Utility/Content'
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+import { ThemeProvider } from 'emotion-theming';
+import theme from '../components/Utility/theme';
+import Markdown from '../components/Utility/Markdown';
+import Layout from '../components/Layout';
+import Container from '../components/Container';
+import Heading from '../components/Heading';
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
-
-  return (
-    <section>
-      <h2>
+export const AboutPageTemplate = ({
+  title,
+  body,
+  isPreview = false,
+}) => (
+  <ThemeProvider theme={theme}>
+    <div>
+      <Heading Tag='h2'>
         {title}
-      </h2>
-      <PageContent className="content" content={content} />
-    </section>
-  )
-}
+      </Heading>
+    </div>
+    {body && (
+      <Markdown
+        customCSS={{
+          'p': {
+            fontSize: theme.size(1),
+            lineHeight: theme.size(3),
+          },
+          [theme.mq('sm')]: {
+            marginBottom: theme.size(8),
+            'p': {
+              fontSize: theme.size(2),
+              lineHeight: theme.size(5),
+            }
+          },
+        }}
+      >
+        {body}
+      </Markdown>
+    )}
+  </ThemeProvider>
+);
 
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
-}
+  body: PropTypes.string,
+};
 
 const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
 
   return (
-    <Layout>
-      <AboutPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
-      />
+    <Layout altBG={true}>
+      <Container>
+        <AboutPageTemplate
+          title={post.frontmatter.title}
+          body={post.rawMarkdownBody}
+        />
+      </Container>
     </Layout>
-  )
-}
+  );
+};
 
 AboutPage.propTypes = {
   data: PropTypes.object.isRequired,
-}
+};
 
-export default AboutPage
+export default AboutPage;
 
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      html
       frontmatter {
         title
       }
+      rawMarkdownBody
     }
   }
-`
+`;

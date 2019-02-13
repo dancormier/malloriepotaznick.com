@@ -19,6 +19,10 @@ const Markdown = ({
         'a': {
           color: theme.color('accent'),
         },
+        'h2': {
+          color: theme.color('accent'),
+          fontWeight: 500,
+        },
         ...customCSS,
       }
     }}

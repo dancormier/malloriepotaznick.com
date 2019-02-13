@@ -35,7 +35,11 @@ CMS.registerPreviewTemplate('superbar', props => (
 ));
 
 // Pages
-CMS.registerPreviewTemplate('about', AboutPagePreview);
+CMS.registerPreviewTemplate('about', props => (
+  <CSSInjector>
+    <AboutPagePreview {...props} />
+  </CSSInjector>
+));
 CMS.registerPreviewTemplate('blog', BlogPostPreview);
 CMS.registerPreviewTemplate('contact', props => (
   <CSSInjector>

@@ -3,9 +3,8 @@ import { jsx } from '@emotion/core'
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types'
 import { ThemeProvider } from 'emotion-theming'
-import Markdown from '../components/Utility/Markdown'
 import theme from '../components/Utility/theme'
-import Container from '../components/Container'
+import Markdown from '../components/Utility/Markdown'
 import ContactForm from '../components/Contact-form'
 import Heading from '../components/Heading'
 import Subsection from '../components/Subsection'
@@ -30,13 +29,13 @@ export const ContactPageTemplate = ({
           customCSS={{
             'p': {
               fontSize: theme.size(1),
-              lineHeight: theme.size(3),  
+              lineHeight: theme.size(3),
             },
             [theme.mq('sm')]: {
               marginBottom: theme.size(8),
               'p': {
                 fontSize: theme.size(2),
-                lineHeight: theme.size(5),  
+                lineHeight: theme.size(5),
               }
             },
           }}
@@ -107,9 +106,7 @@ const ContactPage = () => (
                   body
                 }
               }
-              excerpt(
-                format: PLAIN
-              )
+              rawMarkdownBody
             }
           }
         }
@@ -117,7 +114,7 @@ const ContactPage = () => (
     `}
     render={data => {
       const { edges } = data.allMarkdownRemark;
-      const { excerpt: body, frontmatter } = edges[0].node;
+      const { rawMarkdownBody: body, frontmatter } = edges[0].node;
       const {
         heading,
         subsections,
