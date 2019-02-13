@@ -3,6 +3,7 @@
 import { jsx } from '@emotion/core'
 import theme from './Utility/theme'
 import Button from './Button'
+import ContactForm from './Contact-form'
 import Container from './Container'
 import Heading from './Heading'
 import Markdown from './Utility/Markdown'
@@ -22,8 +23,9 @@ const Hero = ({
   imageAlign,
   subsections,
 }) => {
-  const isFeatured = context === 'featured';
   const isAbout = context === 'about';
+  const isContact = context === 'contact';
+  const isFeatured = context === 'featured';
 
   const flexArrange = (align) => {
     switch(align) {
@@ -42,8 +44,9 @@ const Hero = ({
 
   return (
     <div
+      id={context}
       css={{
-        backgroundColor: altBG && '#f9f9f9',
+        backgroundColor: altBG && theme.color('gray-ll'),
         color: theme.color('primary'),
         position: 'relative',
         '&:after': {
@@ -97,12 +100,41 @@ const Hero = ({
         >
           <div
             css={{
+              display: isContact && 'flex',
+              flexDirection: isContact && 'column-reverse',
               zIndex: 1,
+              [theme.mq('md')]: {
+                flexDirection: isContact && 'row',
+              },
               [theme.mq('lg')]: {
                 width: isFeatured ? '70%' : '100%',
               },
             }}
           >
+            {isContact && (
+              <div
+                css={{
+                  boxSizing: 'border-box',
+                  flexShrink: 0,
+                  maxWidth: theme.size(21),
+                  width: '100%',
+                  [theme.mq('md')]: {
+                    paddingRight: '6%',
+                    width: '40%',
+                  },
+                  [theme.mq('lg')]: {
+                    width: '60%',
+                  },
+                }}
+              >
+                <ContactForm
+                  action={`#${context}`}
+                  onClick={() => {
+                    console.log('Contact form submitted');
+                  }}
+                />
+              </div>
+            )}
             {children && (
               <div
                 css={isFeatured ? {

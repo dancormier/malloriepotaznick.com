@@ -16,8 +16,9 @@ const style = {
   textAlign: 'center',
   textDecoration: 'none',
   textTransform: 'uppercase',
-  [theme.mq('sm')]: {
+  [theme.mq('xs')]: {
     display: 'inline-block',
+    width: 'auto',
   },
 };
 
@@ -25,13 +26,26 @@ const Button = ({
   customCSS,
   onClick,
   children,
+  type,
   url,
-}) => (
-  <Link
-    to={url}
-    title={children || 'Book a session'}
+}) => type ? (
+  <button
+    css={{
+      ...style,
+      ...customCSS,
+      width: '100%',
+    }}
     onClick={onClick}
+    type={type}
+  >
+    {children}
+  </button>
+) : (
+  <Link
     css={{...style, ...customCSS}}
+    onClick={onClick}
+    title={children || 'Book a session'}
+    to={url}
   >
     {children || 'Book a session'}
   </Link>
