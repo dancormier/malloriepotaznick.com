@@ -55,7 +55,7 @@ const fonts = {
 };
 
 const breakPoints = {
-  xs: '@media(min-width:350px)',
+  xs: '@media(min-width:400px)',
   sm: '@media(min-width:700px)',
   md: '@media(min-width:900px)',
   lg: '@media(min-width:1200px)',
