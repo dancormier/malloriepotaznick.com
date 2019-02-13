@@ -135,16 +135,6 @@ collections:
               fields:
               [
                 {label: "Heading", name: "heading", widget: "string"},
-                {
-                  label: "Subsections",
-                  name: "subsections",
-                  required: false,
-                  widget: "list",
-                  fields: [
-                    {label: "Heading", name: "heading", widget: "string"},
-                    {label: "Body", name: "body", widget: "markdown"},
-                  ]
-                },
                 {label: "Body", name: "body", required: false, widget: "markdown"},
                 {
                   label: "Button",
