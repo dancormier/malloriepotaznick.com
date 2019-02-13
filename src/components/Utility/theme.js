@@ -37,12 +37,16 @@ const modularscale = (value, ratio = 'golden') => {
 const getFromScale = x => modularscale(x - 1, 'minor third');
 
 const colors = {
-  accent: '#ea3934',
-  primary: '#444444',
-  white: '#ffffff',
-  whiteToTransparent: 'linear-gradient(#ffffff, transparent)',
-  // gray: '#999999', Add some gray in here
-  black: '#000000',
+  'accent': '#ea3934',
+  'primary': '#444444',
+  'whiteToTransparent': 'linear-gradient(#ffffff, transparent)',
+  'white': '#ffffff',
+  'gray-ll': '#f9f9f9',
+  'gray-l': '#cccccc',
+  'gray': '#999999',
+  'gray-d': '#666666',
+  'gray-dd': '#222222',
+  'black': '#000000',
 };
 
 const fonts = {
