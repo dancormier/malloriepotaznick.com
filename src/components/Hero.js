@@ -7,7 +7,6 @@ import ContactForm from './Contact-form'
 import Container from './Container'
 import Heading from './Heading'
 import Markdown from './Utility/Markdown'
-import Subsection from './Subsection'
 
 const Hero = ({
   customCSS,
@@ -21,7 +20,6 @@ const Hero = ({
   heading,
   image,
   imageAlign,
-  subsections,
 }) => {
   const isAbout = context === 'about';
   const isContact = context === 'contact';
@@ -73,7 +71,6 @@ const Hero = ({
       <Container
         customCSS={{
           paddingTop: theme.size(isFeatured ? 2 : 8),
-          paddingBottom: theme.size(6),
           position: 'relative',
           [theme.mq('lg')]: {
             paddingTop: theme.size(isFeatured ? 8 : 11),
@@ -157,7 +154,6 @@ const Hero = ({
                     lineHeight: theme.size(3),  
                   },
                   [theme.mq('sm')]: {
-                    marginBottom: theme.size(8),
                     'p': {
                       fontSize: theme.size(2),
                       lineHeight: theme.size(5),  
@@ -169,16 +165,6 @@ const Hero = ({
                   {children}
                 </Markdown>
               </div>
-            )}
-            {subsections && subsections.map(sub => {
-              return (
-                <Subsection
-                  key={sub.heading}
-                  heading={sub.heading}
-                >
-                  {sub.body}
-                </Subsection>
-              )}
             )}
             {buttonText && buttonURL && (
               <Button
