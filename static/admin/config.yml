@@ -104,6 +104,24 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/contact/index.md"
+        label: "Contact"
+        name: "contact"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_contact-page"}
+          - {label: "Heading", name: "heading", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - {
+              label: "Subsections",
+              name: "subsections",
+              widget: "list",
+              fields: [
+                {label: "Heading", name: "heading", widget: "string"},
+                {label: "Body", name: "body", widget: "markdown"},
+              ]
+            }
+
+
       - file: "src/pages/home/index.md"
         label: "Homepage"
         name: "home"
