@@ -68,7 +68,7 @@ const HomePage = () => (
                     align
                     image {
                       childImageSharp {
-                        fixed(width: 1000) {
+                        fixed(width: 1600) {
                           src
                         }
                       }
