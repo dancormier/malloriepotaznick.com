@@ -30,7 +30,7 @@ const Logo = ({ heading, subheading }) => {
           [theme.mq('sm')]: {
             fontSize: theme.size(6),
             marginBottom: theme.size(-5),
-            fontWeight: 400,
+            fontWeight: 500,
           },
         }}
       >
