@@ -107,9 +107,9 @@ const NavMenu = ({ links }) => {
           customCSS={{
             borderTop: '1px solid #eeeeee',
           }}
+          key={l.url}
         >
           <Link
-            key={l.url}
             to={l.url}
             title={l.text}
             css={{

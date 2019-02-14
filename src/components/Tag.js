@@ -8,6 +8,7 @@ import Button from './Button'
 const style = {
   display: 'inline-block',
   fontSize: theme.size(0),
+  marginBottom: theme.size(-2),
   marginRight: theme.size(0),
   padding: theme.size(0),
   paddingLeft: theme.size(0),
