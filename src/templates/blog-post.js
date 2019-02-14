@@ -1,14 +1,13 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import { ThemeProvider } from 'emotion-theming';
 import theme from '../components/Utility/theme';
 import Layout from '../components/Layout'
 import Page from '../components/Page';
-import Button from '../components/Button';
+import Tag from '../components/Tag';
 
 export const BlogPostTemplate = ({
   content,
@@ -42,29 +41,14 @@ export const BlogPostTemplate = ({
           {description}
         </div>
         {tags && tags.length ? (
-          <ul
-            css={{
-              listStyle: 'none',
-            }}
-          >
+          <div>
             {tags.map(tag => (
-              <li key={tag + `tag`} css={{ display: 'inline-block' }}>
-                <Button
-                  customCSS={{
-                    display: 'inline-block',
-                    fontSize: theme.size(0),
-                    marginRight: theme.size(0),
-                    padding: theme.size(0),
-                    paddingLeft: theme.size(0),
-                    paddingRight: theme.size(0),
-                  }}
-                  url={`/tags/${kebabCase(tag)}/`}
-                >
-                  {tag}
-                </Button>
-              </li>
+              <Tag
+                key={tag + `tag`}
+                tag={tag}
+              />
             ))}
-          </ul>
+          </div>
         ) : null}
       </div>
     </Page>

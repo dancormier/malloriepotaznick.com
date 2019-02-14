@@ -2,11 +2,11 @@ import React from 'react'
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import { ThemeProvider } from 'emotion-theming'
 import theme from '../../components/Utility/theme'
 import Layout from '../../components/Layout'
-import Heading from '../../components/Heading'
+import BlogItem from '../../components/Blog-item';
 import Page from '../../components/Page'
 
 export default class BlogPage extends React.Component {
@@ -20,59 +20,14 @@ export default class BlogPage extends React.Component {
           <Page heading="Latest Blog Posts">
             <div>
               {posts.map(({ node: post }) => (
-                <div
+                <BlogItem
                   key={post.id}
-                  css={{
-                    paddingBottom: theme.size(11),
-                    '&:last-child': {
-                      paddingBottom: 0,
-                    },
-                  }}
-                >
-                  <Heading Tag="h4">
-                    <Link
-                      css={{
-                        color: theme.color('accent'),
-                      }}
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                  </Heading>
-                  <div
-                    css={{
-                      color: theme.color('gray'),
-                      fontSize: theme.size(0),
-                      marginBottom: theme.size(1),
-                      [theme.mq('sm')]: {
-                        marginTop: `-${theme.size(0)}`,
-                      },
-                    }}
-                  >
-                    {post.frontmatter.date}
-                  </div>
-                  <div
-                    css={{
-                      fontSize: theme.size(1),
-                      lineHeight: theme.size(3),
-                      marginBottom: theme.size(2),
-                      [theme.mq('sm')]: {
-                        fontSize: theme.size(2),
-                        lineHeight: theme.size(5),
-                      },
-                    }}
-                  >
-                    {post.excerpt}
-                  </div>
-                  <Link
-                    css={{
-                      color: theme.color('accent'),
-                    }}
-                    to={post.fields.slug}
-                  >
-                    Read more →
-                  </Link>
-                </div>
+                  date={post.frontmatter.date}
+                  excerpt={post.excerpt}
+                  id={post.id}
+                  slug={post.fields.slug}
+                  title={post.frontmatter.title}
+                />
               ))}
             </div>
           </Page>
