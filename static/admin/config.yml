@@ -4,7 +4,6 @@ backend:
 
 media_folder: static/img
 public_folder: /img
-publish_mode: editorial_workflow
 
 collections:
   - name: "blog"
@@ -189,6 +188,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "custom-page"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "created-page"}
+      - {label: "Name", name: "title", widget: "string", required: true}
+      - {label: "Heading", name: "heading", widget: "string", required: true}
+      - {label: "Body", name: "body", widget: "markdown", required: true}
