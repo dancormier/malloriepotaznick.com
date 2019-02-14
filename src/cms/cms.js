@@ -13,6 +13,7 @@ import SuperbarPreview from './preview-templates/SuperbarPreview';
 import AboutPagePreview from './preview-templates/AboutPagePreview';
 import BlogPostPreview from './preview-templates/BlogPostPreview';
 import ContactPagePreview from './preview-templates/ContactPagePreview';
+import FaqPagePreview from './preview-templates/FaqPagePreview';
 import HomePagePreview from './preview-templates/HomePagePreview';
 
 CMS.registerWidget("color", ColorWidget.Control);
@@ -44,6 +45,11 @@ CMS.registerPreviewTemplate('blog', BlogPostPreview);
 CMS.registerPreviewTemplate('contact', props => (
   <CSSInjector>
     <ContactPagePreview {...props} />
+  </CSSInjector>
+));
+CMS.registerPreviewTemplate('faq', props => (
+  <CSSInjector>
+    <FaqPagePreview {...props} />
   </CSSInjector>
 ));
 CMS.registerPreviewTemplate('home', props => (
