@@ -48,13 +48,13 @@ const SuperbarItem = ({ item }) => {
   );
 }
 
-export const SuperbarTemplate = ({ items }) => (
+export const SuperbarTemplate = ({ items, isPreview = false }) => (
   <ThemeProvider theme={theme}>
     <div
       css={{
         backgroundColor: theme.color('accent'),
         color: theme.color('white'),
-        display: 'none',
+        display: !isPreview && 'none',
         [theme.mq('md')]: {
           display: 'block',
         },
