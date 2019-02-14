@@ -1,6 +1,7 @@
 ---
-templateKey: custom-page
+templateKey: created-page
 title: Custom Page
+slug: /test
 ---
 ## Positivity
 
