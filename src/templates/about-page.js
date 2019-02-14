@@ -29,7 +29,7 @@ const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
-    <Layout altBG={true}>
+    <Layout>
       <AboutPageTemplate
         title={post.frontmatter.title}
         body={post.rawMarkdownBody}

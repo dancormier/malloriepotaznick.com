@@ -29,7 +29,7 @@ const FaqPage = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
-    <Layout altBG={true}>
+    <Layout>
       <FaqPageTemplate
         title={post.frontmatter.title}
         body={post.rawMarkdownBody}
