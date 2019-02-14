@@ -26,6 +26,7 @@ const SuperbarItem = ({ item }) => {
     align,
     icon,
     text,
+    url,
   } = item;
 
   return (
@@ -40,9 +41,24 @@ const SuperbarItem = ({ item }) => {
         }}
       >
         {icons(icon)}
-        <span css={{ marginLeft: theme.size(-1) }}>
-          {text}
-        </span>
+        {url ? (
+          <a
+            css={{
+              color: theme.color('white'),
+              textDecoration: 'none',
+              marginLeft: theme.size(-1),
+            }}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {text}
+          </a>
+        ) : (
+          <span css={{ marginLeft: theme.size(-1) }}>
+            {text}
+          </span>
+        )}
       </div>
     </ThemeProvider>
   );
@@ -104,6 +120,7 @@ const Superbar = () => (
                   align
                   icon
                   text
+                  url
                 }
               }
             }
