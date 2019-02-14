@@ -1,6 +1,7 @@
 ---
-templateKey: about-page
-title: About Mallorie
+templateKey: created-page
+title: about
+heading: About Mallorie
 ---
 ## Positivity
 

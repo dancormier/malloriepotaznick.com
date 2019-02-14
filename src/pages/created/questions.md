@@ -1,6 +1,7 @@
 ---
-templateKey: faq-page
-title: Frequently Asked Questions
+templateKey: created-page
+title: questions
+heading: Frequently Asked Questions
 ---
 ## Question #1
 
