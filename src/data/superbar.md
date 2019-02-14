@@ -1,14 +1,17 @@
 ---
 templateKey: _superbar
 items:
-  - text: 9732 W Sample Rd, Coral Springs, FL 33065
+  - align: left
     icon: map
-    align: left
-  - text: malloriepotaznick@gmail.com
+    text: '9732 W Sample Rd, Coral Springs, FL 33065'
+    url: 'https://goo.gl/maps/xz1PZA494Tz'
+  - align: right
     icon: envelope
-    align: right
-  - text: (561) 536-3980‬
+    text: malloriepotaznick@gmail.com
+    url: 'mailto:malloriepotaznick@gmail.com'
+  - align: right
     icon: phone
-    align: right
+    text: (561) 536-3980‬
+    url: 'tel:1-561-536-3980'
 ---
 
