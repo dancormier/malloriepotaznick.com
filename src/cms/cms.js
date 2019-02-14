@@ -10,10 +10,9 @@ import NavbarPreview from './preview-templates/NavbarPreview';
 import SuperbarPreview from './preview-templates/SuperbarPreview';
 
 // Pages
-import AboutPagePreview from './preview-templates/AboutPagePreview';
 import BlogPostPreview from './preview-templates/BlogPostPreview';
 import ContactPagePreview from './preview-templates/ContactPagePreview';
-import FaqPagePreview from './preview-templates/FaqPagePreview';
+import CreatedPagePreview from './preview-templates/CreatedPagePreview';
 import HomePagePreview from './preview-templates/HomePagePreview';
 
 CMS.registerWidget("color", ColorWidget.Control);
@@ -36,20 +35,19 @@ CMS.registerPreviewTemplate('superbar', props => (
 ));
 
 // Pages
-CMS.registerPreviewTemplate('about', props => (
+CMS.registerPreviewTemplate('blog', props => (
   <CSSInjector>
-    <AboutPagePreview {...props} />
+    <BlogPostPreview {...props} />
   </CSSInjector>
 ));
-CMS.registerPreviewTemplate('blog', BlogPostPreview);
 CMS.registerPreviewTemplate('contact', props => (
   <CSSInjector>
     <ContactPagePreview {...props} />
   </CSSInjector>
 ));
-CMS.registerPreviewTemplate('faq', props => (
+CMS.registerPreviewTemplate('pages', props => (
   <CSSInjector>
-    <FaqPagePreview {...props} />
+    <CreatedPagePreview {...props} />
   </CSSInjector>
 ));
 CMS.registerPreviewTemplate('home', props => (

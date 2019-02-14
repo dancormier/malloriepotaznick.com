@@ -10,7 +10,7 @@ import Page from '../components/Page';
 import Tag from '../components/Tag';
 
 export const BlogPostTemplate = ({
-  content,
+  body,
   description,
   tags,
   title,
@@ -19,7 +19,7 @@ export const BlogPostTemplate = ({
   <ThemeProvider theme={theme}>
     {helmet || ''}
     <Page
-      body={content}
+      body={body}
       heading={title}
     >
       <div
@@ -56,7 +56,7 @@ export const BlogPostTemplate = ({
 );
 
 BlogPostTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
+  body: PropTypes.node.isRequired,
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
@@ -68,7 +68,7 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <BlogPostTemplate
-        content={post.html}
+        body={post.rawMarkdownBody}
         description={post.frontmatter.description}
         helmet={
           <Helmet
@@ -97,7 +97,7 @@ export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
-      html
+      rawMarkdownBody
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
