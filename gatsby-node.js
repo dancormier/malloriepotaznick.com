@@ -42,10 +42,11 @@ exports.createPages = ({ actions, graphql }) => {
       const shouldRender = templateKey && edge.node.frontmatter.templateKey.charAt(0) !== '_';
 
       if (shouldRender) {
-        console.log(`Create path: ${edge.node.fields.slug}`);
+        const slug = edge.node.fields.slug.replace('/created', '')
+        console.log(`Create path: ${slug}`);
 
         createPage({
-          path: edge.node.fields.slug,
+          path: slug,
           tags: edge.node.frontmatter.tags,
           component: path.resolve(
             `src/templates/${String(edge.node.frontmatter.templateKey)}.js`

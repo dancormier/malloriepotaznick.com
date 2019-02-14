@@ -20,82 +20,9 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
-  - name: "data"
-    label: "Pieces"
-    files:
-      - file: "src/data/footer.md"
-        label: "Footer"
-        name: "footer"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_footer"}
-          - {
-              label: "Items",
-              name: "items",
-              required: true,
-              widget: "list",
-              fields:
-              [
-                {label: "Text", name: "text", widget: "string", required: true},
-                {
-                  label: "Alignment",
-                  name: "align",
-                  widget: "select",
-                  options: ["left", "right"]
-                },
-                {label: "URL", name: "url", widget: "string"}
-              ]
-            }
-      - file: "src/data/navbar.md"
-        label: "Navbar"
-        name: "navbar"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_navbar"}
-          - {label: "Main Heading", name: "heading", widget: "string", required: true}
-          - {label: "Subheading", name: "subheading", widget: "string", required: true}
-          - {
-              label: "Links",
-              name: "links",
-              required: true,
-              widget: "list",
-              fields:
-              [
-                {label: "Text", name: "text", widget: "string", required: true},
-                {label: "URL", name: "url", widget: "string", required: true},
-                {label: "Apply Button Style", name: "button", widget: "boolean", default: false},
-                {label: "Show", name: "enabled", widget: "boolean", default: true}
-              ]
-            }
-      - file: "src/data/superbar.md"
-        label: "Superbar"
-        name: "superbar"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_superbar"}
-          - {
-              label: "Items",
-              name: "items",
-              required: true,
-              widget: "list",
-              fields:
-              [
-                {label: "Text", name: "text", widget: "string", required: true},
-                {
-                  label: "Icon",
-                  name: "icon",
-                  widget: "select",
-                  options: ["envelope", "map", "phone"]
-                },
-                {
-                  label: "Alignment",
-                  name: "align",
-                  widget: "select",
-                  options: ["left", "right"]
-                },
-                {label: "URL", name: "url", widget: "string"}
-              ]
-            }
 
-  - name: "pages"
-    label: "Pages"
+  - name: "custom-pages"
+    label: "Custom Pages"
     files:
       - file: "src/pages/about/index.md"
         label: "About"
@@ -181,3 +108,87 @@ collections:
                 },
               ]
             }
+
+  - name: "data"
+    label: "Pieces"
+    files:
+      - file: "src/data/footer.md"
+        label: "Footer"
+        name: "footer"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_footer"}
+          - {
+              label: "Items",
+              name: "items",
+              required: true,
+              widget: "list",
+              fields:
+              [
+                {label: "Text", name: "text", widget: "string", required: true},
+                {
+                  label: "Alignment",
+                  name: "align",
+                  widget: "select",
+                  options: ["left", "right"]
+                },
+                {label: "URL", name: "url", widget: "string"}
+              ]
+            }
+      - file: "src/data/navbar.md"
+        label: "Navbar"
+        name: "navbar"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_navbar"}
+          - {label: "Main Heading", name: "heading", widget: "string", required: true}
+          - {label: "Subheading", name: "subheading", widget: "string", required: true}
+          - {
+              label: "Links",
+              name: "links",
+              required: true,
+              widget: "list",
+              fields:
+              [
+                {label: "Text", name: "text", widget: "string", required: true},
+                {label: "URL", name: "url", widget: "string", required: true},
+                {label: "Apply Button Style", name: "button", widget: "boolean", default: false},
+                {label: "Show", name: "enabled", widget: "boolean", default: true}
+              ]
+            }
+      - file: "src/data/superbar.md"
+        label: "Superbar"
+        name: "superbar"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_superbar"}
+          - {
+              label: "Items",
+              name: "items",
+              required: true,
+              widget: "list",
+              fields:
+              [
+                {label: "Text", name: "text", widget: "string", required: true},
+                {
+                  label: "Icon",
+                  name: "icon",
+                  widget: "select",
+                  options: ["envelope", "map", "phone"]
+                },
+                {
+                  label: "Alignment",
+                  name: "align",
+                  widget: "select",
+                  options: ["left", "right"]
+                },
+                {label: "URL", name: "url", widget: "string"}
+              ]
+            }
+
+  - name: "pages"
+    label: "Pages"
+    folder: "src/pages/created"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "custom-page"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
