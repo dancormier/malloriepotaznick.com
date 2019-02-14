@@ -5,13 +5,13 @@ heroes:
       align: contain
       image: /img/bg-flower-feature.jpg
     body: >-
-      ### There is help. Therapy will provide you with the tools to make you the
-      best you. Also, there’s other benefits.
+      ### _“Let go of who you think you’re supposed to be; embrace who you are.”
+      - Brené Brown_
     button:
       text: Book a session
       url: '#'
     context: featured
-    heading: Treatment begins with you
+    heading: Change is possible
   - body: >-
       Hi, I’m Mallorie. For the last few years I’ve worked with adolescents,
       young adults, adults and couples to transform their anxiety, frustration,
