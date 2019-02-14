@@ -18,7 +18,7 @@ export default class BlogPage extends React.Component {
       <ThemeProvider theme={theme}>
         <Layout>
           <Page heading="Latest Blog Posts">
-            <div>
+            <div css={{ marginTop: theme.size(4) }}>
               {posts.map(({ node: post }) => (
                 <BlogItem
                   key={post.id}

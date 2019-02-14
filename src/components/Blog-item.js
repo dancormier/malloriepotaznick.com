@@ -6,7 +6,7 @@ import theme from './Utility/theme'
 import Heading from './Heading'
 
 const style = {
-  paddingBottom: theme.size(11),
+  paddingBottom: theme.size(8),
   '&:last-child': {
     paddingBottom: 0,
   },
@@ -25,10 +25,28 @@ const BlogItem = ({
     key={id}
     css={{ ...style, ...customCSS }}
   >
-    <Heading Tag="h4">
+    <div
+      css={{
+        color: theme.color('gray'),
+        fontSize: theme.size(0),
+        marginBottom: theme.size(0),
+      }}
+    >
+      {date}
+    </div>
+    <Heading
+      Tag="h4"
+      customCSS={{
+        marginBottom: theme.size(2),
+      }}
+    >
       <Link
         css={{
           color: theme.color('accent'),
+          textDecoration: 'none',
+          '&:hover': {
+            textDecoration: 'underline',
+          }
         }}
         onClick={onClick}
         to={slug}
@@ -36,18 +54,6 @@ const BlogItem = ({
         {title}
       </Link>
     </Heading>
-    <div
-      css={{
-        color: theme.color('gray'),
-        fontSize: theme.size(0),
-        marginBottom: theme.size(1),
-        [theme.mq('sm')]: {
-          marginTop: `-${theme.size(0)}`,
-        },
-      }}
-    >
-      {date}
-    </div>
     <div
       css={{
         fontSize: theme.size(1),

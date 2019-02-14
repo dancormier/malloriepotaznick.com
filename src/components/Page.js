@@ -20,7 +20,12 @@ const Page = ({
   heading,
 }) => (
   <Container customCSS={{...style, ...customCSS}}>
-    <Heading Tag='h2'>
+    <Heading
+      Tag='h2'
+      customCSS={{
+        marginBottom: theme.size(6),
+      }}
+    >
       {heading}
     </Heading>
     {children}
