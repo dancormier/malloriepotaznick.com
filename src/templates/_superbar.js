@@ -3,6 +3,7 @@ import { jsx } from '@emotion/core';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'emotion-theming';
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 import Container from '../components/Container';
 import theme from '../components/Utility/theme';
@@ -42,7 +43,7 @@ const SuperbarItem = ({ item }) => {
       >
         {icons(icon)}
         {url ? (
-          <a
+          <OutboundLink
             css={{
               color: theme.color('white'),
               textDecoration: 'none',
@@ -53,7 +54,7 @@ const SuperbarItem = ({ item }) => {
             rel="noopener noreferrer"
           >
             {text}
-          </a>
+          </OutboundLink>
         ) : (
           <span css={{ marginLeft: theme.size(-1) }}>
             {text}
