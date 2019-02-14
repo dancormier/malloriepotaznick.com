@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Mallorie Potaznick, LMHC',
-    description: 'Coral Spring, FL therapist specialializing in anxiety and eating disorders',
+    description: 'Coral Spring, FL licensed mental health counselor specialializing in anxiety and eating disorders.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
