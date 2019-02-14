@@ -1,54 +1,78 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
+import { ThemeProvider } from 'emotion-theming';
+import theme from '../components/Utility/theme';
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Utility/Content'
+import Page from '../components/Page';
+import Button from '../components/Button';
 
 export const BlogPostTemplate = ({
   content,
-  contentComponent,
   description,
   tags,
   title,
   helmet,
-}) => {
-  const PostContent = contentComponent || Content
-
-  return (
-    <section className="section">
-      {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-          </div>
+}) => (
+  <ThemeProvider theme={theme}>
+    {helmet || ''}
+    <Page
+      body={content}
+      heading={title}
+    >
+      <div
+        css={{
+          marginBottom: theme.size(4),
+        }}
+      >
+        <div
+          css={{
+            background: theme.color('gray-ll'),
+            color: theme.color('gray-d'),
+            fontSize: theme.size(2),
+            fontStyle: 'italic',
+            lineHeight: theme.size(4),
+            marginBottom: theme.size(2),
+            padding: theme.size(2),
+          }}
+        >
+          {description}
         </div>
+        {tags && tags.length ? (
+          <ul
+            css={{
+              listStyle: 'none',
+            }}
+          >
+            {tags.map(tag => (
+              <li key={tag + `tag`} css={{ display: 'inline-block' }}>
+                <Button
+                  customCSS={{
+                    display: 'inline-block',
+                    fontSize: theme.size(0),
+                    marginRight: theme.size(0),
+                    padding: theme.size(0),
+                    paddingLeft: theme.size(0),
+                    paddingRight: theme.size(0),
+                  }}
+                  url={`/tags/${kebabCase(tag)}/`}
+                >
+                  {tag}
+                </Button>
+              </li>
+            ))}
+          </ul>
+        ) : null}
       </div>
-    </section>
-  )
-}
+    </Page>
+  </ThemeProvider>
+);
 
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
@@ -61,7 +85,6 @@ const BlogPost = ({ data }) => {
     <Layout>
       <BlogPostTemplate
         content={post.html}
-        contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
           <Helmet

@@ -6,7 +6,7 @@ import { ThemeProvider } from 'emotion-theming'
 import theme from '../components/Utility/theme'
 import Markdown from '../components/Utility/Markdown'
 import ContactForm from '../components/Contact-form'
-import Heading from '../components/Heading'
+import Page from '../components/Page'
 
 export const ContactPageTemplate = ({
   body,
@@ -14,58 +14,57 @@ export const ContactPageTemplate = ({
   isPreview = false,
 }) => (
   <ThemeProvider theme={theme}>
-    <Heading Tag='h2'>
-      {heading}
-    </Heading>
-    <section
-      css={{
-        display: 'flex',
-        flexDirection: 'column-reverse',
-        marginTop: theme.size(4),
-        [theme.mq('md')]: {
-          flexDirection: 'row',
-          marginTop: theme.size(8),
-        },
-      }}
-    >
-      <div
+    <Page heading={heading}>
+      <section
         css={{
-          boxSizing: 'border-box',
-          flexShrink: 0,
-          maxWidth: theme.size(21),
-          width: '100%',
+          display: 'flex',
+          flexDirection: 'column-reverse',
+          paddingBottom: theme.size(4),
           [theme.mq('md')]: {
-            paddingRight: '6%',
-            width: '40%',
-          },
-          [theme.mq('lg')]: {
-            width: '60%',
+            flexDirection: 'row',
+            paddingBottom: theme.size(9),
           },
         }}
       >
-        <ContactForm />
-      </div>
-      {body && (
-        <Markdown
-          customCSS={{
-            marginBottom: theme.size(4),
-            'p': {
-              fontSize: theme.size(1),
-              lineHeight: theme.size(3),
+        <div
+          css={{
+            boxSizing: 'border-box',
+            flexShrink: 0,
+            maxWidth: theme.size(21),
+            width: '100%',
+            [theme.mq('md')]: {
+              paddingRight: '6%',
+              width: '40%',
             },
-            [theme.mq('sm')]: {
-              marginBottom: theme.size(8),
-              'p': {
-                fontSize: theme.size(2),
-                lineHeight: theme.size(5),
-              }
+            [theme.mq('lg')]: {
+              width: '60%',
             },
           }}
         >
-          {body}
-        </Markdown>
-      )}
-    </section>
+          <ContactForm />
+        </div>
+        {body && (
+          <Markdown
+            customCSS={{
+              marginBottom: theme.size(4),
+              'p': {
+                fontSize: theme.size(1),
+                lineHeight: theme.size(3),
+              },
+              [theme.mq('sm')]: {
+                marginBottom: theme.size(8),
+                'p': {
+                  fontSize: theme.size(2),
+                  lineHeight: theme.size(5),
+                }
+              },
+            }}
+          >
+            {body}
+          </Markdown>
+        )}
+      </section>
+    </Page>
   </ThemeProvider>
 );
 

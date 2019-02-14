@@ -1,14 +1,13 @@
 import React from 'react'
 /** @jsx jsx */
-import { jsx } from '@emotion/core'
+import { jsx } from '@emotion/core';
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import { ThemeProvider } from 'emotion-theming'
 import theme from '../../components/Utility/theme'
 import Layout from '../../components/Layout'
-import Button from '../../components/Button'
-import Container from '../../components/Container';
 import Heading from '../../components/Heading'
+import Page from '../../components/Page'
 
 export default class BlogPage extends React.Component {
   render() {
@@ -18,10 +17,7 @@ export default class BlogPage extends React.Component {
     return (
       <ThemeProvider theme={theme}>
         <Layout>
-          <Container>
-            <Heading Tag='h2'>
-              Latest Blog Posts
-            </Heading>
+          <Page heading="Latest Blog Posts">
             <div>
               {posts.map(({ node: post }) => (
                 <div
@@ -47,16 +43,23 @@ export default class BlogPage extends React.Component {
                     css={{
                       color: theme.color('gray'),
                       fontSize: theme.size(0),
-                      marginBottom: theme.size(2),
+                      marginBottom: theme.size(1),
+                      [theme.mq('sm')]: {
+                        marginTop: `-${theme.size(0)}`,
+                      },
                     }}
                   >
                     {post.frontmatter.date}
                   </div>
                   <div
                     css={{
-                      fontSize: theme.size(2),
-                      lineHeight: theme.size(4),
+                      fontSize: theme.size(1),
+                      lineHeight: theme.size(3),
                       marginBottom: theme.size(2),
+                      [theme.mq('sm')]: {
+                        fontSize: theme.size(2),
+                        lineHeight: theme.size(5),
+                      },
                     }}
                   >
                     {post.excerpt}
@@ -72,7 +75,7 @@ export default class BlogPage extends React.Component {
                 </div>
               ))}
             </div>
-          </Container>
+          </Page>
         </Layout>
       </ThemeProvider>
     )

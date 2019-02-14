@@ -4,10 +4,8 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { ThemeProvider } from 'emotion-theming';
 import theme from '../components/Utility/theme';
-import Markdown from '../components/Utility/Markdown';
+import Page from '../components/Page';
 import Layout from '../components/Layout';
-import Container from '../components/Container';
-import Heading from '../components/Heading';
 
 export const AboutPageTemplate = ({
   title,
@@ -15,30 +13,10 @@ export const AboutPageTemplate = ({
   isPreview = false,
 }) => (
   <ThemeProvider theme={theme}>
-    <div>
-      <Heading Tag='h2'>
-        {title}
-      </Heading>
-    </div>
-    {body && (
-      <Markdown
-        customCSS={{
-          'p': {
-            fontSize: theme.size(1),
-            lineHeight: theme.size(3),
-          },
-          [theme.mq('sm')]: {
-            marginBottom: theme.size(8),
-            'p': {
-              fontSize: theme.size(2),
-              lineHeight: theme.size(5),
-            }
-          },
-        }}
-      >
-        {body}
-      </Markdown>
-    )}
+    <Page
+      body={body}
+      heading={title}
+    />
   </ThemeProvider>
 );
 
@@ -52,12 +30,10 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout altBG={true}>
-      <Container>
-        <AboutPageTemplate
-          title={post.frontmatter.title}
-          body={post.rawMarkdownBody}
-        />
-      </Container>
+      <AboutPageTemplate
+        title={post.frontmatter.title}
+        body={post.rawMarkdownBody}
+      />
     </Layout>
   );
 };

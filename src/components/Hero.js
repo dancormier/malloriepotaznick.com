@@ -159,12 +159,12 @@ const Hero = ({
                   marginBottom: theme.size(4),
                   'p': {
                     fontSize: theme.size(1),
-                    lineHeight: theme.size(3),  
+                    lineHeight: theme.size(3),
                   },
                   [theme.mq('sm')]: {
                     'p': {
                       fontSize: theme.size(2),
-                      lineHeight: theme.size(5),  
+                      lineHeight: theme.size(5),
                     }
                   },
                 }}
