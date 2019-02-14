@@ -1,7 +1,7 @@
 ---
 templateKey: created-page
-title: Custom Page
-slug: /test
+title: test
+heading: Custom Created Page
 ---
 ## Positivity
 

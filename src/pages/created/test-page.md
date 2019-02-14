@@ -1,5 +1,6 @@
 ---
 templateKey: created-page
-title: Test Page
+title: test-page
+heading: Test Page
 ---
 This is a test page. What does it do.
