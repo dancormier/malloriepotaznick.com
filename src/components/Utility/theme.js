@@ -39,7 +39,7 @@ const getFromScale = x => modularscale(x - 1, 'minor third');
 const colors = {
   'accent': '#ea3934',
   'primary': '#444444',
-  'whiteToTransparent': 'linear-gradient(#ffffff, transparent)',
+  'whiteToTransparent': 'linear-gradient(#ffffff, rgba(255,255,255,0))',
   'white': '#ffffff',
   'gray-ll': '#f9f9f9',
   'gray-l': '#cccccc',
