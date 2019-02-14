@@ -84,10 +84,6 @@ export const pageQuery = graphql`
                   }
                 }
               }
-              subsections {
-                heading
-                body
-              }
             }
           }
         }
