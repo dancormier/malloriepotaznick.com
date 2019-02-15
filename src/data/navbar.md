@@ -20,7 +20,7 @@ links:
   - button: false
     enabled: true
     text: FAQ
-    url: questions
+    url: faq
   - button: true
     enabled: true
     text: Contact Mallorie
