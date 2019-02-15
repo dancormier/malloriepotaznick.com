@@ -4,8 +4,34 @@ import { jsx } from '@emotion/core'
 import theme from './Utility/theme'
 import { Link } from 'gatsby'
 
+const styleByType = (type) => {
+  switch(type) {
+    case 'secondary':
+      return {
+        backgroundColor: theme.color('white'),
+        border: `2px solid ${theme.color('accent')}`,
+        color: theme.color('accent'),
+        fontWeight: 700,
+      }
+    case 'link':
+      return {
+        backgroundColor: 'none',
+        color: theme.color('accent'),
+        fontFamily: theme.font('serif'),
+        padding: 0,
+        paddingLeft: 0,
+        paddingRight: 0,
+        textDecoration: 'underline',
+        textTransform: 'none',
+      }
+    default:
+      return {
+        backgroundColor: theme.color('accent'),
+      }
+  }
+}
+
 const style = {
-  backgroundColor: theme.color('accent'),
   borderRadius: theme.size(8),
   color: theme.color('white'),
   display: 'block',
@@ -28,10 +54,11 @@ const Button = ({
   children,
   type,
   url,
-}) => type ? (
+}) => type === 'button' ? (
   <button
     css={{
       ...style,
+      ...styleByType(type),
       ...customCSS,
       width: '100%',
     }}
@@ -42,7 +69,11 @@ const Button = ({
   </button>
 ) : (
   <Link
-    css={{...style, ...customCSS}}
+    css={{
+      ...style,
+      ...styleByType(type),
+      ...customCSS
+    }}
     onClick={onClick}
     title={children || 'Book a session'}
     to={url}

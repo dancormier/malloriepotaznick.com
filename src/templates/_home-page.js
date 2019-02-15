@@ -76,6 +76,11 @@ const HomePage = () => (
                     }
                   }
                   body
+                  buttons {
+                    text
+                    type
+                    url
+                  }
                   context
                   heading
                   image {
