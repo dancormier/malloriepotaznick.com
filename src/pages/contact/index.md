@@ -2,7 +2,9 @@
 templateKey: _contact-page
 heading: Contact Mallorie
 ---
-<img src="/img/emma-hall-133521-unsplash.jpg" alt="image-description" width="400" align="center" />
+<img src="/img/emma-hall-133521-unsplash.jpg" alt="image-description" width="600" align="center" />
+
+
 
 ## Have Questions?
 
