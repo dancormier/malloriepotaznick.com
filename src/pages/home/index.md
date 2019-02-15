@@ -2,14 +2,15 @@
 templateKey: _home-page
 heroes:
   - background:
-      align: contain
+      align: cover
       image: /img/bg-flower-feature.jpg
+      invert: true
     body: >-
       ### _“Let go of who you think you’re supposed to be; embrace who you are.”
       - Brené Brown_
     button:
       text: Book a session
-      url: '#'
+      url: contact
     context: featured
     heading: Change is possible
   - body: >-
