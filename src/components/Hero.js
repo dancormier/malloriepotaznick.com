@@ -50,20 +50,15 @@ const Hero = ({
           backgroundImage: bgImage && `url(${bgImage})`,
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          backgroundSize: isFeatured ? 'cover' : bgAlign,
+          backgroundSize: bgAlign,
           content: '""',
-          opacity: isFeatured && '0.25',
-          top: isFeatured ? '-60%' : 0,
-          left: isFeatured ? '-30%' : 0,
-          bottom: isFeatured ? '-100%' : 0,
-          right: isFeatured ? '-30%' : 0,
+          opacity: '0.25',
+          top: 0,
+          left: 0,
+          bottom: 0,
+          right: 0,
           position: 'absolute',
           zIndex: '-1',
-        },
-        [theme.mq('lg')]: {
-          '&:after': {
-              backgroundImage: bgImage && `url(${isFeatured ? '' : bgImage})`,
-            },
         },
         ...customCSS,
       }}
@@ -109,7 +104,7 @@ const Hero = ({
                   flexDirection: isContact && 'row',
                 },
                 [theme.mq('lg')]: {
-                  width: isFeatured ? '70%' : '100%',
+                  width: '100%',
                 },
               }}
             >
@@ -180,28 +175,6 @@ const Hero = ({
                 </Button>
               )}
             </div>
-            {isFeatured && (
-              <div
-                css={{
-                  backgroundImage: `url(${bgImage})`,
-                  backgroundPosition: 'top right',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundSize: 'cover',
-                  bottom: 0,
-                  display: 'none',
-                  left: 'auto',
-                  marginLeft: 0,
-                  position: 'absolute',
-                  right: `-${theme.size(18)}`,
-                  top: `-${theme.size(19)}`,
-                  width: '100%',
-                  zIndex: -1,
-                  [theme.mq('lg')]: {
-                    display: 'block',
-                  },
-                }}
-              />
-            )}
             {image && (
               <img
                 src={image}

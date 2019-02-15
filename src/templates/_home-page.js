@@ -38,6 +38,7 @@ export const HomePageTemplate = ({ heroes, isPreview = false }) => (
             heading={heading}
             image={img}
             imageAlign={image && image.align}
+            invert={image && image.invert}
           >
             {body}
           </Hero>
@@ -83,6 +84,7 @@ const HomePage = () => (
                   heading
                   image {
                     align
+                    invert
                     image {
                       childImageSharp {
                         fixed(width: 800) {
