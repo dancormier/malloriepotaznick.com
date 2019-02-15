@@ -9,9 +9,9 @@ heroes:
       ### “Let go of who you think you’re supposed to be; embrace who you are.”
       \- Brené Brown
     buttons:
-      - style: primary
+      - type: primary
         text: Book a session
-        url: /contact
+        url: contact
     context: featured
     heading: Find Freedom
   - body: >-

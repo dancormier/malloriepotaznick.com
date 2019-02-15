@@ -52,11 +52,11 @@ collections:
                   name: "buttons",
                   widget: "list",
                   fields: [
-                    {label: "Text", name: "text", widget: "string" },
-                    {label: "URL", name: "url", widget: "string" },
+                    {label: "Text", name: "text", widget: "string"},
+                    {label: "URL", name: "url", widget: "string"},
                     {
                       label: "Style",
-                      name: "style",
+                      name: "type",
                       widget: "select",
                       default: "primary",
                       options: ["primary", "secondary", "link"]
