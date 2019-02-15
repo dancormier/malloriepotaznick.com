@@ -16,7 +16,7 @@ links:
     url: anxiety
   - enabled: true
     text: Eating Disorders
-    url: eating-disorders
+    url: eatingdisorders
   - button: false
     enabled: true
     text: FAQ
