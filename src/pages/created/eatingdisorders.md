@@ -11,7 +11,7 @@ When you have an eating disorder the first thought you have each morning usually
 
 ## Many people struggle with issues concerning their body image, and relationship to food, they just don’t talk about it.
 
-It's not easy for people to discuss or even acknowledge they have an eating disorder. Who wants to admit their struggling? 
+It's not easy for people to discuss or even acknowledge they have an eating disorder. Who wants to admit they're struggling? 
 
 ## One of the most common questions I get asked is, "What do eating disorders look like?"
 
@@ -19,6 +19,8 @@ Eating disorders don’t have a **LOOK**, and  can affect anyone regardless of t
 
 ## Eating disorders are often a symptom of an emotional disorder.
 
-This is the crux of it all. 
+This is the crux of it all. Eating disorders tend to come about often after emotionally taxing, stressful and traumatic events. When we have poor emotional hygiene the ways in which we discharge our pain and discomfort often take the form of disorders eating patterns in order to help us self sooth, self punish, self seek attention, or control. 
 
-Whether you have been diagnosed with an eating disorder or are just beginning to notice symptoms of an eating disorder, therapy with an individual like me, who specializes in eating disorders can help. During therapy we will look at your disordered eating patterns, and your emotions and find and work through the underlying causes of your disordered eating patterns so that you can become healthy and regain control of your life again.
+## Understanding why and how your disordered eating patterns came to be, and learning what your disordered eating patterns is serving you is the first step on your road to recovery.  
+
+Whether you have been diagnosed with an eating disorder or are just beginning to notice symptoms of an eating disorder, therapy can help. During therapy we will look at your disordered eating patterns, and your emotions and find and work through the underlying causes of your disordered eating patterns so that you can become healthy and regain control of your life again.
