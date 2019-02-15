@@ -3,7 +3,7 @@ templateKey: _home-page
 heroes:
   - background:
       align: cover
-      image: /img/bg-flower-feature-2.jpg
+      image: /img/alexandru-tudorache-17852-unsplash.jpg
       invert: true
     body: >-
       ### “Let go of who you think you’re supposed to be; embrace who you are.”
