@@ -20,36 +20,38 @@ const Page = ({
   children,
   heading,
 }) => (
-  <Container customCSS={{...style, ...customCSS}}>
-    <Heading
-      Tag='h2'
-      customCSS={{
-        marginBottom: theme.size(6),
-      }}
-    >
-      {heading}
-    </Heading>
-    {children}
-    {body && (
-      <Markdown
+  <div css={{...style, ...customCSS}}>
+    <Container>
+      <Heading
+        Tag='h2'
         customCSS={{
-          'p': {
-            fontSize: theme.size(1),
-            lineHeight: theme.size(3),
-          },
-          [theme.mq('sm')]: {
-            marginBottom: theme.size(8),
-            'p': {
-              fontSize: theme.size(2),
-              lineHeight: theme.size(5),
-            }
-          },
+          marginBottom: theme.size(6),
         }}
       >
-        {body}
-      </Markdown>
-    )}
-  </Container>
+        {heading}
+      </Heading>
+      {children}
+      {body && (
+        <Markdown
+          customCSS={{
+            'p': {
+              fontSize: theme.size(1),
+              lineHeight: theme.size(3),
+            },
+            [theme.mq('sm')]: {
+              marginBottom: theme.size(8),
+              'p': {
+                fontSize: theme.size(2),
+                lineHeight: theme.size(5),
+              }
+            },
+          }}
+        >
+          {body}
+        </Markdown>
+      )}
+    </Container>
+  </div>
 );
 
 export default Page;
