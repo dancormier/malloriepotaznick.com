@@ -3,7 +3,7 @@ templateKey: created-page
 title: eatingdisorders
 heading: Eating Disorders
 ---
-<img src="/img/i-yunmai-617618-unsplash.jpg" alt="image-description" width="600" align="Center" />
+<img src="/img/jennifer-burk-118076-unsplash.jpg" alt="image-description" width="600" align="Center" />
 
 ## Having an eating disorder can be exhausting and lonely
 
@@ -11,15 +11,17 @@ Having an eating disorder can be exhausting and lonely. It may feel at times as 
 
 When you have an eating disorder the first thought you have each morning usually involves food or your body, and yet tends to be the last thing you want to discuss with anyone. It may feel isolating as you hide the symptoms of your disorder from your friends or family, or tell the people in your life, only to find that they don’t truly understand what its like to have an eating disorder. **You're not alone.** 
 
-<img src="/img/jennifer-burk-118076-unsplash.jpg" alt="image-description" width="200" align="left" />
-
 ## Many people struggle with issues concerning their body image, and relationship to food, they just don’t talk about it.
+
+<img src="/img/i-yunmai-617618-unsplash.jpg" alt="image-description" width="200" align="right" />
 
 It's not easy for people to discuss or even acknowledge they have an eating disorder. Who wants to admit they're struggling? 
 
 ## One of the most common questions I get asked is, "What do eating disorders look like?"
 
 Eating disorders don’t have a **LOOK**, and  can affect anyone regardless of their weight, and physical appearance. Physical appearances at times can be deceiving. Just because someone is skinny doesn’t mean their anorexic, nor does it mean if someone is heavier that they have a binge eating disorder. In fact, appearances are so deceiving that just because someone looks physically healthy it doesn’t mean they actually are. In reality those physically healthy looking people may be restricting and calorie counting what they eat, or could be struggling with bulimia, binge-eating disorder, and body dysmorphia. 
+
+<img src="/img/cristian-newman-141895-unsplash.jpg" alt="image-description" width="190" align="left" />
 
 ## Eating disorders are often a symptom of an emotional disorder.
 
