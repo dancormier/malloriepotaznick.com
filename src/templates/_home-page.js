@@ -13,7 +13,7 @@ export const HomePageTemplate = ({ heroes, isPreview = false }) => (
         const {
           background: bg,
           body,
-          button,
+          buttons,
           context,
           heading,
           image,
@@ -33,8 +33,7 @@ export const HomePageTemplate = ({ heroes, isPreview = false }) => (
             bgAlign={bg && bg.align}
             bgImage={imgBG}
             bgInvert={imgBG && bg && bg.invert}
-            buttonText={button && button.text}
-            buttonURL={button && button.url}
+            buttons={buttons}
             context={context}
             heading={heading}
             image={img}
@@ -77,10 +76,6 @@ const HomePage = () => (
                     }
                   }
                   body
-                  button {
-                    text
-                    url
-                  }
                   context
                   heading
                   image {

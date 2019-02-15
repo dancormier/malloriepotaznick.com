@@ -8,9 +8,6 @@ heroes:
     body: >-
       ### “Let go of who you think you’re supposed to be; embrace who you are.”
       \- Brené Brown
-    button:
-      text: Book a session
-      url: contact
     context: featured
     heading: Find Freedom
   - body: >-
@@ -25,9 +22,6 @@ heroes:
       through your painful feelings. It’s time to make a change. Call me for a
       free 20 minute consultation and together we can figure out where your
       journey begins.
-    button:
-      text: ''
-      url: ''
     context: about
     heading: About Mallorie
     image:

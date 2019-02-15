@@ -15,8 +15,7 @@ const Hero = ({
   bgAlign,
   bgImage,
   bgInvert,
-  buttonText,
-  buttonURL,
+  buttons,
   context,
   heading,
   image,
@@ -173,12 +172,17 @@ const Hero = ({
                   </Markdown>
                 </div>
               )}
-              {buttonText && buttonURL && (
-                <Button
-                  url={buttonURL}
-                >
-                  {buttonText}
-                </Button>
+              {buttons && buttons.length && (
+                <div>
+                  {buttons.map((button) => (
+                    <Button
+                      type={button.type}
+                      url={button.url}
+                    >
+                      {button.text}
+                    </Button>
+                  ))}
+                </div>
               )}
             </div>
             {image && (
