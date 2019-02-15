@@ -17,7 +17,7 @@ The initial intake session is $150. Individual 50-minute sessions are $100. I ha
 
 ## How does payment work?
 
-Payment is collected at the time of the appointment. I accept cash or credit card. 
+Payment is collected at the time of the appointment. I accept cash or credit cards. 
 
 ## Do you have a cancellation policy?
 
