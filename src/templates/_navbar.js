@@ -8,15 +8,14 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import Button from '../components/Button';
 import Container from '../components/Container'
 import theme from '../components/Utility/theme';
-import { relative } from 'path';
 
-const linkIsActive = (slug) => {
-  let pathname = window.location.pathname;
-  if (pathname.charAt(0) == "/") {
-    pathname = pathname.substr(1);
+const linkIsActive = (slug, pathname) => {
+  let path = pathname;
+  if (path.charAt(0) === "/") {
+    path = path.substr(1);
   }
-  console.log(slug, pathname);
-  return slug === pathname
+  console.log(slug, path);
+  return slug === path;
 };
 
 const Logo = ({ heading, prelaunch, subheading }) => {
@@ -62,7 +61,7 @@ const Logo = ({ heading, prelaunch, subheading }) => {
   );
 };
 
-const NavLinks = ({ links }) => {
+const NavLinks = ({ links, pathname }) => {
   return (
     <div
       css={{
@@ -88,18 +87,18 @@ const NavLinks = ({ links }) => {
             to={l.url}
             title={l.text}
             css={{
-              color: linkIsActive(l.url) ? theme.color('accent') : theme.color('primary'),
+              color: theme.color(linkIsActive(l.url, pathname) ? 'accent' : 'primary'),
               display: 'block',
               fontSize: theme.size(2),
               marginLeft: theme.size(6),
-              pointerEvents: linkIsActive(l.url) && 'none',
+              pointerEvents: linkIsActive(l.url, pathname) && 'none',
               position: 'relative',
               textDecoration: 'none',
               whiteSpace: 'nowrap',
               '&:hover': {
                 color: theme.color('accent'),
               },
-              '&:after': linkIsActive(l.url) && {
+              '&:after': linkIsActive(l.url, pathname) && {
                 background: theme.color('accent'),
                 content: '""',
                 display: 'block',
@@ -173,6 +172,7 @@ export const NavbarTemplate = class extends React.Component {
     const {
       heading,
       links,
+      pathname,
       subheading,
       prelaunch,
     } = this.props;
@@ -231,7 +231,10 @@ export const NavbarTemplate = class extends React.Component {
               },
             }}
           >
-            <NavLinks links={links} />
+            <NavLinks
+              links={links}
+              pathname={pathname}
+            />
           </div>
         </Container>
         {menuVisible && (
@@ -259,11 +262,12 @@ export const NavbarTemplate = class extends React.Component {
 NavbarTemplate.propTypes = {
   heading: PropTypes.string,
   links: PropTypes.any,
+  pathname: PropTypes.string,
   prelaunch: PropTypes.bool,
   subheading: PropTypes.string,
 };
 
-const Navbar = ({ prelaunch }) => (
+const Navbar = ({ pathname, prelaunch }) => (
   <StaticQuery
     query={graphql`
       query Navbar {
@@ -301,6 +305,7 @@ const Navbar = ({ prelaunch }) => (
         <NavbarTemplate
           heading={heading}
           links={links}
+          pathname={pathname}
           subheading={subheading}
           prelaunch={prelaunch}
         />
