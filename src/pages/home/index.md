@@ -6,11 +6,8 @@ heroes:
       image: /img/bg-flower-feature.jpg
       invert: true
     body: >-
-      ### _“Let go of who you think you’re supposed to be; embrace who you
-      are.”_
-
-
-      ### _\- Brené Brown_
+      ### “Let go of who you think you’re supposed to be; embrace who you are.”
+      \- Brené Brown
     button:
       text: Book a session
       url: contact
