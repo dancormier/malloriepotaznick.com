@@ -26,8 +26,8 @@ heroes:
       free 20 minute consultation and together we can figure out where your
       journey begins.
     button:
-      text: More about mallorie
-      url: about
+      text: ''
+      url: ''
     context: about
     heading: About Mallorie
     image:
