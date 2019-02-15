@@ -12,7 +12,7 @@ heroes:
       text: Book a session
       url: contact
     context: featured
-    heading: Change is possible
+    heading: Find Freedom
   - body: >-
       Hi, I’m Mallorie. For the last few years I’ve worked with adolescents,
       young adults, adults and couples to transform their anxiety, frustration,
