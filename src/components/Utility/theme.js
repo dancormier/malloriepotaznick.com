@@ -40,6 +40,7 @@ const colors = {
   'accent': '#ea3934',
   'primary': '#444444',
   'whiteToTransparent': 'linear-gradient(#ffffff, rgba(255,255,255,0))',
+  'whiteBGOverlay': 'linear-gradient(#fff, rgba(255,232,232,.3))',
   'white': '#ffffff',
   'gray-ll': '#f9f9f9',
   'gray-l': '#cccccc',
@@ -47,6 +48,7 @@ const colors = {
   'gray-d': '#666666',
   'gray-dd': '#222222',
   'black': '#000000',
+  'blackBGOverlay': 'linear-gradient(rgba(15,5,0,.9), rgba(45,15,0,.5))',
 };
 
 const fonts = {

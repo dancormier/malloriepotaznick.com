@@ -41,13 +41,14 @@ const Hero = ({
     }
   };
 
-  const invertedBG = bgImage && (bgInvert ? 'rgba(0,0,0,.5)' : 'rgba(255,255,255,.5)');
+  const invertedBG = bgImage && (theme.color(bgInvert ? 'blackBGOverlay' : 'whiteBGOverlay'));
 
   return (
     <div
       id={context}
       css={{
-        backgroundColor: invertedBG || (altBG && theme.color('gray-ll')),
+        backgroundColor: !invertedBG && altBG && theme.color('gray-ll'),
+        backgroundImage: invertedBG,
         position: 'relative',
         '&:after': {
           backgroundImage: bgImage && `url(${bgImage})`,
@@ -74,8 +75,8 @@ const Hero = ({
             position: 'relative',
             textAlign: isFeatured && 'center',
             [theme.mq('lg')]: {
-              paddingTop: theme.size(isFeatured ? 14 : 11),
-              paddingBottom: theme.size(isFeatured ? 14 : 9),
+              paddingTop: theme.size(isFeatured ? 11 : 11),
+              paddingBottom: theme.size(isFeatured ? 12 : 9),
             },
           }}
         >
