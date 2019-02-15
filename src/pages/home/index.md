@@ -12,7 +12,7 @@ heroes:
       text: Book a session
       url: contact
     context: featured
-    heading: Change is possible
+    heading: Find Freedom
   - body: >-
       Hi, I’m Mallorie. For the last few years I’ve worked with adolescents,
       young adults, adults and couples to transform their anxiety, frustration,
@@ -100,12 +100,12 @@ heroes:
       ## Have Questions?
 
 
-      If you want to ask me anything, please use this form, email me at
-      malloriepotaznick@gmail.com. I offer 20 minute phone consultations. To
-      schedule one, contact me with your information and I’ll respond within one
-      business day. For general information, consult my Frequently Asked
-      Questions. However you choose to improve yourself, godspeed. You’re taking
-      the first step towards a happier you.
+      If you have any questions, want to request a consultation, or would like
+      any additional information please feel free to use this form to contact me
+      today. I look forward to hearing from you! Please provide your information
+      and I’ll respond within
+
+      one business day. **Change** **starts today!**
     context: contact
     heading: Contact Mallorie
 ---
