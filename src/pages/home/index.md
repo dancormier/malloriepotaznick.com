@@ -3,7 +3,7 @@ templateKey: _home-page
 heroes:
   - background:
       align: cover
-      image: /img/bg-flower-feature.jpg
+      image: /img/bg-flower-feature-2.jpg
       invert: true
     body: >-
       ### “Let go of who you think you’re supposed to be; embrace who you are.”
