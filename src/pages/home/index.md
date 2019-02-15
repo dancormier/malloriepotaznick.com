@@ -53,8 +53,8 @@ heroes:
       # Eating Disorders/Body Dysmorphia
 
 
-      <img src="/img/jennifer-burk-118076-unsplash.jpg" alt="image-description"
-      width="180" align="right" />
+      <img src="/img/i-yunmai-617618-unsplash.jpg" alt="image-description"
+      width="190" align="right" />
 
 
       Food and the way you look is a source of contention for you. You're

@@ -3,13 +3,15 @@ templateKey: created-page
 title: eatingdisorders
 heading: Eating Disorders
 ---
-
+<img src="/img/i-yunmai-617618-unsplash.jpg" alt="image-description" width="600" align="Center" />
 
 ## Having an eating disorder can be exhausting and lonely
 
 Having an eating disorder can be exhausting and lonely. It may feel at times as if your whole life has become consumed with thoughts about your weight, what you look like, your flaws, how others perceive you, what to eat during your binge sessions or how many calories you consumed that day. You may feel like you have little time to worry or think about anything else in your life, as you become **trapped in the constant cycle of anxiety, fear, shame, and guilt.**
 
 When you have an eating disorder the first thought you have each morning usually involves food or your body, and yet tends to be the last thing you want to discuss with anyone. It may feel isolating as you hide the symptoms of your disorder from your friends or family, or tell the people in your life, only to find that they don’t truly understand what its like to have an eating disorder. **You're not alone.** 
+
+<img src="/img/jennifer-burk-118076-unsplash.jpg" alt="image-description" width="200" align="left" />
 
 ## Many people struggle with issues concerning their body image, and relationship to food, they just don’t talk about it.
 
