@@ -8,20 +8,16 @@ links:
     text: About
     url: about
   - button: false
-    enabled: true
+    enabled: false
     text: Blog
     url: blog
   - button: false
     enabled: true
     text: FAQ
     url: questions
-  - button: false
-    enabled: true
-    text: Contact
-    url: contact
   - button: true
     enabled: true
-    text: Book a session
-    url: '#'
+    text: Contact Mallorie
+    url: contact
 ---
 
