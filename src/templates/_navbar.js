@@ -9,14 +9,16 @@ import Button from '../components/Button';
 import Container from '../components/Container'
 import theme from '../components/Utility/theme';
 
-const Logo = ({ heading, subheading }) => {
+const Logo = ({ heading, prelaunch, subheading }) => {
   return (
     <Link
       to="/"
       title={`${heading} | Home`}
       css={{
         color: theme.color('primary'),
-        paddingRight: theme.size(2),
+        margin: prelaunch && 'auto',
+        paddingRight: !prelaunch && theme.size(2),
+        textAlign: prelaunch && 'center',
         textDecoration: 'none',
         [theme.mq('sm')]: {
           whiteSpace: 'nowrap',
@@ -149,6 +151,7 @@ export const NavbarTemplate = class extends React.Component {
       heading,
       links,
       subheading,
+      prelaunch,
     } = this.props;
     const { menuVisible } = this.state;
 
@@ -178,12 +181,13 @@ export const NavbarTemplate = class extends React.Component {
           <Logo
             heading={heading}
             subheading={subheading}
+            prelaunch={prelaunch}
           />
           <div
             onClick={() => toggleMenu(menuVisible)}
             css={{
               color: theme.color('black'),
-              display: 'flex',
+              display: prelaunch ? 'none' : 'flex',
               fontSize: theme.size(4),
               [theme.mq('sm')]: {
                 fontSize: theme.size(5),
@@ -200,7 +204,7 @@ export const NavbarTemplate = class extends React.Component {
             css={{
               display: 'none',
               [theme.mq('lg')]: {
-                display: 'block',
+                display: !prelaunch && 'block',
               },
             }}
           >
@@ -232,10 +236,11 @@ export const NavbarTemplate = class extends React.Component {
 NavbarTemplate.propTypes = {
   heading: PropTypes.string,
   links: PropTypes.any,
+  prelaunch: PropTypes.bool,
   subheading: PropTypes.string,
 };
 
-const Navbar = () => (
+const Navbar = ({ prelaunch }) => (
   <StaticQuery
     query={graphql`
       query Navbar {
@@ -274,6 +279,7 @@ const Navbar = () => (
           heading={heading}
           links={links}
           subheading={subheading}
+          prelaunch={prelaunch}
         />
       );
     }}

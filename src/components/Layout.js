@@ -4,10 +4,13 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from "gatsby"
 import { ThemeProvider } from 'emotion-theming'
 import theme from './Utility/theme'
+import Container from '../components/Container';
 import Footer from '../templates/_footer'
 import Navbar from '../templates/_navbar'
 import Superbar from '../templates/_superbar'
 import './Utility/all.sass'
+
+const prelaunch = true;
 
 const TemplateWrapper = ({ children, altBG }) => (
   <StaticQuery
@@ -58,9 +61,25 @@ const TemplateWrapper = ({ children, altBG }) => (
               overflow: 'hidden',
             }}>
               <Superbar />
-              <Navbar />
+              <Navbar prelaunch={prelaunch} />
               <div css={{ minHeight: '100vh' }}>
-                {children}
+                {prelaunch ? (
+                  <Container customCSS={{ textAlign: 'center' }}>
+                    <h2
+                      css={{
+                        fontSize: theme.size(6),
+                        marginBottom: theme.size(6),
+                      }}
+                    >
+                      More coming soon
+                    </h2>
+                    <div>
+                      <a href="https://www.psychologytoday.com/us/therapists/mallorie-potaznick-coral-springs-fl/429831">
+                        View Mallorie Potaznick's Psychology Today profile
+                      </a>
+                    </div>
+                  </Container>
+                ) : children}
               </div>
               <Footer />
             </div>
