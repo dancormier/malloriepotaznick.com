@@ -37,10 +37,16 @@ const modularscale = (value, ratio = 'golden') => {
 const getFromScale = x => modularscale(x - 1, 'minor third');
 
 const colors = {
-  accent: '#ea3934',
-  primary: '#444444',
-  white: '#ffffff',
-  black: '#000000',
+  'accent': '#ea3934',
+  'primary': '#444444',
+  'whiteToTransparent': 'linear-gradient(#ffffff, rgba(255,255,255,0))',
+  'white': '#ffffff',
+  'gray-ll': '#f9f9f9',
+  'gray-l': '#cccccc',
+  'gray': '#999999',
+  'gray-d': '#666666',
+  'gray-dd': '#222222',
+  'black': '#000000',
 };
 
 const fonts = {
@@ -49,10 +55,12 @@ const fonts = {
 };
 
 const breakPoints = {
-  xs: '@media(min-width:350px)',
+  xs: '@media(min-width:400px)',
   sm: '@media(min-width:700px)',
   md: '@media(min-width:900px)',
   lg: '@media(min-width:1200px)',
+  xl: '@media(min-width:1400px)',
+  xxl: '@media(min-width:1700px)',
 };
 
 const custom = {

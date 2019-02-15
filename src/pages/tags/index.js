@@ -1,37 +1,33 @@
 import React from 'react'
-import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
+import { ThemeProvider } from 'emotion-theming'
+import theme from '../../components/Utility/theme'
 import Layout from '../../components/Layout'
+import Page from '../../components/Page'
+import Tag from '../../components/Tag';
 
 const TagsPage = ({
   data: { allMarkdownRemark: { group }, site: { siteMetadata: { title } } },
 }) => (
-  <Layout>
-    <section className="section">
+  <ThemeProvider theme={theme}>
+    <Layout>
       <Helmet title={`Tags | ${title}`} />
-      <div className="container content">
-        <div className="columns">
-          <div
-            className="column is-10 is-offset-1"
-            style={{ marginBottom: '6rem' }}
-          >
-            <h1 className="title is-size-2 is-bold-light">Tags</h1>
-            <ul className="taglist">
-              {group.map(tag => (
-                <li key={tag.fieldValue}>
-                  <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                    {tag.fieldValue} ({tag.totalCount})
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+      <Page heading="Tags">
+        <div>
+          {group.map(tag => (
+            <Tag
+              key={tag.fieldValue}
+              tag={tag.fieldValue}
+            >
+              {tag.fieldValue} ({tag.totalCount})
+            </Tag>
+          ))}
         </div>
-      </div>
-    </section>
-  </Layout>
-)
+      </Page>
+    </Layout>
+  </ThemeProvider>
+);
 
 export default TagsPage
 

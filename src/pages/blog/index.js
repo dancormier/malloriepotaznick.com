@@ -1,7 +1,13 @@
 import React from 'react'
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
+import { ThemeProvider } from 'emotion-theming'
+import theme from '../../components/Utility/theme'
 import Layout from '../../components/Layout'
+import BlogItem from '../../components/Blog-item';
+import Page from '../../components/Page'
 
 export default class BlogPage extends React.Component {
   render() {
@@ -9,39 +15,24 @@ export default class BlogPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-            </div>
-            {posts
-              .map(({ node: post }) => (
-                <div
-                  className="content"
-                  style={{ border: '1px solid #333', padding: '2em 4em' }}
+      <ThemeProvider theme={theme}>
+        <Layout>
+          <Page heading="Latest Blog Posts">
+            <div css={{ marginTop: theme.size(4) }}>
+              {posts.map(({ node: post }) => (
+                <BlogItem
                   key={post.id}
-                >
-                  <p>
-                    <Link className="has-text-primary" to={post.fields.slug}>
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <small>{post.frontmatter.date}</small>
-                  </p>
-                  <p>
-                    {post.excerpt}
-                    <br />
-                    <br />
-                    <Link className="button is-small" to={post.fields.slug}>
-                      Keep Reading →
-                    </Link>
-                  </p>
-                </div>
+                  date={post.frontmatter.date}
+                  excerpt={post.excerpt}
+                  id={post.id}
+                  slug={post.fields.slug}
+                  title={post.frontmatter.title}
+                />
               ))}
-          </div>
-        </section>
-      </Layout>
+            </div>
+          </Page>
+        </Layout>
+      </ThemeProvider>
     )
   }
 }

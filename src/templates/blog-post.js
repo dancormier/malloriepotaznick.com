@@ -1,54 +1,62 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
+import { ThemeProvider } from 'emotion-theming';
+import theme from '../components/Utility/theme';
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import Page from '../components/Page';
+import Tag from '../components/Tag';
 
 export const BlogPostTemplate = ({
-  content,
-  contentComponent,
+  body,
   description,
   tags,
   title,
   helmet,
-}) => {
-  const PostContent = contentComponent || Content
-
-  return (
-    <section className="section">
-      {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-          </div>
+}) => (
+  <ThemeProvider theme={theme}>
+    {helmet || ''}
+    <Page
+      body={body}
+      heading={title}
+    >
+      <div
+        css={{
+          marginBottom: theme.size(4),
+        }}
+      >
+        <div
+          css={{
+            background: theme.color('gray-ll'),
+            color: theme.color('gray-d'),
+            fontSize: theme.size(2),
+            fontStyle: 'italic',
+            lineHeight: theme.size(4),
+            marginBottom: theme.size(2),
+            padding: theme.size(2),
+          }}
+        >
+          {description}
         </div>
+        {tags && tags.length ? (
+          <div>
+            {tags.map(tag => (
+              <Tag
+                key={tag + `tag`}
+                tag={tag}
+              />
+            ))}
+          </div>
+        ) : null}
       </div>
-    </section>
-  )
-}
+    </Page>
+  </ThemeProvider>
+);
 
 BlogPostTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
+  body: PropTypes.node.isRequired,
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
@@ -60,8 +68,7 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <BlogPostTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
+        body={post.rawMarkdownBody}
         description={post.frontmatter.description}
         helmet={
           <Helmet
@@ -90,7 +97,7 @@ export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
-      html
+      rawMarkdownBody
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
