@@ -33,7 +33,7 @@ const Markdown = ({
           fontWeight: 500,
         },
         'p + h1, p + h2, p + h3, p + h4': {
-          marginTop: theme.size(8),
+          marginTop: theme.size(9),
         },
         ...customCSS,
       }
