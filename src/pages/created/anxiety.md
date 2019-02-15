@@ -3,7 +3,7 @@ templateKey: created-page
 title: anxiety
 heading: Anxiety
 ---
-<img src="/img/nikko-macaspac-263785-unsplash.jpg" alt="image-description" width="700" align="center" />
+![hand emerging from ocean](/img/nikko-macaspac-263785-unsplash.jpg "Anxiety")
 
 ## Anxiety is uncomfortable
 
