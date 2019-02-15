@@ -37,6 +37,10 @@ heroes:
       # Anxiety
 
 
+      <img src="/img/fernando-cferdo-627207-unsplash.jpg"
+      alt="image-description" width="190" align="left" />
+
+
       Do you constantly feel worried, nervous, or unease over situations or
       events happening in your life? Are you always on edge? Anxiety affects
       over 40 million people everyday. Don't let it consume your life any
@@ -49,6 +53,10 @@ heroes:
 
 
       # Eating Disorders/Body Dysmorphia
+
+
+      <img src="/img/jennifer-burk-118076-unsplash.jpg" alt="image-description"
+      width="180" align="right" />
 
 
       Food and the way you look is a source of contention for you. You're
@@ -65,6 +73,10 @@ heroes:
 
 
       # Other Disorders I Treat
+
+
+      <img src="/img/ben-white-194220-unsplash.jpg" alt="image-description"
+      width="190" align="left" />
 
 
       In addition to anxiety and eating disorders, I have an extensive
