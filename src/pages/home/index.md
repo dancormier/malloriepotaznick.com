@@ -3,8 +3,8 @@ templateKey: _home-page
 heroes:
   - background:
       align: cover
-      image: /img/alexandru-tudorache-17852-unsplash.jpg
-      invert: true
+      image: /img/henry-be-99471-unsplash.jpg
+      invert: false
     body: >-
       ### “Let go of who you think you’re supposed to be; embrace who you are.”
       \- Brené Brown
