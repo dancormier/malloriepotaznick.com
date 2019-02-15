@@ -10,11 +10,13 @@ converter.setOption('noHeaderId', true);
 const Markdown = ({
   children,
   customCSS,
+  invert,
 }) => (
   <div
     className="markdown-body"
     css={{
       '&.markdown-body': {
+        color: invert && theme.color('white'),
         fontFamily: theme.font('serif'),
         'a': {
           color: theme.color('accent'),

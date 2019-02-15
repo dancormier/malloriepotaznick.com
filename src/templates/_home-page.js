@@ -32,13 +32,13 @@ export const HomePageTemplate = ({ heroes, isPreview = false }) => (
             altBG={i % 2 !== 0}
             bgAlign={bg && bg.align}
             bgImage={imgBG}
+            bgInvert={imgBG && bg && bg.invert}
             buttonText={button && button.text}
             buttonURL={button && button.url}
             context={context}
             heading={heading}
             image={img}
             imageAlign={image && image.align}
-            // invert={image && image.invert}
           >
             {body}
           </Hero>
@@ -67,6 +67,7 @@ const HomePage = () => (
                 heroes {
                   background {
                     align
+                    invert
                     image {
                       childImageSharp {
                         fixed(width: 1600) {

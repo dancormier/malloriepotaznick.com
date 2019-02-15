@@ -14,6 +14,7 @@ const Hero = ({
   altBG,
   bgAlign,
   bgImage,
+  bgInvert,
   buttonText,
   buttonURL,
   context,
@@ -40,11 +41,13 @@ const Hero = ({
     }
   };
 
+  const invertedBG = bgImage && (bgInvert ? 'rgba(0,0,0,.7)' : 'rgba(255,255,255,.7)');
+
   return (
     <div
       id={context}
       css={{
-        backgroundColor: altBG && theme.color('gray-ll'),
+        backgroundColor: invertedBG || (altBG && theme.color('gray-ll')),
         position: 'relative',
         '&:after': {
           backgroundImage: bgImage && `url(${bgImage})`,
@@ -52,7 +55,7 @@ const Hero = ({
           backgroundRepeat: 'no-repeat',
           backgroundSize: bgAlign,
           content: '""',
-          opacity: '0.25',
+          opacity: '1',
           top: 0,
           left: 0,
           bottom: 0,
@@ -69,9 +72,10 @@ const Hero = ({
             paddingBottom: theme.size(4),
             paddingTop: theme.size(isFeatured ? 2 : 8),
             position: 'relative',
+            textAlign: isFeatured && 'center',
             [theme.mq('lg')]: {
-              paddingTop: theme.size(isFeatured ? 8 : 11),
-              paddingBottom: theme.size(isFeatured ? 12 : 9),
+              paddingTop: theme.size(isFeatured ? 14 : 11),
+              paddingBottom: theme.size(isFeatured ? 14 : 9),
             },
           }}
         >
@@ -80,6 +84,7 @@ const Hero = ({
               Tag='h2'
               accent={!isFeatured}
               customCSS={{
+                color: bgInvert && theme.color('white'),
                 marginBottom: theme.size(isFeatured ? 2 : 6),
               }}
             >
@@ -162,7 +167,7 @@ const Hero = ({
                     },
                   }}
                 >
-                  <Markdown>
+                  <Markdown invert={bgInvert}>
                     {children}
                   </Markdown>
                 </div>
