@@ -13,8 +13,7 @@ const linkIsActive = (slug, pathname) => {
   let path = pathname;
   if (path.charAt(0) === "/") {
     path = path.substr(1);
-  }
-  console.log(slug, path);
+  };
   return slug === path;
 };
 
