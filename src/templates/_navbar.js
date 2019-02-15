@@ -8,6 +8,16 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import Button from '../components/Button';
 import Container from '../components/Container'
 import theme from '../components/Utility/theme';
+import { relative } from 'path';
+
+const linkIsActive = (slug) => {
+  let pathname = window.location.pathname;
+  if (pathname.charAt(0) == "/") {
+    pathname = pathname.substr(1);
+  }
+  console.log(slug, pathname);
+  return slug === pathname
+};
 
 const Logo = ({ heading, prelaunch, subheading }) => {
   return (
@@ -78,14 +88,26 @@ const NavLinks = ({ links }) => {
             to={l.url}
             title={l.text}
             css={{
-              color: theme.color('primary'),
+              color: linkIsActive(l.url) ? theme.color('accent') : theme.color('primary'),
               display: 'block',
               fontSize: theme.size(2),
               marginLeft: theme.size(6),
+              pointerEvents: linkIsActive(l.url) && 'none',
+              position: 'relative',
               textDecoration: 'none',
               whiteSpace: 'nowrap',
               '&:hover': {
                 color: theme.color('accent'),
+              },
+              '&:after': linkIsActive(l.url) && {
+                background: theme.color('accent'),
+                content: '""',
+                display: 'block',
+                height: theme.size(-8),
+                marginTop: theme.size(-1),
+                position: 'absolute',
+                top: '100%',
+                width: '100%',
               },
             }}
           >
@@ -107,7 +129,8 @@ const NavMenu = ({ links }) => {
       {links.map(l => l.enabled && (
         <Container
           customCSS={{
-            borderTop: '1px solid #eeeeee',
+            background: l.button && theme.color('accent'),
+            borderTop: `1px solid ${theme.color(l.button ? 'accent' : 'gray-l' )}`,
           }}
           key={l.url}
         >
@@ -115,7 +138,7 @@ const NavMenu = ({ links }) => {
             to={l.url}
             title={l.text}
             css={{
-              color: l.button ? theme.color('accent') : theme.color('primary'),
+              color: theme.color(l.button ? 'white' : 'primary'),
               display: 'block',
               fontSize: theme.size(2),
               paddingBottom: theme.size(3),
