@@ -81,7 +81,7 @@ collections:
                       name: "align",
                       widget: "select",
                       options: ["above", "below", "before", "after",]
-                    }
+                    },
                     {label: "Dark Background", name: "invert", widget: "boolean", default: false}
                   ]
                 },
