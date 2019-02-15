@@ -5,6 +5,9 @@ backend:
 media_folder: static/img
 public_folder: /img
 
+body_hint: &body_hint
+  - 'For images, use `<img src="/img/default-image.jpg" alt="image-description" width="200" align="left" />`'
+
 collections:
   - name: "blog"
     label: "Blog"
@@ -16,7 +19,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "markdown", hint: *body_hint}
       - {label: "Tags", name: "tags", widget: "list"}
 
 
@@ -29,7 +32,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_contact-page"}
           - {label: "Title", name: "heading", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Body", name: "body", widget: "markdown", hint: *body_hint}
       - file: "src/pages/home/index.md"
         label: "Homepage"
         name: "home"
@@ -43,7 +46,7 @@ collections:
               fields:
               [
                 {label: "Heading", name: "heading", widget: "string"},
-                {label: "Body", name: "body", required: false, widget: "markdown"},
+                {label: "Body", name: "body", widget: "markdown", hint: *body_hint},
                 {
                   label: "Button",
                   name: "button",
@@ -178,4 +181,4 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "created-page"}
       - {label: "URL", name: "title", widget: "string", required: true}
       - {label: "Title", name: "heading", widget: "string", required: true}
-      - {label: "Body", name: "body", widget: "markdown", required: true}
+      - {label: "Body", name: "body", widget: "markdown", required: true, hint: *body_hint}
