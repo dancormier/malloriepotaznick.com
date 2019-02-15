@@ -41,7 +41,7 @@ const Hero = ({
     }
   };
 
-  const invertedBG = bgImage && (bgInvert ? 'rgba(0,0,0,.7)' : 'rgba(255,255,255,.7)');
+  const invertedBG = bgImage && (bgInvert ? 'rgba(0,0,0,.5)' : 'rgba(255,255,255,.5)');
 
   return (
     <div
@@ -69,8 +69,8 @@ const Hero = ({
       <Container>
         <div
           css={{
-            paddingBottom: theme.size(4),
-            paddingTop: theme.size(isFeatured ? 2 : 8),
+            paddingBottom: theme.size(isFeatured ? 5 : 4),
+            paddingTop: theme.size(isFeatured ? 6 : 8),
             position: 'relative',
             textAlign: isFeatured && 'center',
             [theme.mq('lg')]: {
