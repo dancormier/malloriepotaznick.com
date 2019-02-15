@@ -11,6 +11,12 @@ links:
     enabled: false
     text: Blog
     url: blog
+  - enabled: true
+    text: Anxiety
+    url: anxiety
+  - enabled: true
+    text: Eating Disorders
+    url: /eating-disorders
   - button: false
     enabled: true
     text: FAQ
