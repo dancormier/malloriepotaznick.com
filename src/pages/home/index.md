@@ -34,66 +34,38 @@ heroes:
       align: after
       image: /img/mp-headshot-800.jpg
   - body: >-
-      ## Anxiety
+      # Anxiety
 
 
-      Anxiety often happens during the worst possible times, and can be quite
-      difficult to get under control. For instance, have you ever been walking
-      down the street, not a care in the world when suddenly you begin noticing
-      an uncomfortable sensation in your body, or a stray thought, which comes
-      to the forefront of your mind. You try to ignore this sensation or thought
-      but your mind begins to focus in on whats going on in your mind and body,
-      and within seconds your completely entrapped by the rapid and repetitive
-      racing thoughts of what’s wrong with you, and why your feeling the way you
-      are. You begin then to go down the rabbit hole of what if’s, as you try to
-      figure out what caused the random thought or uncomfortable body sensation
-      in the first place. As fear and panic are setting in, your body begins to
-      show physical signs that begin to worry you even more as your heart-rate
-      increases, you experience shortness of breathe, become dizzy and/or begin
-      sweating.  If you’ve experienced this scenario then you know the feeling
-      and discomfort that anxiety provides all to well unfortunately. Luckily
-      therapy can help alleviate anxiety. Together, I will help you discover the
-      underlying causes of your anxiety, provide you with coping tools,  and
-      help you change the way you think and manage your anxiety so that you can
-      eliminate those pesky racing thoughts.
+      Do you constantly feel worried, nervous, or unease over situations or
+      events happening in your life? Are you always on edge? Anxiety affects
+      over 40 million people everyday. Don't let it consume your life any
+      longer. Therapy will provide you with the tools to be able to identify,
+      challenge, and change the thoughts and behaviors that trigger your
+      anxiety.
 
 
-      ## Eating Disorders
+      [Learn more](/anxiety)
 
 
-      Having an eating disorder can be exhausting and lonely. It may feel at
-      times as if your whole life has become consumed with thoughts about your
-      weight, what you look like, your flaws, how others perceive you, what to
-      eat during your binge sessions or how many calories you consumed that day.
-      You may feel like you have little time to worry or think about anything
-      else in your life, as you become trapped in the constant cycle of anxiety,
-      fear, shame, and guilt. 
+      # Eating Disorders/Body Dysmorphia
 
 
-      When you have an eating disorder food is usually the first thought you
-      have each morning and is the last thing you want to talk about with
-      anyone. It may feel isolating as you hide the symptoms of your disorder
-      from your friends or family, or tell the people in your life, only to find
-      that they don’t truly understand what its like to have an eating disorder.
-      You're not alone. Many people struggle with issues concerning their body
-      image, and relationship to food, they just don’t talk about it. Whether
-      you have been diagnosed with an eating disorder or are just beginning to
-      notice symptoms of an eating disorder, therapy with an individual like me,
-      who specializes in eating disorders can help. During therapy we will look
-      at your disordered eating patterns, and your emotions and find and work
-      through the underlying causes of your eating disorder so that you can
-      become healthy and regain control of your life again.
+      Food and the way you look is a source of contention for you. You're
+      constantly worrying about your body and how much and what you've eaten,
+      and have resorted to restricting what you eat, binge eating, counting
+      calories and/or purging. 
 
 
-      ## Other Specialties
+      [Learn more](/eatingdisorders)
+
+
+      # Other Disorders I Treat
 
 
       In addition to anxiety and eating disorders, I have an extensive
-      background treating addition, autism, and some other things I’ll go over
-      in another novel. What’s the last book you’ve read? What’s the last meal
-      you’ve eaten? How about the last movie you’ve seen? If you want answers to
-      these questions and so many others, hook yourself up to an e-meter and
-      have a spin at some pseudoscience. Wait, that’s something else.
+      background treating chronic stress, depression, addiction, autism, and
+      grief.
     context: specialties
     heading: Mallorie's Specialties
   - body: >-
