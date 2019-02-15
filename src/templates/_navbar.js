@@ -11,7 +11,7 @@ import theme from '../components/Utility/theme';
 
 const linkIsActive = (slug, pathname) => {
   let path = pathname;
-  if (path.charAt(0) === "/") {
+  if (path && path.charAt(0) === "/") {
     path = path.substr(1);
   };
   return slug === path;
