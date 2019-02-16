@@ -6,6 +6,7 @@ const CreatedPagePreview = ({ entry }) => (
   <CreatedPageTemplate
     heading={entry.getIn(['data', 'heading'])}
     body={entry.getIn(['data', 'body'])}
+    image={entry.getIn(['data', 'image'])}
     isPreview
   />
 );

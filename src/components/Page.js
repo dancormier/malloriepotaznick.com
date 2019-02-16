@@ -25,12 +25,17 @@ const Page = ({
     {headerImage && (
       <div
         css={{
+          backgroundColor: theme.color('gray-ll'),
           backgroundImage: `url(${headerImage})`,
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           height: theme.size(14),
-          marginTop: theme.size(2),
-        }}
+          marginBottom: theme.size(1),
+          [theme.mq('sm')]: {
+            height: theme.size(20),
+            marginBottom: theme.size(8),
+          },
+          }}
       />
     )}
     <Container>

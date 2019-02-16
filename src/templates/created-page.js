@@ -9,16 +9,24 @@ import Layout from '../components/Layout';
 
 export const CreatedPageTemplate = ({
   heading,
+  image,
   body,
   isPreview = false,
-}) => (
-  <ThemeProvider theme={theme}>
-    <Page
-      body={body}
-      heading={heading}
-    />
-  </ThemeProvider>
-);
+}) => {
+  const hasImage = image && image.childImageSharp;
+  const headerImage = hasImage && hasImage.fixed.src;
+
+  console.log(hasImage, headerImage, 'bop');
+  return (
+    <ThemeProvider theme={theme}>
+      <Page
+        body={body}
+        heading={heading}
+        headerImage={(isPreview && image) || (hasImage && headerImage)}
+      />
+    </ThemeProvider>
+  );
+};
 
 CreatedPageTemplate.propTypes = {
   heading: PropTypes.string.isRequired,
@@ -27,12 +35,18 @@ CreatedPageTemplate.propTypes = {
 
 const CreatedPage = ({ data }) => {
   const { markdownRemark: post } = data;
+  const {
+    heading,
+    image,
+  } = post.frontmatter;
 
+  console.log(image, 'img123')
   return (
     <Layout>
       <CreatedPageTemplate
-        heading={post.frontmatter.heading}
+        heading={heading}
         body={post.rawMarkdownBody}
+        image={image}
       />
     </Layout>
   );
@@ -49,6 +63,13 @@ export const createdPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         heading
+        image {
+          childImageSharp {
+            fixed(width: 1600) {
+              src
+            }
+          }
+        }
       }
       rawMarkdownBody
     }
