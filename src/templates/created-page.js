@@ -16,7 +16,6 @@ export const CreatedPageTemplate = ({
   const hasImage = image && image.childImageSharp;
   const headerImage = hasImage && hasImage.fixed.src;
 
-  console.log(hasImage, headerImage, 'bop');
   return (
     <ThemeProvider theme={theme}>
       <Page
@@ -40,7 +39,6 @@ const CreatedPage = ({ data }) => {
     image,
   } = post.frontmatter;
 
-  console.log(image, 'img123')
   return (
     <Layout>
       <CreatedPageTemplate
