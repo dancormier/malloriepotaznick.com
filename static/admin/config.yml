@@ -186,5 +186,6 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "created-page"}
       - {label: "URL", name: "title", widget: "string", required: true}
+      - {label: "Header Image", name: "image", widget: "image", allow_multiple: false},
       - {label: "Title", name: "heading", widget: "string", required: true}
       - {label: "Body", name: "body", widget: "markdown", required: true, hint: *body_hint}

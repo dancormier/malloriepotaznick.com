@@ -18,9 +18,21 @@ const Page = ({
   body,
   customCSS,
   children,
+  headerImage,
   heading,
 }) => (
   <div css={{...style, ...customCSS}}>
+    {headerImage && (
+      <div
+        css={{
+          backgroundImage: `url(${headerImage})`,
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          height: theme.size(14),
+          marginTop: theme.size(2),
+        }}
+      />
+    )}
     <Container>
       <Heading
         Tag='h2'
