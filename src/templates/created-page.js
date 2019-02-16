@@ -37,10 +37,11 @@ const CreatedPage = ({ data }) => {
   const {
     heading,
     image,
+    showFooterContact,
   } = post.frontmatter;
 
   return (
-    <Layout showFooterContact={true}>
+    <Layout showFooterContact={showFooterContact}>
       <CreatedPageTemplate
         heading={heading}
         body={post.rawMarkdownBody}
@@ -68,6 +69,7 @@ export const createdPageQuery = graphql`
             }
           }
         }
+        showFooterContact
       }
       rawMarkdownBody
     }

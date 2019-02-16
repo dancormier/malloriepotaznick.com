@@ -9,7 +9,6 @@ import Heading from './Heading';
 const style = {
   paddingBottom: theme.size(4),
   [theme.mq('md')]: {
-    paddingBottom: theme.size(9),
     paddingTop: theme.size(2),
   },
 };

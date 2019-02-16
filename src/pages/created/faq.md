@@ -3,7 +3,6 @@ templateKey: created-page
 title: faq
 image: /img/alexandru-tudorache-17852-unsplash.jpg
 heading: Frequently Asked Questions
-showFooterContact: true
 ---
 ## How long are therapy sessions and how often do I need to attend sessions?
 
