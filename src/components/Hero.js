@@ -6,6 +6,7 @@ import Button from './Button'
 import ContactForm from './Contact-form'
 import Container from './Container'
 import Heading from './Heading'
+import Subsection from './Subsection'
 import Markdown from './Utility/Markdown'
 
 const Hero = ({
@@ -20,6 +21,7 @@ const Hero = ({
   heading,
   image,
   imageAlign,
+  subsections,
 }) => {
   const isAbout = context === 'about';
   const isContact = context === 'contact';
@@ -170,6 +172,30 @@ const Hero = ({
                   <Markdown invert={bgInvert}>
                     {children}
                   </Markdown>
+                </div>
+              )}
+              {subsections && (
+                <div
+                  css={{
+                    [theme.mq('sm')]: {
+                      display: 'flex',
+                      'div + div': {
+                        marginLeft: theme.size(6),
+                      }
+                    }
+                  }}
+                >
+                  {subsections.map((sub) => (
+                    <Subsection
+                      key={sub.heading}
+                      heading={sub.heading}
+                      customCSS={{
+                        width: '100%',
+                      }}
+                    >
+                      {sub.body}
+                    </Subsection>
+                  ))}
                 </div>
               )}
               {buttons && buttons.length && (

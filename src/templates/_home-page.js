@@ -17,6 +17,7 @@ export const HomePageTemplate = ({ heroes, isPreview = false }) => (
           context,
           heading,
           image,
+          subsections,
         } = hero;
 
         const img = image && (
@@ -38,6 +39,7 @@ export const HomePageTemplate = ({ heroes, isPreview = false }) => (
             heading={heading}
             image={img}
             imageAlign={image && image.align}
+            subsections={subsections}
           >
             {body}
           </Hero>
@@ -92,6 +94,10 @@ const HomePage = () => (
                         }
                       }
                     }
+                  }
+                  subsections {
+                    body
+                  	heading
                   }
                 }
               }

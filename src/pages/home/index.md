@@ -31,55 +31,46 @@ heroes:
     image:
       align: after
       image: /img/mp-headshot-800.jpg
-  - body: >-
-      # Anxiety
+  - subsections:
+      - body: >-
+          # Anxiety
+
+          <img src="/img/fernando-cferdo-627207-unsplash.jpg"
+          alt="image-description" />
+
+          Do you constantly feel worried, nervous, or unease over situations or
+          events happening in your life? Are you always on edge? Anxiety affects
+          over 40 million people everyday. Don't let it consume your life any
+          longer. Therapy will provide you with the tools to be able to identify,
+          challenge, and change the thoughts and behaviors that trigger your
+          anxiety.
 
 
-      <img src="/img/fernando-cferdo-627207-unsplash.jpg"
-      alt="image-description" width="190" align="left" />
+          [Learn more](/anxiety)
+      - body: >-
+          # Eating Disorders
+
+          <img src="/img/i-yunmai-617618-unsplash.jpg" alt="image-description" />
+
+          Food and the way you look is a source of contention for you. You're
+          constantly worrying about your body and how much and what you've eaten,
+          and have resorted to restricting what you eat, binge eating, counting
+          calories and/or purging. You feel like you've tried everything to get your
+          disordered eating habits under control to no avail, and you're left with
+          feelings of frustration, shame, and guilt over your behaviors. You're not
+          alone! With the help of therapy you can learn to gain back the control
+          that eating disorder voice has stolen from you, and gain freedom again!
 
 
-      Do you constantly feel worried, nervous, or unease over situations or
-      events happening in your life? Are you always on edge? Anxiety affects
-      over 40 million people everyday. Don't let it consume your life any
-      longer. Therapy will provide you with the tools to be able to identify,
-      challenge, and change the thoughts and behaviors that trigger your
-      anxiety.
+          [Learn more](/eatingdisorders)
+      - body: >-
+          # Other Disorders
 
+          <img src="/img/ben-white-194220-unsplash.jpg" alt="image-description" />
 
-      [Learn more](/anxiety)
-
-
-      # Eating Disorders/Body Dysmorphia
-
-
-      <img src="/img/i-yunmai-617618-unsplash.jpg" alt="image-description"
-      width="190" align="right" />
-
-
-      Food and the way you look is a source of contention for you. You're
-      constantly worrying about your body and how much and what you've eaten,
-      and have resorted to restricting what you eat, binge eating, counting
-      calories and/or purging. You feel like you've tried everything to get your
-      disordered eating habits under control to no avail, and you're left with
-      feelings of frustration, shame, and guilt over your behaviors. You're not
-      alone! With the help of therapy you can learn to gain back the control
-      that eating disorder voice has stolen from you, and gain freedom again!
-
-
-      [Learn more](/eatingdisorders)
-
-
-      # Other Disorders I Treat
-
-
-      <img src="/img/ben-white-194220-unsplash.jpg" alt="image-description"
-      width="190" align="left" />
-
-
-      In addition to anxiety and eating disorders, I have an extensive
-      background treating chronic stress, depression, addiction, autism, and
-      grief.
+          In addition to anxiety and eating disorders, I have an extensive
+          background treating chronic stress, depression, addiction, autism, and
+          grief.
     context: specialties
     heading: Mallorie's Specialties
   - body: >-
