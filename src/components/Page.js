@@ -41,7 +41,7 @@ const Page = ({
       <Heading
         Tag='h2'
         customCSS={{
-          marginBottom: theme.size(6),
+          marginBottom: theme.size(3),
         }}
       >
         {heading}
