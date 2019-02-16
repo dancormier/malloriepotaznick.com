@@ -3,6 +3,7 @@ templateKey: created-page
 title: anxiety
 image: /img/nikko-macaspac-263785-unsplash.jpg
 heading: Anxiety
+showFooterContact: true
 ---
 ## Anxiety is uncomfortable
 
