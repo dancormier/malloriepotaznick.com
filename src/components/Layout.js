@@ -11,7 +11,7 @@ import Navbar from '../templates/_navbar'
 import Superbar from '../templates/_superbar'
 import './Utility/all.sass'
 
-const prelaunch = true;
+const prelaunch = false;
 
 const TemplateWrapper = ({ children, altBG, showFooterContact }) => (
   <StaticQuery
