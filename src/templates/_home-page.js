@@ -97,7 +97,6 @@ const HomePage = () => (
                   }
                   subsections {
                     body
-                  	heading
                   }
                 }
               }

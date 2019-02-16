@@ -98,7 +98,6 @@ collections:
                   name: "subsections",
                   widget: "object",
                   fields: [
-                    {label: "Heading", name: "heading", widget: "string"},
                     {label: "Body", name: "body", widget: "markdown"},
                   ]
                 },
