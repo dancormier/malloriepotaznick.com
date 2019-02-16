@@ -55,6 +55,7 @@ export default class ContactForm extends React.Component {
   };
 
   handleSubmit = e => {
+    console.log(e, 'sub')
     e.preventDefault();
     const form = e.target;
     fetch("/", {
@@ -71,17 +72,17 @@ export default class ContactForm extends React.Component {
 
   render() {
     const {
-      action,
       onClick,
     } = this.props;
     return (
       <form
         name="contact"
         method="post"
-        action={action || ''}
+        action="/contact/thanks"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={(e) => {
+          console.log('submit?')
           if (onClick) {
             onClick();
           }

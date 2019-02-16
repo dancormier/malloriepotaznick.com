@@ -54,7 +54,7 @@ const Button = ({
   children,
   type,
   url,
-}) => type === 'button' ? (
+}) => type === 'submit' ? (
   <button
     css={{
       ...style,

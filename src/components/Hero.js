@@ -132,7 +132,6 @@ const Hero = ({
                   }}
                 >
                   <ContactForm
-                    action={`#${context}`}
                     onClick={() => {
                       console.log('Contact form submitted');
                     }}
