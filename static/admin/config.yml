@@ -112,6 +112,23 @@ collections:
         name: "footer"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_footer"}
+          - {label: "Contact Text", name: "body", widget: "markdown", hint: *body_hint}
+          - {
+              label: "Contact Buttons",
+              name: "buttons",
+              widget: "list",
+              fields: [
+                {label: "Text", name: "text", widget: "string"},
+                {label: "URL", name: "url", widget: "string"},
+                {
+                  label: "Style",
+                  name: "type",
+                  widget: "select",
+                  default: "primary",
+                  options: ["primary", "secondary", "link"]
+                }
+              ]
+            }
           - {
               label: "Items",
               name: "items",
@@ -189,3 +206,4 @@ collections:
       - {label: "Header Image", name: "image", widget: "image", allow_multiple: false}
       - {label: "Title", name: "heading", widget: "string", required: true}
       - {label: "Body", name: "body", widget: "markdown", required: true, hint: *body_hint}
+      - {label: "Show Contact Footer", name: "showFooterContact", widget: "boolean", default: true}
