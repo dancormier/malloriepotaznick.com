@@ -3,7 +3,6 @@ templateKey: created-page
 title: anxiety
 image: /img/nikko-macaspac-263785-unsplash.jpg
 heading: Anxiety
-showFooterContact: true
 ---
 ## Anxiety is uncomfortable
 
@@ -15,12 +14,16 @@ If you’ve experienced this scenario then you know the **feeling of discomfort*
 
 ## Anxiety takes many forms
 
-<img src="/img/ben-white-302160-unsplash.jpg" alt="image-description" width="200" align="left" />
+<p align="center">
+  <img src="/img/ben-white-302160-unsplash.jpg" alt="image-description" width="600" />
+</p>
 
 Anxiety takes many forms. Whether you are experiencing general anxiety, social anxiety, obsessive compulsive disorder, panic disorder, or a specific phobia, living with an anxiety disorder can make you feel like a prisoner in your own life and be overwhelming. 
 
 ## Therapy can help alleviate anxiety
 
-<img src="/img/rawpixel-315186-unsplash.jpg" alt="image-description" width="250" align="right" />
+<p align="center">
+  <img src="/img/rawpixel-315186-unsplash.jpg" alt="image-description" width="600" />
+</p>
 
 Luckily, **therapy can help alleviate anxiety**. You don't have to feel stuck anymore! Together, I will help you discover the underlying causes of your anxiety, provide you with coping tools,  and help you change the way you think and manage your anxiety so that you can eliminate those pesky racing thoughts.
