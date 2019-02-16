@@ -1,10 +1,9 @@
 ---
 templateKey: created-page
 title: anxiety
+image: /img/nikko-macaspac-263785-unsplash.jpg
 heading: Anxiety
 ---
-![hand emerging from ocean](/img/nikko-macaspac-263785-unsplash.jpg "Anxiety")
-
 ## Anxiety is uncomfortable
 
 Anxiety often happens during the worst possible times, and can be quite difficult to get under control once it's gotten a hold of you.
