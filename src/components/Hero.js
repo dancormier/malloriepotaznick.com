@@ -176,6 +176,7 @@ const Hero = ({
                 <div>
                   {buttons.map((button) => (
                     <Button
+                      key={text}
                       type={button.type}
                       url={button.url}
                     >
