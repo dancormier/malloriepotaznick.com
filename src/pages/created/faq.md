@@ -1,10 +1,9 @@
 ---
 templateKey: created-page
 title: faq
+image: /img/alexandru-tudorache-17852-unsplash.jpg
 heading: Frequently Asked Questions
 ---
-<img src="/img/alexandru-tudorache-17852-unsplash.jpg" alt="image-description" width="600" align="center" />
-
 ## How long are therapy sessions and how often do I need to attend sessions?
 
 Therapy has been found to works best when it is attended at least 1 time per week for the first couple weeks of therapy. As such, I ask that new clients attend sessions at least 1 time a week for the first 4-5 weeks, in order for us to begin building a therapeutic relationship and work on a plan so you can begin to achieve your goals in therapy. When this is accomplished we will discuss and evaluate how often you should come in to therapy and adjust your sessions accordingly.
