@@ -40,7 +40,7 @@ const CreatedPage = ({ data }) => {
   } = post.frontmatter;
 
   return (
-    <Layout>
+    <Layout showFooterContact={true}>
       <CreatedPageTemplate
         heading={heading}
         body={post.rawMarkdownBody}

@@ -13,7 +13,7 @@ import './Utility/all.sass'
 
 const prelaunch = true;
 
-const TemplateWrapper = ({ children, altBG }) => (
+const TemplateWrapper = ({ children, altBG, showFooterContact }) => (
   <StaticQuery
     query={graphql`
       query HeadingQuery {
@@ -87,7 +87,7 @@ const TemplateWrapper = ({ children, altBG }) => (
                       </Container>
                     ) : children}
                   </div>
-                  <Footer />
+                  <Footer showFooterContact={showFooterContact} />
                 </div>
               </ThemeProvider>
             </div>

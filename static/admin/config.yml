@@ -22,7 +22,6 @@ collections:
       - {label: "Body", name: "body", widget: "markdown", hint: *body_hint}
       - {label: "Tags", name: "tags", widget: "list"}
 
-
   - name: "custom-pages"
     label: "Custom Pages"
     files:
