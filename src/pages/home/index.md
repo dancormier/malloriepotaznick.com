@@ -49,7 +49,7 @@ heroes:
           trigger your anxiety.
 
 
-          [Learn more](/anxiety)
+          [Learn more about anxiety](/anxiety)
       - body: >-
           # Eating Disorders
 
@@ -68,7 +68,7 @@ heroes:
           stolen from you, and gain freedom again!
 
 
-          [Learn more](/eatingdisorders)
+          [Learn more about eating disorders](/eatingdisorders)
       - body: >-
           # Other Disorders
 
