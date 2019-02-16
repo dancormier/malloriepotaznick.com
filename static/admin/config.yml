@@ -96,7 +96,7 @@ collections:
                 {
                   label: "Subsections",
                   name: "subsections",
-                  widget: "object",
+                  widget: "list",
                   fields: [
                     {label: "Body", name: "body", widget: "markdown"},
                   ]

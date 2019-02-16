@@ -55,7 +55,6 @@ export default class ContactForm extends React.Component {
   };
 
   handleSubmit = e => {
-    console.log(e, 'sub')
     e.preventDefault();
     const form = e.target;
     fetch("/", {
