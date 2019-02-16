@@ -13,18 +13,17 @@ Anxiety often happens during the worst possible times, and can be quite difficul
 
 If you’ve experienced this scenario then you know the **feeling of discomfort** that anxiety provides all too well unfortunately. 
 
-## Anxiety takes many forms
-
-<p align="center">
+<div align="center">
   <img src="/img/ben-white-302160-unsplash.jpg" alt="image-description" width="600" />
-</p>
+</div>
+## Anxiety takes many forms
 
 Anxiety takes many forms. Whether you are experiencing general anxiety, social anxiety, obsessive compulsive disorder, panic disorder, or a specific phobia, living with an anxiety disorder can make you feel like a prisoner in your own life and be overwhelming. 
 
-## Therapy can help alleviate anxiety
-
-<p align="center">
+<div align="center">
   <img src="/img/rawpixel-315186-unsplash.jpg" alt="image-description" width="600" />
-</p>
+</div>
+
+## Therapy can help alleviate anxiety
 
 Luckily, **therapy can help alleviate anxiety**. You don't have to feel stuck anymore! Together, I will help you discover the underlying causes of your anxiety, provide you with coping tools,  and help you change the way you think and manage your anxiety so that you can eliminate those pesky racing thoughts.
