@@ -1,7 +1,7 @@
 ---
 templateKey: created-page
 title: eatingdisorders
-image: /img/jennifer-burk-118076-unsplash.jpg
+image: /img/rawpixel-1054662-unsplash.jpg
 heading: Eating Disorders
 ---
 ## Having an eating disorder can be exhausting and lonely
@@ -20,9 +20,9 @@ It's not easy for people to discuss or even acknowledge they have an eating diso
 
 Eating disorders don’t have a **LOOK**, and  can affect anyone regardless of their weight, and physical appearance. Physical appearances at times can be deceiving. Just because someone is skinny doesn’t mean their anorexic, nor does it mean if someone is heavier that they have a binge eating disorder. In fact, appearances are so deceiving that just because someone looks physically healthy it doesn’t mean they actually are. In reality those physically healthy looking people may be restricting and calorie counting what they eat, or could be struggling with bulimia, binge-eating disorder, and body dysmorphia. 
 
-<img src="/img/cristian-newman-141895-unsplash.jpg" alt="image-description" width="190" align="left" />
 
 ## Eating disorders are often a symptom of an emotional disorder.
+<img src="/img/cristian-newman-141895-unsplash.jpg" alt="image-description" width="200" align="left" />
 
 This is the crux of it all. Eating disorders tend to come about often after emotionally taxing, stressful and traumatic events. When we have poor emotional hygiene the ways in which we discharge our pain and discomfort often take the form of disorders eating patterns in order to help us self sooth, self punish, self seek attention, or control. 
 
