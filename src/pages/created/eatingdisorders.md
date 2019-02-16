@@ -1,7 +1,7 @@
 ---
 templateKey: created-page
 title: eatingdisorders
-image: /img/jennifer-burk-118076-unsplash.jpg
+image: /img/rawpixel-1054662-unsplash.jpg
 heading: Eating Disorders
 ---
 ## Having an eating disorder can be exhausting and lonely
