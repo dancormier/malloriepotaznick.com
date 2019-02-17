@@ -65,7 +65,7 @@ heroes:
           control to no avail, and you're left with feelings of frustration,
           shame, and guilt over your behaviors. You're not alone! With the help
           of therapy you can learn to gain back the control that eating disorder
-          voice has stolen from you, and gain freedom again!
+          voice has stolen from you, and attain freedom again!
 
 
           [Learn more about eating disorders](/eatingdisorders)
