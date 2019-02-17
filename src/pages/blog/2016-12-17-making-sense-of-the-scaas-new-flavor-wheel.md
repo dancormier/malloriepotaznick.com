@@ -1,32 +1,31 @@
 ---
 templateKey: blog-post
-title: Making sense of the SCAA’s new Flavor Wheel
-date: 2016-12-17T15:04:10.000Z
-description: The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.
+title: Anxiety
+date: 2018-02-16T19:00:10.000Z
+description: >-
+  Anxiety often happens during the worst possible times, and can be quite
+  difficult to get under control once it's gotten a hold of you.
 tags:
-  - flavor
-  - tasting
+  - anxiety
+  - therapy
 ---
+## Anxiety is uncomfortable
 
-![flavor wheel](/img/bg-flower-feature.jpg)
+Anxiety often happens during the worst possible times, and can be quite difficult to get under control once it's gotten a hold of you.
 
-The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
+ For instance, have you ever been walking down the street, not a care in the world when suddenly you begin noticing an uncomfortable sensation in your body, or a stray thought, which comes to the forefront of your mind? You try to ignore this sensation or thought but your mind begins to focus in on whats going on in your mind and body, and within seconds your completely entrapped by the rapid and repetitive racing thoughts of what’s wrong with you, and why your feeling the way you are. You begin then to go down the rabbit hole of what if’s, as you try to figure out what caused the random thought or uncomfortable body sensation in the first place. As fear and panic are setting in, your body begins to show physical signs that begin to worry you even more as your heart-rate increases, you experience shortness of breathe, become dizzy and/or begin sweating. If you’ve experienced this scenario then you know the **feeling of discomfort** that **anxiety** provides all too well unfortunately. 
 
-While this is going to be a big change for professional coffee tasters, it means a lot to you as a consumer as well. We’ll explain how the wheel came to be, how pros use it and what the flavors actually mean.
+<div align="center">
+  <img src="/img/ben-white-302160-unsplash.jpg" alt="image-description" width="600" />
+</div>
+## Anxiety takes many forms
 
-## What the updates mean to you
+Anxiety takes many forms. Whether you are experiencing general anxiety, social anxiety, obsessive compulsive disorder, panic disorder, or a specific phobia, living with an anxiety disorder can make you feel like a prisoner in your own life and be overwhelming. 
 
-The Specialty Coffee Association of America (SCAA), founded in 1982, is a non-profit trade organization for the specialty coffee industry. With members located in more than 40 countries, SCAA represents every segment of the specialty coffee industry, including:
+<div align="center">
+  <img src="/img/rawpixel-315186-unsplash.jpg" alt="image-description" width="600" />
+</div>
 
-* producers
-* roasters
-* importers/exporters
-* retailers
-* manufacturers
-* baristas
+## Therapy can help alleviate anxiety
 
-For over 30 years, SCAA has been dedicated to creating a vibrant specialty coffee community by recognizing, developing and promoting specialty coffee. SCAA sets and maintains quality standards for the industry, conducts market research, and provides education, training, resources, and business services for its members.
-
-Coffee cupping, or coffee tasting, is the practice of observing the tastes and aromas of brewed coffee. It is a professional practice but can be done informally by anyone or by professionals known as "Q Graders". A standard coffee cupping procedure involves deeply sniffing the coffee, then loudly slurping the coffee so it spreads to the back of the tongue.
-
-The coffee taster attempts to measure aspects of the coffee's taste, specifically the body (the texture or mouthfeel, such as oiliness), sweetness, acidity (a sharp and tangy feeling, like when biting into an orange), flavour (the characters in the cup), and aftertaste. Since coffee beans embody telltale flavours from the region where they were grown, cuppers may attempt to identify the coffee's origin.
+Luckily, **therapy can help alleviate anxiety**. You don't have to feel stuck anymore! Together, I will help you discover the underlying causes of your anxiety, provide you with coping tools,  and help you change the way you think and manage your anxiety so that you can eliminate those pesky racing thoughts.
