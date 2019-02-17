@@ -58,14 +58,14 @@ heroes:
           />
 
           Food and the way you look is a source of frustration and stress for
-          you. You're constantly worrying about your body and how much and what
-          you've eaten, and have resorted to restricting what you eat, binge
-          eating, counting calories and/or purging. You feel like you've tried
-          everything to get your disordered eating habits under control to no
-          avail, and you're left with feelings of frustration, shame, and guilt
-          over your behaviors. You're not alone! With the help of therapy you
-          can learn to gain back the control that eating disorder voice has
-          stolen from you, and gain freedom again!
+          you. You're constantly worrying about your body size and shape, how
+          much and what you've eaten, and have resorted to restricting what you
+          eat, binge eating, counting calories and/or purging. You feel like
+          you've tried everything to get your disordered eating habits under
+          control to no avail, and you're left with feelings of frustration,
+          shame, and guilt over your behaviors. You're not alone! With the help
+          of therapy you can learn to gain back the control that eating disorder
+          voice has stolen from you, and gain freedom again!
 
 
           [Learn more about eating disorders](/eatingdisorders)
