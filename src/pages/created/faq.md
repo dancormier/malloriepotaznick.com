@@ -21,6 +21,10 @@ The initial intake session is $150. Individual 50-minute sessions are $100. I ha
 
 Payment is collected at the time of the appointment. I accept cash or credit cards. 
 
+## Do you accept insurance?
+
+At this time I do not accept insurance.
+
 ## Do you have a cancellation policy?
 
 Yes. I ask for a minimum of 24 hours notice if you need to cancel a session. If you fail to attend a scheduled session or give less than 24 hours notice of cancellation, your full fee will be charged to the credit card on file. 
