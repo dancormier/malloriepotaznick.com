@@ -186,8 +186,7 @@ const Hero = ({
                 >
                   {subsections.map((sub) => (
                     <Subsection
-                      key={sub.heading}
-                      heading={sub.heading}
+                      key={sub.body}
                       customCSS={{
                         width: '100%',
                       }}
