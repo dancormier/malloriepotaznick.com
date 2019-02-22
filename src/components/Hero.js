@@ -144,13 +144,13 @@ const Hero = ({
                     marginBottom: theme.size(6),
                     'h3': {
                       fontSize: theme.size(2),
-                      fontWeight: 500,
+                      fontWeight: 400,
                       lineHeight: theme.size(4),
                     },
                     [theme.mq('sm')]: {
                       'h3': {
                         fontSize: theme.size(4),
-                        fontWeight: 500,
+                        fontWeight: 400,
                         lineHeight: theme.size(6),
                       },
                     },

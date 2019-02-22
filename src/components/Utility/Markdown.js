@@ -24,13 +24,13 @@ const Markdown = ({
         'h1': {
           color: theme.color('accent'),
           fontSize: '1.75em',
-          fontWeight: 500,
+          fontWeight: 400,
         },
         'h2': {
           borderBottom: 'none',
           color: theme.color('accent'),
           fontSize: '1.75em',
-          fontWeight: 500,
+          fontWeight: 400,
         },
         'p + h1, p + h2, p + h3, p + h4': {
           marginTop: theme.size(9),

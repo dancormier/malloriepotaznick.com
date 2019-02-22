@@ -38,7 +38,7 @@ const Logo = ({ heading, subheading }) => {
           [theme.mq('sm')]: {
             fontSize: theme.size(4),
             marginBottom: theme.size(-5),
-            fontWeight: 500,
+            fontWeight: 400,
           },
           [theme.mq('lg')]: {
             fontSize: theme.size(5),

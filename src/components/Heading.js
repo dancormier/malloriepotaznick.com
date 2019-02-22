@@ -94,7 +94,7 @@ const Heading = ({
   Tag = 'h3',
 }) => (
   <Tag css={{
-    fontWeight: 500,
+    fontWeight: 400,
     margin: 'auto',
     position: 'relative',
     ...style(Tag),
