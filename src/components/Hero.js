@@ -50,6 +50,7 @@ const Hero = ({
       css={{
         backgroundColor: !invertedBG && altBG && theme.color('gray-ll'),
         backgroundImage: invertedBG,
+        boxShadow: isFeatured && 'inset 0 -10px 20px rgba(0,0,0,.1)',
         position: 'relative',
         '&:after': {
           backgroundImage: bgImage && `url(${bgImage})`,
@@ -76,8 +77,8 @@ const Hero = ({
             position: 'relative',
             textAlign: isFeatured && 'center',
             [theme.mq('lg')]: {
-              paddingTop: theme.size(isFeatured ? 11 : 11),
-              paddingBottom: theme.size(isFeatured ? 12 : 9),
+              paddingTop: theme.size(isFeatured ? 9 : 13),
+              paddingBottom: theme.size(isFeatured ? 10 : 11),
             },
           }}
         >
