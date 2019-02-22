@@ -21,6 +21,9 @@ const Markdown = ({
         'a': {
           color: theme.color('accent'),
         },
+        'em': {
+          fontStyle: 'italic',
+        },
         'h1': {
           color: theme.color('accent'),
           fontSize: '1.75em',
@@ -32,11 +35,11 @@ const Markdown = ({
           fontSize: '1.75em',
           fontWeight: 400,
         },
-        'p + h1, p + h2, p + h3, p + h4': {
-          marginTop: theme.size(9),
-        },
         'img': {
           margin: `${theme.size(1)} 0`,
+        },
+        'p + h1, p + h2, p + h3, p + h4': {
+          marginTop: theme.size(9),
         },
         ...customCSS,
       }
