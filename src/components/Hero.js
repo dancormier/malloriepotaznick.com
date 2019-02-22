@@ -50,7 +50,7 @@ const Hero = ({
       css={{
         backgroundColor: !invertedBG && altBG && theme.color('gray-ll'),
         backgroundImage: invertedBG,
-        boxShadow: isFeatured && 'inset 0 -10px 20px rgba(0,0,0,.1)',
+        boxShadow: isFeatured && 'inset 0 -20px 20px -20px rgba(0,0,0,.2)',
         position: 'relative',
         '&:after': {
           backgroundImage: bgImage && `url(${bgImage})`,
