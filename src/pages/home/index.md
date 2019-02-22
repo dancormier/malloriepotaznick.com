@@ -5,9 +5,11 @@ heroes:
       align: cover
       image: /img/henry-be-99471-unsplash.jpg
       invert: false
-    body: >-
-      ### “Let go of who you think you’re supposed to be; embrace who you are.”
-      \- Brené Brown
+    body: |-
+      ### Anxiety and Eating Disorder Counseling 
+      ### For Adolescents and Adults
+
+      Coral Springs, FL
     buttons:
       - text: Book a session
         type: primary
