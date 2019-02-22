@@ -36,6 +36,7 @@ const SuperbarItem = ({ item }) => {
         key={text}
         css={{
           alignItems: 'center',
+          color: theme.color('accent'),
           display: 'flex',
           marginRight: align === 'left' && theme.size(2),
           marginLeft: align === 'right' && theme.size(2),
@@ -45,9 +46,12 @@ const SuperbarItem = ({ item }) => {
         {url ? (
           <OutboundLink
             css={{
-              color: theme.color('white'),
+              color: theme.color('accent'),
               textDecoration: 'none',
               marginLeft: theme.size(-1),
+              '&:hover': {
+                textDecoration: 'underline',
+              }
             }}
             href={url}
             target="_blank"
@@ -69,8 +73,7 @@ export const SuperbarTemplate = ({ items, isPreview = false }) => (
   <ThemeProvider theme={theme}>
     <div
       css={{
-        backgroundColor: theme.color('accent'),
-        color: theme.color('white'),
+        borderBottom: `1px solid ${theme.color('gray-ll-alt')}`,
         display: !isPreview && 'none',
         [theme.mq('md')]: {
           display: 'block',

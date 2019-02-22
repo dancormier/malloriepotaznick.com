@@ -41,6 +41,7 @@ const colors = {
   'primary': '#444444',
   'white': '#ffffff',
   'gray-ll': '#f9f9f9',
+  'gray-ll-alt': '#eeeeee',
   'gray-l': '#cccccc',
   'gray': '#999999',
   'gray-d': '#666666',

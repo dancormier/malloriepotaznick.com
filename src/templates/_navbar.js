@@ -201,8 +201,8 @@ export const NavbarTemplate = class extends React.Component {
             paddingBottom: theme.size(4),
             position: 'relative',
             [theme.mq('xl')]: {
-              paddingTop: theme.size(6),
-              paddingBottom: theme.size(6),
+              paddingTop: theme.size(5),
+              paddingBottom: theme.size(5),
             },
           }}
         >
