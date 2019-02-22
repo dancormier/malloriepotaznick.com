@@ -18,10 +18,10 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Header Image", name: "image", widget: "image", allow_multiple: false}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Header Image", name: "image", widget: "image", allow_multiple: false, required: false}
       - {label: "Body", name: "body", widget: "markdown", hint: *body_hint}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
 
   - name: "custom-pages"
     label: "Custom Pages"
@@ -41,7 +41,6 @@ collections:
           - {
               label: "Home Sections",
               name: "heroes",
-              required: true,
               widget: "list",
               fields:
               [
@@ -50,6 +49,7 @@ collections:
                 {
                   label: "Buttons",
                   name: "buttons",
+                  required: false,
                   widget: "list",
                   fields: [
                     {label: "Text", name: "text", widget: "string"},
@@ -98,6 +98,7 @@ collections:
                   label: "Subsections",
                   name: "subsections",
                   widget: "list",
+                  required: false,
                   fields: [
                     {label: "Body", name: "body", widget: "markdown"},
                   ]
@@ -124,6 +125,7 @@ collections:
           - {
               label: "Contact Buttons",
               name: "buttons",
+              required: false,
               widget: "list",
               fields: [
                 {label: "Text", name: "text", widget: "string"},
@@ -140,18 +142,17 @@ collections:
           - {
               label: "Items",
               name: "items",
-              required: true,
               widget: "list",
               fields:
               [
-                {label: "Text", name: "text", widget: "string", required: true},
+                {label: "Text", name: "text", widget: "string"},
                 {
                   label: "Alignment",
                   name: "align",
                   widget: "select",
                   options: ["left", "right"]
                 },
-                {label: "URL", name: "url", widget: "string"}
+                {label: "URL", name: "url", widget: "string", required: false}
               ]
             }
       - file: "src/data/navbar.md"
@@ -159,17 +160,16 @@ collections:
         name: "navbar"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_navbar"}
-          - {label: "Main Heading", name: "heading", widget: "string", required: true}
-          - {label: "Subheading", name: "subheading", widget: "string", required: true}
+          - {label: "Main Heading", name: "heading", widget: "string"}
+          - {label: "Subheading", name: "subheading", widget: "string"}
           - {
               label: "Links",
               name: "links",
-              required: true,
               widget: "list",
               fields:
               [
-                {label: "Text", name: "text", widget: "string", required: true},
-                {label: "URL", name: "url", widget: "string", required: true},
+                {label: "Text", name: "text", widget: "string"},
+                {label: "URL", name: "url", widget: "string"},
                 {label: "Apply Button Style", name: "button", widget: "boolean", default: false},
                 {label: "Show", name: "enabled", widget: "boolean", default: true}
               ]
@@ -182,11 +182,10 @@ collections:
           - {
               label: "Items",
               name: "items",
-              required: true,
               widget: "list",
               fields:
               [
-                {label: "Text", name: "text", widget: "string", required: true},
+                {label: "Text", name: "text", widget: "string"},
                 {
                   label: "Icon",
                   name: "icon",
@@ -199,7 +198,7 @@ collections:
                   widget: "select",
                   options: ["left", "right"]
                 },
-                {label: "URL", name: "url", widget: "string"}
+                {label: "URL", name: "url", widget: "string", required: false}
               ]
             }
 
@@ -210,8 +209,8 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "created-page"}
-      - {label: "URL", name: "title", widget: "string", required: true}
-      - {label: "Header Image", name: "image", widget: "image", allow_multiple: false}
-      - {label: "Title", name: "heading", widget: "string", required: true}
-      - {label: "Body", name: "body", widget: "markdown", required: true, hint: *body_hint}
+      - {label: "URL", name: "title", widget: "string"}
+      - {label: "Header Image", name: "image", widget: "image", allow_multiple: false, required: false}
+      - {label: "Title", name: "heading", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown", hint: *body_hint}
       - {label: "Show Contact Footer", name: "showFooterContact", widget: "boolean", default: true}
