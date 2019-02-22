@@ -11,8 +11,6 @@ import Navbar from '../templates/_navbar'
 import Superbar from '../templates/_superbar'
 import './Utility/all.sass'
 
-const prelaunch = false;
-
 const TemplateWrapper = ({ children, altBG, showFooterContact }) => (
   <StaticQuery
     query={graphql`
@@ -64,28 +62,9 @@ const TemplateWrapper = ({ children, altBG, showFooterContact }) => (
                   overflow: 'hidden',
                 }}>
                   <Superbar />
-                  <Navbar
-                    prelaunch={prelaunch}
-                    pathname={location.pathname}
-                  />
+                  <Navbar pathname={location.pathname} />
                   <div css={{ minHeight: '100vh' }}>
-                    {prelaunch ? (
-                      <Container customCSS={{ textAlign: 'center' }}>
-                        <h2
-                          css={{
-                            fontSize: theme.size(6),
-                            marginBottom: theme.size(6),
-                          }}
-                        >
-                          More coming soon
-                        </h2>
-                        <div>
-                          <a href="https://www.psychologytoday.com/us/therapists/mallorie-potaznick-coral-springs-fl/429831">
-                            View Mallorie Potaznick's Psychology Today profile
-                          </a>
-                        </div>
-                      </Container>
-                    ) : children}
+                    {children}
                   </div>
                   <Footer showFooterContact={showFooterContact} />
                 </div>

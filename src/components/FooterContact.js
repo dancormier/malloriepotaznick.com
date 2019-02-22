@@ -22,7 +22,7 @@ const FooterContact = ({
       <Markdown
         customCSS={{
           'p': {
-            color: theme.color('gray'),
+            color: theme.color('gray-d'),
             fontSize: theme.size(2),
           }
         }}

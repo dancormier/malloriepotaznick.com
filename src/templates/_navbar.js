@@ -17,16 +17,14 @@ const linkIsActive = (slug, pathname) => {
   return slug === path;
 };
 
-const Logo = ({ heading, prelaunch, subheading }) => {
+const Logo = ({ heading, subheading }) => {
   return (
     <Link
       to="/"
       title={`${heading} | Home`}
       css={{
         color: theme.color('primary'),
-        margin: prelaunch && 'auto',
-        paddingRight: !prelaunch && theme.size(2),
-        textAlign: prelaunch && 'center',
+        paddingRight: theme.size(2),
         textDecoration: 'none',
         [theme.mq('sm')]: {
           whiteSpace: 'nowrap',
@@ -38,9 +36,15 @@ const Logo = ({ heading, prelaunch, subheading }) => {
           fontSize: theme.size(2),
           fontWeight: 700,
           [theme.mq('sm')]: {
-            fontSize: theme.size(6),
+            fontSize: theme.size(4),
             marginBottom: theme.size(-5),
             fontWeight: 500,
+          },
+          [theme.mq('lg')]: {
+            fontSize: theme.size(5),
+          },
+          [theme.mq('xl')]: {
+            fontSize: theme.size(6),
           },
         }}
       >
@@ -50,6 +54,9 @@ const Logo = ({ heading, prelaunch, subheading }) => {
         css={{
           fontSize: theme.size(0),
           [theme.mq('sm')]: {
+            fontSize: theme.size(1),
+          },
+          [theme.mq('xl')]: {
             fontSize: theme.size(2),
           },
         }}
@@ -75,7 +82,7 @@ const NavLinks = ({ links, pathname }) => {
             key={l.text}
             url={l.url}
             customCSS={{
-              marginLeft: theme.size(6),
+              marginLeft: theme.size(4),
             }}
           >
             {l.text}
@@ -89,7 +96,7 @@ const NavLinks = ({ links, pathname }) => {
               color: theme.color(linkIsActive(l.url, pathname) ? 'accent' : 'primary'),
               display: 'block',
               fontSize: theme.size(2),
-              marginLeft: theme.size(6),
+              marginLeft: theme.size(5),
               pointerEvents: linkIsActive(l.url, pathname) && 'none',
               position: 'relative',
               textDecoration: 'none',
@@ -173,7 +180,6 @@ export const NavbarTemplate = class extends React.Component {
       links,
       pathname,
       subheading,
-      prelaunch,
     } = this.props;
     const { menuVisible } = this.state;
 
@@ -192,24 +198,23 @@ export const NavbarTemplate = class extends React.Component {
             display: 'flex',
             justifyContent: 'space-between',
             paddingTop: theme.size(4),
-            paddingBottom: theme.size(5),
+            paddingBottom: theme.size(4),
             position: 'relative',
-            [theme.mq('lg')]: {
-              paddingTop: theme.size(8),
-              paddingBottom: theme.size(7),
+            [theme.mq('xl')]: {
+              paddingTop: theme.size(6),
+              paddingBottom: theme.size(6),
             },
           }}
         >
           <Logo
             heading={heading}
             subheading={subheading}
-            prelaunch={prelaunch}
           />
           <div
             onClick={() => toggleMenu(menuVisible)}
             css={{
               color: theme.color('black'),
-              display: prelaunch ? 'none' : 'flex',
+              display: 'flex',
               fontSize: theme.size(4),
               [theme.mq('sm')]: {
                 fontSize: theme.size(5),
@@ -226,7 +231,7 @@ export const NavbarTemplate = class extends React.Component {
             css={{
               display: 'none',
               [theme.mq('lg')]: {
-                display: !prelaunch && 'block',
+                display: 'block',
               },
             }}
           >
@@ -262,11 +267,10 @@ NavbarTemplate.propTypes = {
   heading: PropTypes.string,
   links: PropTypes.any,
   pathname: PropTypes.string,
-  prelaunch: PropTypes.bool,
   subheading: PropTypes.string,
 };
 
-const Navbar = ({ pathname, prelaunch }) => (
+const Navbar = ({ pathname }) => (
   <StaticQuery
     query={graphql`
       query Navbar {
@@ -306,7 +310,6 @@ const Navbar = ({ pathname, prelaunch }) => (
           links={links}
           pathname={pathname}
           subheading={subheading}
-          prelaunch={prelaunch}
         />
       );
     }}

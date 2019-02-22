@@ -12,6 +12,11 @@ const styleByType = (type) => {
         border: `2px solid ${theme.color('accent')}`,
         color: theme.color('accent'),
         fontWeight: 700,
+        transition: '.1s',
+        '&:hover': {
+          backgroundColor: theme.color('accent'),
+          color: theme.color('white'),
+        }
       }
     case 'link':
       return {
@@ -27,6 +32,12 @@ const styleByType = (type) => {
     default:
       return {
         backgroundColor: theme.color('accent'),
+        border: `2px solid ${theme.color('accent')}`,
+        transition: '.1s',
+        '&:hover': {
+          backgroundColor: theme.color('white'),
+          color: theme.color('accent'),
+        }
       }
   }
 }
@@ -34,11 +45,12 @@ const styleByType = (type) => {
 const style = {
   borderRadius: theme.size(8),
   color: theme.color('white'),
+  cursor: 'pointer',
   display: 'block',
   fontFamily: theme.font('sans'),
-  padding: theme.size(2),
-  paddingLeft: theme.size(5),
-  paddingRight: theme.size(5),
+  padding: theme.size(1),
+  paddingLeft: theme.size(4),
+  paddingRight: theme.size(4),
   textAlign: 'center',
   textDecoration: 'none',
   textTransform: 'uppercase',

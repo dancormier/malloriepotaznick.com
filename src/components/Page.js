@@ -8,9 +8,6 @@ import Heading from './Heading';
 
 const style = {
   paddingBottom: theme.size(4),
-  [theme.mq('md')]: {
-    paddingTop: theme.size(2),
-  },
 };
 
 const Page = ({
