@@ -23,7 +23,7 @@ links:
     url: faq
   - button: true
     enabled: true
-    text: Contact Mallorie
+    text: Contact
     url: contact
 ---
 
