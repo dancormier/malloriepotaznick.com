@@ -38,13 +38,14 @@ heroes:
       - body: >-
           # Anxiety
 
+
           <img src="/img/fernando-cferdo-627207-unsplash.jpg"
           alt="image-description" />
 
           Do you constantly feel worried, nervous, or unease over situations or
           events happening in your life? Are you always on edge? Anxiety affects
           over 40 million people everyday. Don't let it consume your life any
-          longer. Therapy will provide you with the tools to be able to
+          longer. Counseling will provide you with the tools to be able to
           identify, challenge, and change the thoughts and behaviors that
           trigger your anxiety.
 
@@ -64,20 +65,21 @@ heroes:
           you've tried everything to get your disordered eating habits under
           control to no avail, and you're left with feelings of frustration,
           shame, and guilt over your behaviors. You're not alone! With the help
-          of therapy you can learn to gain back the control that eating disorder
-          voice has stolen from you, and attain freedom again!
+          of counseling you can learn to gain back the control that eating
+          disorder voice has stolen from you, and attain freedom again!
 
 
           [Learn more about eating disorders](/eatingdisorders)
       - body: >-
           # Other Disorders
 
+
           <img src="/img/ben-white-194220-unsplash.jpg" alt="image-description"
           />
 
           In addition to anxiety and eating disorders, I have an extensive
-          background treating chronic stress, depression, addiction, autism, and
-          grief.
+          background treating chronic stress, depression, substance abuse,
+          autism, and grief.
   - body: >-
       ## Have Questions?
 
