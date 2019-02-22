@@ -1,7 +1,9 @@
 ---
 templateKey: _navbar
 heading: 'Mallorie Potaznick, LMHC'
-subheading: Licensed Mental Health Counselor
+subheading: >-
+  Licensed Mental Health Counselor, Eating Disorder and Anxiety counselor in
+  Coral Springs
 links:
   - button: false
     enabled: false
