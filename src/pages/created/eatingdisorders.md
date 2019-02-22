@@ -20,7 +20,7 @@ Many people **struggle** with issues concerning their **body image**, and **rela
 
 ## What do eating disorders look like?
 
-Eating disorders don’t have a **LOOK**, and  can affect anyone regardless of their weight, and physical appearance. **Physical appearances** at times can be deceiving. Just because someone is skinny doesn’t mean their anorexic, nor does it mean if someone is heavier that they have a binge eating disorder. In fact, **appearances** can be **deceiving**.  Someone who looks physically healthy may be restricting what they eat, calorie counting, or could be struggling with bulimia, binge-eating disorder, and body dysmorphia. 
+Eating disorders don’t have a **LOOK**, and  can affect anyone regardless of their weight, and physical appearance. **Physical appearances** at times can be deceiving. Just because someone is skinny doesn’t mean they're suffering from anorexia nervosa, nor does it mean if someone is heavier that they have a binge eating disorder. In fact, **appearances** can be **deceiving**.  Someone who looks physically healthy may be restricting what they eat, calorie counting, or could be struggling with bulimia, binge-eating disorder, and body dysmorphia. 
 
 <div align="center">
   <img src="/img/cristian-newman-141895-unsplash.jpg" alt="image-description" width="600" />
@@ -33,4 +33,4 @@ This is the crux of it all. Eating disorders tend to come about often after emot
 
 Understanding **why** and **how** your disordered eating patterns came to be, and **learning** what your disordered eating patterns is serving you is the **first step** on your road to **recovery.**
 
-Whether you have been diagnosed with an eating disorder or are just beginning to notice symptoms of an eating disorder, therapy can help. During therapy we will look at your **disordered eating patterns**, and your **emotions** and find and work through the underlying causes of your disordered eating patterns so that you can become **healthy** and regain **control** of your life again.
+Whether you have been diagnosed with an eating disorder or are just beginning to notice symptoms of an eating disorder, counseling can help. During therapy we will look at your **disordered eating patterns**, and your **emotions** and find and work through the underlying causes of your disordered eating patterns so that you can become **healthy** and regain **control** of your life again.
