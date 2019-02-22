@@ -5,11 +5,9 @@ heroes:
       align: cover
       image: /img/henry-be-99471-unsplash.jpg
       invert: false
-    body: |-
-      ### Anxiety and Eating Disorder Counseling 
-      ### For Adolescents and Adults
-
-      Coral Springs, FL
+    body: >-
+      **“Owning our story and loving ourselves through that process is the
+      bravest thing we will ever do.” - _Brené Brown_**
     buttons:
       - text: Book a session
         type: primary
