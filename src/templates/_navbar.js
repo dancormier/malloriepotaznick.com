@@ -26,6 +26,9 @@ const Logo = ({ heading, subheading }) => {
         color: theme.color('primary'),
         paddingRight: theme.size(2),
         textDecoration: 'none',
+        '&:hover': {
+          color: theme.color('accent'),
+        },
         [theme.mq('sm')]: {
           whiteSpace: 'nowrap',
         },
@@ -52,6 +55,7 @@ const Logo = ({ heading, subheading }) => {
       </h1>
       <span
         css={{
+          fontFamily: theme.font('sans'),
           fontSize: theme.size(0),
           [theme.mq('sm')]: {
             fontSize: theme.size(1),
@@ -74,6 +78,7 @@ const NavLinks = ({ links, pathname }) => {
         alignItems: 'center',
         background: 'transparent',
         display: 'flex',
+        fontFamily: theme.font('sans'),
       }}
     >
       {links.map(l => l.enabled && (
@@ -136,6 +141,7 @@ const NavMenu = ({ links }) => {
           customCSS={{
             background: l.button && theme.color('accent'),
             borderTop: `1px solid ${theme.color(l.button ? 'accent' : 'gray-l' )}`,
+            fontFamily: theme.font('sans'),
           }}
           key={l.url}
         >

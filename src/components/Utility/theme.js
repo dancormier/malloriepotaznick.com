@@ -49,7 +49,7 @@ const colors = {
   'black': '#000000',
   'accentBGOverlay': 'linear-gradient(rgba(234, 57, 52, .9) 50%, rgba(255,255,255,0))',
   'blackBGOverlay': 'linear-gradient(rgba(0,0,0,.8) 50%, rgba(0,0,0,.4))',
-  'whiteBGOverlay': 'linear-gradient(rgba(255,255,255,.9) 50%, rgba(255,232,232,0))',
+  'whiteBGOverlay': 'linear-gradient(rgba(255,255,255,.9) 50%, rgba(255,255,255,0))',
   'whiteToTransparent': 'linear-gradient(#fff, rgba(255,255,255,0))',
 };
 

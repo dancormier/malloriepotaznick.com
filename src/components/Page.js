@@ -31,7 +31,7 @@ const Page = ({
           height: theme.size(14),
           marginBottom: theme.size(1),
           [theme.mq('sm')]: {
-            height: theme.size(20),
+            height: theme.size(19),
             marginBottom: theme.size(8),
           },
           }}
