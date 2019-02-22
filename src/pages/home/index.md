@@ -6,8 +6,8 @@ heroes:
       image: /img/henry-be-99471-unsplash.jpg
       invert: false
     body: >-
-      ### “Let go of who you think you’re supposed to be; embrace who you are.”
-      \- Brené Brown
+      ### “Owning our story and loving ourselves through that process is the
+      bravest thing we will ever do.” - _Brené Brown_
     buttons:
       - text: Book a session
         type: primary
