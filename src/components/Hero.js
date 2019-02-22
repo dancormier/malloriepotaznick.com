@@ -199,11 +199,18 @@ const Hero = ({
               )}
               {buttons && buttons.length && (
                 <div>
-                  {buttons.map((button) => (
+                  {buttons.map((button, i) => (
                     <Button
                       key={button.text}
                       type={button.type}
                       url={button.url}
+                      customCSS={{
+                        marginTop: i > 0 && theme.size(0),
+                        [theme.mq('sm')]: {
+                          marginLeft: i > 0 && theme.size(1),
+                          marginTop: 0,
+                        },
+                      }}
                     >
                       {button.text}
                     </Button>
