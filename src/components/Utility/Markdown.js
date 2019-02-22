@@ -35,6 +35,9 @@ const Markdown = ({
         'p + h1, p + h2, p + h3, p + h4': {
           marginTop: theme.size(9),
         },
+        'img': {
+          margin: `${theme.size(1)} 0`,
+        },
         ...customCSS,
       }
     }}
