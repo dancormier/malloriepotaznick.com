@@ -7,11 +7,13 @@ import { ThemeProvider } from 'emotion-theming';
 import theme from '../components/Utility/theme';
 import Layout from '../components/Layout'
 import Page from '../components/Page';
+import Heading from '../components/Heading';
 import Tag from '../components/Tag';
 
 export const BlogPostTemplate = ({
   body,
   description,
+  image,
   tags,
   title,
   helmet,
@@ -19,14 +21,11 @@ export const BlogPostTemplate = ({
   <ThemeProvider theme={theme}>
     {helmet || ''}
     <Page
+      author={true}
       body={body}
       heading={title}
-    >
-      <div
-        css={{
-          marginBottom: theme.size(4),
-        }}
-      >
+      headerImage={image}
+      prebody={description && (
         <div
           css={{
             background: theme.color('gray-ll'),
@@ -40,8 +39,16 @@ export const BlogPostTemplate = ({
         >
           {description}
         </div>
-        {tags && tags.length ? (
-          <div>
+      )}
+    >
+      {tags && tags.length ? (
+        <div>
+          <Heading Tag="h6">Tags</Heading>
+          <div
+            css={{
+              marginTop: theme.size(2),
+            }}
+          >
             {tags.map(tag => (
               <Tag
                 key={tag + `tag`}
@@ -49,8 +56,8 @@ export const BlogPostTemplate = ({
               />
             ))}
           </div>
-        ) : null}
-      </div>
+        </div>
+      ) : null}
     </Page>
   </ThemeProvider>
 );
@@ -58,28 +65,37 @@ export const BlogPostTemplate = ({
 BlogPostTemplate.propTypes = {
   body: PropTypes.node.isRequired,
   description: PropTypes.string,
+  headerImage: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
+  const {
+    description,
+    image,
+    tags,
+    title,
+  } = post.frontmatter;
+  const headerImage = image && image.childImageSharp.fixed.src;
 
   return (
-    <Layout>
+    <Layout showFooterContact={true}>
       <BlogPostTemplate
         body={post.rawMarkdownBody}
-        description={post.frontmatter.description}
+        description={description}
+        image={headerImage}
         helmet={
           <Helmet
             titleTemplate="%s | Blog"
           >
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta name="description" content={`${post.frontmatter.description}`} />
+            <title>{`${title}`}</title>
+            <meta name="description" content={`${description}`} />
           </Helmet>
         }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
+        tags={tags}
+        title={title}
       />
     </Layout>
   )
@@ -103,6 +119,13 @@ export const pageQuery = graphql`
         title
         description
         tags
+        image {
+          childImageSharp {
+            fixed(width: 1600) {
+              src
+            }
+          }
+        }
       }
     }
   }

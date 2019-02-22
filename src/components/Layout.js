@@ -5,7 +5,6 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from "gatsby"
 import { ThemeProvider } from 'emotion-theming'
 import theme from './Utility/theme'
-import Container from '../components/Container';
 import Footer from '../templates/_footer'
 import Navbar from '../templates/_navbar'
 import Superbar from '../templates/_superbar'

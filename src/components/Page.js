@@ -1,6 +1,7 @@
 // import React from 'react'
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { Link } from 'gatsby';
 import Markdown from './Utility/Markdown';
 import theme from './Utility/theme';
 import Container from './Container';
@@ -11,11 +12,13 @@ const style = {
 };
 
 const Page = ({
+  author,
   body,
   customCSS,
   children,
   headerImage,
   heading,
+  prebody,
 }) => (
   <div css={{...style, ...customCSS}}>
     {headerImage && (
@@ -38,12 +41,41 @@ const Page = ({
       <Heading
         Tag='h2'
         customCSS={{
-          marginBottom: theme.size(3),
+          marginBottom: theme.size(1),
+          [theme.mq('sm')]: {
+            marginBottom: theme.size(3),
+          },
         }}
       >
         {heading}
       </Heading>
-      {children}
+      {author && (
+        <div
+          css={{
+            marginBottom: theme.size(2),
+            [theme.mq('sm')]: {
+              fontSize: theme.size(2),
+              marginBottom: theme.size(4),
+            },
+          }}
+        >
+          <span>by </span>
+          <Link
+            to="/"
+            title="Mallorie Potaznick, LMHC"
+            css={{
+              color: theme.color('accent'),
+              textDecoration: 'none',
+              '&:hover': {
+                textDecoration: 'underline',
+              },
+            }}
+          >
+            Mallorie Potaznick
+          </Link>
+        </div>
+      )}
+      {prebody}
       {body && (
         <Markdown
           customCSS={{
@@ -63,6 +95,7 @@ const Page = ({
           {body}
         </Markdown>
       )}
+      {children}
     </Container>
   </div>
 );
