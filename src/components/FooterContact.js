@@ -7,7 +7,6 @@ import Container from './Container'
 import Markdown from '../components/Utility/Markdown'
 
 const style = {
-  backgroundColor: theme.color('gray-ll'),
   paddingBottom: theme.size(8),
   paddingTop: theme.size(8),
 };

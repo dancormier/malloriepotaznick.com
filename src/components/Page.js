@@ -37,13 +37,20 @@ const Page = ({
           }}
       />
     )}
-    <Container>
+    <Container
+      customCSS={{
+        paddingTop: !headerImage && theme.size(0),
+        [theme.mq('sm')]: {
+          paddingTop: !headerImage && theme.size(6),
+        }
+      }}
+    >
       <Heading
         Tag='h2'
         customCSS={{
           marginBottom: theme.size(1),
           [theme.mq('sm')]: {
-            marginBottom: theme.size(3),
+            marginBottom: theme.size(4),
           },
         }}
       >

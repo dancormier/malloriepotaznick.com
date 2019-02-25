@@ -56,13 +56,16 @@ export const FooterTemplate = ({
             buttons={buttons}
           />
         )}
-        <div>
+        <div
+          css={{
+            borderTop: `1px solid ${theme.color('gray-ll-alt')}`,
+          }}
+        >
           <Container
             customCSS={{
               fontFamily: theme.font('sans'),
-              marginTop: theme.size(2),
               paddingBottom: theme.size(4),
-              paddingTop: theme.size(2),
+              paddingTop: theme.size(4),
             }}
           >
             <div
@@ -129,6 +132,7 @@ const Footer = ({ showFooterContact }) => (
                 copyright
                 items {
                   align
+                  body
                 }
               }
               rawMarkdownBody
