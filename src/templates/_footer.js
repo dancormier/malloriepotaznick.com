@@ -17,7 +17,12 @@ const FooterItem = ({ item }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <div css={{ textAlign: align }}>
+      <div css={{
+        textAlign: 'center',
+        [theme.mq('sm')]: {
+          textAlign: align,
+        }
+      }}>
         <Markdown
           customCSS={{
             fontFamily: theme.font('sans'),
@@ -70,15 +75,22 @@ export const FooterTemplate = ({
           >
             <div
               css={{
-                alignItems: 'flex-end',
+                alignItems: 'center',
                 display: 'flex',
+                flexDirection: 'column-reverse',
                 justifyContent: 'space-between',
                 paddingBottom: theme.size(1),
+                [theme.mq('sm')]: {
+                  alignItems: 'flex-end',
+                  flexDirection: 'row',
+                },
               }}
             >
               <div
                 css={{
-                  width: '33%',
+                  [theme.mq('sm')]: {
+                    width: '33%',
+                  }
                 }}
               >
                 {itemsLeftCombined.map(item =>
@@ -88,8 +100,9 @@ export const FooterTemplate = ({
               {itemsRight && (
                 <div
                 css={{
-                  textAlign: 'center',
-                  width: '33%',
+                  [theme.mq('sm')]: {
+                    width: '33%',
+                  }
                 }}
               >
                   {group(items, 'right').map(item =>
