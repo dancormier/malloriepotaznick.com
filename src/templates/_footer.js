@@ -41,6 +41,7 @@ export const FooterTemplate = ({
   copyright,
   items,
   showFooterContact,
+  isPreview,
 }) => {
   const year = new Date().getFullYear();
   const legal = {
@@ -55,7 +56,7 @@ export const FooterTemplate = ({
   return (
     <ThemeProvider theme={theme}>
       <div>
-        {showFooterContact && (
+        {(showFooterContact || isPreview) && (
           <FooterContact
             body={body}
             buttons={buttons}
