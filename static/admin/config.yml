@@ -143,18 +143,19 @@ collections:
               label: "Items",
               name: "items",
               widget: "list",
+              required: false,
               fields:
               [
-                {label: "Text", name: "text", widget: "string"},
+                {label: "Section", name: "body", widget: "markdown"},
                 {
                   label: "Alignment",
                   name: "align",
                   widget: "select",
                   options: ["left", "right"]
-                },
-                {label: "URL", name: "url", widget: "string", required: false}
+                }
               ]
             }
+          - {label: "Copyright", name: "copyright", widget: "string"}
       - file: "src/data/navbar.md"
         label: "Navbar"
         name: "navbar"
