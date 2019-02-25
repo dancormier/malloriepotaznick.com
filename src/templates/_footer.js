@@ -23,7 +23,7 @@ const FooterItem = ({ item }) => {
             fontFamily: theme.font('sans'),
           }}
         >
-          {body}
+          {body || ''}
         </Markdown>
       </div>
     </ThemeProvider>
@@ -129,7 +129,6 @@ const Footer = ({ showFooterContact }) => (
                 copyright
                 items {
                   align
-                  body
                 }
               }
               rawMarkdownBody
