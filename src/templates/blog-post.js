@@ -73,6 +73,10 @@ BlogPostTemplate.propTypes = {
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
   const {
+    shortDescription: siteDescription,
+    title: siteTitle,
+  } = data.site.siteMetadata;
+  const {
     description,
     image,
     tags,
@@ -87,9 +91,7 @@ const BlogPost = ({ data }) => {
         description={description}
         image={headerImage}
         helmet={
-          <Helmet
-            titleTemplate="%s | Blog"
-          >
+          <Helmet titleTemplate={`%s | ${siteTitle}: ${siteDescription}`}>
             <title>{`${title}`}</title>
             <meta name="description" content={`${description}`} />
           </Helmet>
@@ -103,6 +105,7 @@ const BlogPost = ({ data }) => {
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
+    site: PropTypes.object,
     markdownRemark: PropTypes.object,
   }),
 }
@@ -111,6 +114,12 @@ export default BlogPost
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
+    site {
+      siteMetadata {
+        title
+        shortDescription
+      }
+    }
     markdownRemark(id: { eq: $id }) {
       id
       rawMarkdownBody

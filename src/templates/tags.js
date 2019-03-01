@@ -13,7 +13,10 @@ class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
     const tag = this.props.pageContext.tag
-    const title = this.props.data.site.siteMetadata.title
+    const {
+      title,
+      shortDescription,
+    } = this.props.data.site.siteMetadata;
     const totalCount = this.props.data.allMarkdownRemark.totalCount
     const tagHeader = `${totalCount} post${
       totalCount === 1 ? '' : 's'
@@ -22,7 +25,7 @@ class TagRoute extends React.Component {
     return (
       <ThemeProvider theme={theme}>
         <Layout>
-          <Helmet title={`${tag} | ${title}`} />
+          <Helmet title={`${tag} | ${title}: ${shortDescription}`} />
           <Page
             heading={tagHeader}
           >
@@ -60,6 +63,7 @@ export const tagPageQuery = graphql`
     site {
       siteMetadata {
         title
+        shortDescription
       }
     }
     allMarkdownRemark(

@@ -17,7 +17,7 @@ const TemplateWrapper = ({ children, altBG, showFooterContact }) => (
           site {
             siteMetadata {
               title,
-              description,
+              shortDescription,
             }
           }
         }
@@ -25,6 +25,7 @@ const TemplateWrapper = ({ children, altBG, showFooterContact }) => (
     render={data => {
       const {
         description,
+        shortDescription,
         title,
       } = data.site.siteMetadata;
 
@@ -34,7 +35,7 @@ const TemplateWrapper = ({ children, altBG, showFooterContact }) => (
             <div>
               <Helmet>
                 <html lang="en" />
-                <title>{title}</title>
+                <title>{title}: {shortDescription}</title>
                 <meta name="description" content={description} />
                 
                 <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />

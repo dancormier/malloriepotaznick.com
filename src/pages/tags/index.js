@@ -8,11 +8,21 @@ import Page from '../../components/Page'
 import Tag from '../../components/Tag';
 
 const TagsPage = ({
-  data: { allMarkdownRemark: { group }, site: { siteMetadata: { title } } },
+  data: {
+    allMarkdownRemark: {
+      group
+    },
+    site: {
+      siteMetadata: {
+        title,
+        shortDescription,
+      },
+    },
+  },
 }) => (
   <ThemeProvider theme={theme}>
     <Layout>
-      <Helmet title={`Tags | ${title}`} />
+      <Helmet title={`Tags | ${title}: ${shortDescription}`} />
       <Page heading="Tags">
         <div>
           {group.map(tag => (
@@ -36,6 +46,7 @@ export const tagPageQuery = graphql`
     site {
       siteMetadata {
         title
+        shortDescription
       }
     }
     allMarkdownRemark(limit: 1000) {

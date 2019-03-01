@@ -2,6 +2,7 @@
 import { jsx } from '@emotion/core';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import Helmet from 'react-helmet'
 import { ThemeProvider } from 'emotion-theming';
 import theme from '../components/Utility/theme';
 import Page from '../components/Page';
@@ -35,6 +36,10 @@ CreatedPageTemplate.propTypes = {
 const CreatedPage = ({ data }) => {
   const { markdownRemark: post } = data;
   const {
+    title: siteTitle,
+    description: siteDescription,
+  } = data.site.siteMetadata;
+  const {
     heading,
     image,
     showFooterContact,
@@ -42,6 +47,7 @@ const CreatedPage = ({ data }) => {
 
   return (
     <Layout showFooterContact={showFooterContact}>
+      <Helmet title={`${heading} | ${siteTitle}: ${siteDescription}`} />
       <CreatedPageTemplate
         heading={heading}
         body={post.rawMarkdownBody}
@@ -59,6 +65,12 @@ export default CreatedPage;
 
 export const createdPageQuery = graphql`
   query CreatedPage($id: String!) {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         heading
