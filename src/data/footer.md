@@ -9,7 +9,7 @@ items:
     body: '[(561) 536-3980](tel:1-561-536-3980)'
   - align: right
     body: '[malloriepotaznick@gmail.com](mailto:malloriepotaznick@gmail.com)'
-  - align: right
+  - align: left
     body: >-
       <a href="https://www.psychologytoday.com/profile/429831"
       class="sx-verified-seal"></a><script type="text/javascript"
