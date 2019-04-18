@@ -37,7 +37,7 @@ heroes:
       align: after
       image: /img/mp-headshot-800.jpg
   - context: specialties
-    heading: Mallorie's Specialties
+    heading: Mallorie's Counseling Specialties
     subsections:
       - body: >-
           # Anxiety
