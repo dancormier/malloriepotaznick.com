@@ -27,10 +27,10 @@ Eating disorders don’t have a **LOOK**, and  can affect anyone regardless of t
 </div>
 ## Eating disorders are often a symptom of an emotional disorder
 
-This is the crux of it all. Eating disorders tend to come about often after emotionally taxing, stressful and traumatic events. When we have **poor emotional hygien**e the ways in which we **discharge our pain and discomfort** often take the form of **disorders eating patterns** in order to help us **self soothe, self punish, seek attention, or gain control**. This can result in using food to calm oneself, emotional eating, over exercising, restricting, calorie counting, and purging. 
+This is the crux of it all. Eating disorders tend to come about often after emotionally taxing, stressful and traumatic events. When we have **poor emotional hygiene** the ways in which we **discharge our pain and discomfort** often take the form of **disorders eating patterns** in order to help us **self soothe, self punish, seek attention, or gain control**. This can result in using food to calm oneself, emotional eating, over exercising, restricting, calorie counting, and purging. 
 
 ## Life can get better
 
 Understanding **why** and **how** your disordered eating patterns came to be, and **learning** what your disordered eating patterns is serving you is the **first step** on your road to **recovery.**
 
-Whether you have been diagnosed with an eating disorder or are just beginning to notice symptoms of an eating disorder, counseling can help. During therapy we will look at your **disordered eating patterns**, and your **emotions** and find and work through the underlying causes of your disordered eating patterns so that you can become **healthy** and regain **control** of your life again.
+Whether you have been diagnosed with an eating disorder or are just beginning to notice symptoms of an eating disorder for you or a loved one, counseling can help. During therapy we will look at your **disordered eating patterns**, and your **emotions** and find and work through the underlying causes of your disordered eating patterns so that you can become **healthy** and regain **control** of your life again. **Recovery** from an eating disorder is **possible** with the help of therapy!
