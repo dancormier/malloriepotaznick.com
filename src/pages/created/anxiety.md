@@ -24,4 +24,4 @@ Anxiety takes many forms and can be overwhelming. Whether you are experiencing g
 
 ## Counseling can help alleviate anxiety
 
-Luckily, **counseling can help alleviate anxiety**. You don't have to feel stuck anymore! Together, I will help you discover the underlying causes of your anxiety, provide you with effective coping tools, and help you change the way you think and experience anxiety. So if you're ready to find the relief you deserve from your anxiety, eliminate those pesky racing thoughts, and gain the skills to able to face your worries and fears head on, then call today.
+Luckily, **counseling can help alleviate anxiety**. You don't have to feel stuck anymore! Together, I will help you discover the underlying causes of your anxiety, provide you with effective coping tools, and help you change the way you think and experience your anxiety. If you're ready to find the relief you deserve from your anxiety, eliminate those pesky racing thoughts, and gain the skills to be able to face your worries and fears head on through the strategies therapy can provide, then call today to schedule a free 20 minute phone consultation.
