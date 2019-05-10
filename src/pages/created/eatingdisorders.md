@@ -12,7 +12,7 @@ Having an eating disorder can be exhausting and lonely. It may feel at times as 
 When you have an eating disorder the first thought you have each morning usually involves food or your body, and yet tends to be the last thing you want to discuss with anyone. It may feel **isolating** as you hide the symptoms of your disorder from your friends or family, or tell the people in your life, only to find that they don’t truly understand what its like to have an eating disorder. 
 
 <div align="center">
-  <img src="/img/i-yunmai-617618-unsplash.jpg" alt="image-description" width="600" />
+  <img src="/img/i-yunmai-617618-unsplash.jpg" alt="feet on scale" width="600" />
 </div>
 ## You're not alone
 
