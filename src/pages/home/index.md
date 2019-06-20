@@ -47,11 +47,12 @@ heroes:
           alt="image-description" />
 
           Do you constantly feel worried, nervous, or unease over situations or
-          events happening in your life? Are you always on edge? Anxiety affects
-          over 40 million people everyday. Don't let it consume your life any
-          longer. Counseling will provide you with the tools to be able to
-          identify, challenge, and change the thoughts and behaviors that
-          trigger your anxiety.
+          events happening in your life? Are you always on edge? Do you struggle
+          with OCD, panic attacks, or socializing? Anxiety affects over 40
+          million people everyday. Don't let it consume your life any longer.
+          Counseling will provide you with the tools to be able to identify,
+          challenge, and change the thoughts and behaviors that trigger your
+          anxiety.
 
 
           [Learn more about anxiety](/anxiety)
