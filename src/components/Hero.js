@@ -227,6 +227,7 @@ const Hero = ({
                   flexShrink: 0,
                   height: 'auto',
                   marginBottom: theme.size(4),
+                  maxHeight: theme.size(18),
                   maxWidth: theme.size(18),
                   width: imageAlign === 'above' || imageAlign === 'below' || isAbout ? '100%' : '33%',
                   [theme.mq('lg')]: {
