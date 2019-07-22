@@ -81,12 +81,13 @@ heroes:
           background treating chronic stress, depression, substance abuse,
           autism, and grief.
   - body: >-
-      Now providing **Online Counseling** for those located throughout the state
+      Now providing **online counseling** for those located throughout the state
       of **Florida**. Using a HIPPA compliant secure platform, I am able to
       provide counseling both **confidentially** and **conveniently** within
       ones own home. All you need is internet, a device such as a laptop, phone
-      or tablet, and a quiet, private location to talk in! Being able to do
-      Therapy online has never been easier.
+      or tablet, and a quiet, private location to talk in to begin receiving the
+      same benefits of in-person therapy without leaving your home! Being able
+      to do **therapy** **online** has never been easier.
     context: online
     heading: Online Therapy
   - body: >-
