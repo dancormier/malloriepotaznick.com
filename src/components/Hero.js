@@ -177,7 +177,7 @@ const Hero = ({
               {subsections && (
                 <div
                   css={{
-                    [theme.mq('sm')]: {
+                    [theme.mq('lg')]: {
                       display: 'flex',
                       'div + div': {
                         marginLeft: theme.size(6),
