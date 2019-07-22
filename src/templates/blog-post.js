@@ -42,7 +42,11 @@ export const BlogPostTemplate = ({
       )}
     >
       {tags && tags.length ? (
-        <div>
+        <div
+          css={{
+            marginTop: theme.size(2),
+          }}
+        >
           <Heading Tag="h6">Tags</Heading>
           <div
             css={{
