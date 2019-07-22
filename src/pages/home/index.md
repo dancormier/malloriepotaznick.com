@@ -87,6 +87,7 @@ heroes:
       ones own home. All you need is internet, a device such as a laptop, phone
       or tablet, and a quiet, private location to talk in! Being able to do
       Therapy online has never been easier.
+    context: online
     heading: Online Therapy
   - body: >-
       ## Have Questions?
