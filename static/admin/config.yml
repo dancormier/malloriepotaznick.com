@@ -108,7 +108,7 @@ collections:
                   name: "context",
                   required: false,
                   widget: "select",
-                  options: ["about", "contact", "featured", "specialties"]
+                  options: ["about", "contact", "featured", "online", "specialties"]
                 },
               ]
             }
