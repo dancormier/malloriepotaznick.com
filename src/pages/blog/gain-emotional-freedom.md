@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Gain Emotional Freedom
+title: Who can benefit from Theraphy?
 date: 2019-07-22T02:00:11.106Z
 description: ''
 image: /img/freedom-woman-hero.jpg
@@ -17,4 +17,4 @@ On the outside it looks like you have it all together, but inside you're engaged
 
 You desperately want to know what it would feel like to not be consumed with the anxiety that causes you to constantly worry about issues like food, your body, or what is going to happen tomorrow. You’re tired of being consumed by fear. Imagine you could learn the techniques to heal and be free from panic attacks, OCD, binging, restricting and purging food.
 
-As a specialist in anxiety and eating disorders, I can help you find relief and learn the techniques you're searching for. In addition to my specialties, I have extensive experience treating depression, self harm, substance abuse/addiction, and grief for teens and adults. Call, email, or visit malloriepotaznick.com for a free phone consultation today.
+As a specialist in anxiety and eating disorders, I can help you find relief and learn the techniques you're searching for. In addition to my specialties, I have extensive experience treating depression, self harm, substance abuse/addiction, and grief for teens and adults. [Contact me](https://malloriepotaznick.com/contact) for a free phone consultation today.
