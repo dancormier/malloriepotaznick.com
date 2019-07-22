@@ -27,7 +27,10 @@ heroes:
       a free 20 minute therapy consultation and together we can figure out where
       your journey begins.
     buttons:
-      - text: More about therapy
+      - text: Contact Mallorie
+        type: primary
+        url: /contact
+      - text: Learn about therapy
         type: primary
         url: /blog/gain-emotional-freedom/
     context: about
