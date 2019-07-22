@@ -7,10 +7,6 @@ links:
     enabled: false
     text: About
     url: about
-  - button: false
-    enabled: true
-    text: Blog
-    url: blog
   - enabled: true
     text: Anxiety
     url: anxiety
@@ -25,6 +21,10 @@ links:
     enabled: true
     text: FAQ
     url: faq
+  - button: false
+    enabled: true
+    text: Blog
+    url: blog
   - button: true
     enabled: true
     text: Contact
