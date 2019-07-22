@@ -3,7 +3,7 @@ templateKey: _home-page
 heroes:
   - background:
       align: cover
-      image: /img/freedom-woman-hero.jpg
+      image: /img/freedom-woman-hero-cropped.jpg
       invert: false
     body: '### Conquer your anxiety, OCD, and eating disorder through therapy.'
     buttons:
