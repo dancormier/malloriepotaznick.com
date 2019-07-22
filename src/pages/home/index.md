@@ -26,6 +26,10 @@ heroes:
       through your painful feelings. It’s time to make a change. Call today for
       a free 20 minute therapy consultation and together we can figure out where
       your journey begins.
+    buttons:
+      - text: More about therapy
+        type: primary
+        url: /blog/gain-emotional-freedom/
     context: about
     heading: About Mallorie
     image:
