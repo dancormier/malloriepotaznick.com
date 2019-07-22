@@ -19,6 +19,10 @@ links:
     url: eatingdisorders
   - button: false
     enabled: true
+    text: Online Therapy
+    url: '#online'
+  - button: false
+    enabled: true
     text: FAQ
     url: faq
   - button: true
