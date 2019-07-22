@@ -8,7 +8,7 @@ links:
     text: About
     url: about
   - button: false
-    enabled: false
+    enabled: true
     text: Blog
     url: blog
   - enabled: true
