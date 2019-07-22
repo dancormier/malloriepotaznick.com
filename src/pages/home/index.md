@@ -27,7 +27,7 @@ heroes:
       a free 20 minute therapy consultation and together we can figure out where
       your journey begins.
     buttons:
-      - text: Learn about therapy
+      - text: can I benefit?
         type: primary
         url: /blog/gain-emotional-freedom/
     context: about
