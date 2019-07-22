@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Who can benefit from Theraphy?
+title: Who can benefit from therapy?
 date: 2019-07-22T02:00:11.106Z
 description: ''
 image: /img/freedom-woman-hero.jpg
