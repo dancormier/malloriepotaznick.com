@@ -5,11 +5,7 @@ date: 2019-07-22T02:00:11.106Z
 description: ''
 image: /img/freedom-woman-hero.jpg
 tags:
-  - therapy
-  - ocd
-  - anxiety
-  - finding help
-  - florida
+  - ''
 ---
 On the outside it looks like you have it all together, but inside you're engaged in a constant struggle for control. Your anxiety and/or eating disorder has taken over your life. You find yourself in a constant loop of feeling worried, nervous, stressed and at times not good enough, thin enough, or smart enough. You’re stuck and unable to find the relief that you crave, so you try temporary fixes. Sometimes you disconnect and avoid people and your responsibilities, sometimes you binge, sometimes you purge, and sometimes you try to use anything that will distract your mind. You find, however, that your mind just wont turn off.
 
