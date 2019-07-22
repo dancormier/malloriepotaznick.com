@@ -5,18 +5,13 @@ heroes:
       align: cover
       image: /img/henry-be-99471-unsplash.jpg
       invert: false
-    body: >-
-      ### “Owning our story and loving ourselves through that process is the
-      bravest thing we will ever do.”
-
-
-      — _Brené Brown_
+    body: '### Conquer your anxiety, OCD, and eating disorder through therapy.'
     buttons:
-      - text: Book a session
+      - text: Contact Mallorie
         type: primary
         url: contact
     context: featured
-    heading: Find Freedom
+    heading: Gain Emotional Freedom
   - body: >-
       Hi, I’m Mallorie Potaznick, a Licensed Mental Health Counselor based out
       of Coral Springs, FL. For the last few years I’ve worked with adolescents,
