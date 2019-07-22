@@ -5,7 +5,7 @@ heroes:
       align: cover
       image: /img/freedom-woman-hero-cropped.jpg
       invert: false
-    body: '### Conquer your anxiety, OCD, and eating disorder through therapy.'
+    body: '### Conquer your anxiety, OCD, or eating disorder through therapy.'
     buttons:
       - text: Contact Mallorie
         type: primary
