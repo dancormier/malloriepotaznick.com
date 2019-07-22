@@ -1,20 +1,18 @@
 ---
 templateKey: blog-post
-title: Test Blog Post
-date: 2019-04-01T16:43:02.301Z
-description: Enjoy this test description. Isn't it great?
-image: /img/rawpixel-1054662-unsplash.jpg
+title: Gain Emotional Freedom
+date: 2019-07-22T02:00:02.301Z
+description: ''
+image: ''
 tags:
-  - Test
+  - therapy
+  - ocd
+  - anxiety
+  - finding help
+  - florida
 ---
-# This is a test H1
+On the outside it looks like you have it all together, but inside you're engaged in a constant struggle for control. Your anxiety and/or eating disorder has taken over your life. You find yourself in a constant loop of feeling worried, nervous, stressed and at times not good enough, thin enough, or smart enough. You’re stuck and unable to find the relief that you crave, so you try temporary fixes. Sometimes you disconnect and avoid people and your responsibilities, sometimes you binge, sometimes you purge, and sometimes you try to use anything that will distract your mind. You find, however, that your mind just wont turn off.
 
-Leverage deep dive; compelling big data social entrepreneurship design thinking social intrapreneurship unprecedented challenge social entrepreneurship academic innovation technology program area. The; engaging thought provoking, scalable social impact unprecedented challenge granular game-changer low-hanging fruit vibrant. To resist strengthening infrastructure agile rubric think tank, correlation society strategize inspirational storytelling bandwidth correlation uplift.
+You desperately want to know what it would feel like to not be consumed with the anxiety that causes you to constantly worry about issues like food, your body, or what is going to happen tomorrow. You’re tired of being consumed by fear. Imagine you could learn the techniques to heal and be free from panic attacks, OCD, binging, restricting and purging food.
 
-## This is a test H2
-
-Initiative empower impact change-makers invest, effective empathetic save the world innovation program area our work. Challenges and opportunities innovation and, issue outcomes venture philanthropy communities indicators. Sustainable thought leader, shine sustainable agile thought provoking, outcomes, efficient; game-changer, we must stand up save the world blended value. Thought provoking big data shared value when framework energize; strengthening infrastructure co-create outcomes, empathetic milestones storytelling optimism peaceful. Global co-create innovate, theory of change, shared vocabulary academic progress; move the needle but inspirational scale and impact. Compassion; inspirational synergy deep dive catalyze, but problem-solvers, corporate social responsibility, commitment program areas thought partnership agile empower communities.
-
-### This is a test H3
-
-Social enterprise; [test link](#) and opportunities, improve the world indicators granular when social impact effective altruism venture philanthropy. Revolutionary improve the world change-makers, cultivate energize challenges and opportunities. Resist fairness framework; transparent collaborative consumption, systems thinking systems thinking policymaker venture philanthropy segmentation contextualize. Move the needle inspiring low-hanging fruit; targeted revolutionary vibrant challenges and opportunities a entrepreneur but justice social return on investment resist.
+As a specialist in anxiety and eating disorders, I can help you find relief and learn the techniques you're searching for. In addition to my specialties, I have extensive experience treating depression, self harm, substance abuse/addiction, and grief for teens and adults. Call, email, or visit malloriepotaznick.com for a free phone consultation today.
