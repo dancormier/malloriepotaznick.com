@@ -15,7 +15,7 @@ During the first session, we will begin to get to know one another and I will le
 
 ## How much does therapy cost?
 
-The initial intake session is $150. Individual 50-minute sessions are $120. I have a limited amount of sliding scale openings based on financial need.
+The initial intake session is $150. Individual 50-minute sessions are $100. I have a limited amount of sliding scale openings based on financial need.
 
 ## How does payment work?
 
@@ -23,7 +23,7 @@ Payment is collected at the time of the appointment. I accept cash or credit car
 
 ## Do you accept insurance?
 
-At this time I do not accept insurance.
+At this time I do not accept insurance. However, I can provide those with out of network benefits a superbill to submit to your insurance. If you have met your out of network deductible most insurance companies will reimburse you for a portion of your session fee.
 
 ## Do you have a cancellation policy?
 
