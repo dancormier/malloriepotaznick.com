@@ -31,4 +31,4 @@ Yes. I ask for a minimum of 24 hours notice if you need to cancel a session. If 
 
 ## Where are you located?
 
-I am located at [9732 West Sample Road, Coral Springs, FL 33065](https://goo.gl/maps/xz1PZA494Tz). My office is on the second floor of the building. When you arrive for your appointment please knock on the front door, and I will come greet you!
+I am located at [9732 West Sample Road, Coral Springs, FL 33065](https://goo.gl/maps/xz1PZA494Tz). My office is on the second floor of the building, and easily accessible to local surrounding areas such as Parkland, Coconut Creek, Tamarac, Plantation, and Boca Raton. When you arrive for your appointment please knock on the front door or ring the doorbell, and I will come greet you!
