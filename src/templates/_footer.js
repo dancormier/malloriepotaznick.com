@@ -46,13 +46,14 @@ export const FooterTemplate = ({
   const year = new Date().getFullYear();
   const legal = {
     body: `© ${year} ${copyright}`,
-    align: 'left',
+    align: 'right',
   };
   const itemsLeft = items && group(items, 'left');
-  const copyItem = group([legal], 'left');
+  const copyItem = group([legal], 'right');
   const itemsRight = items && group(items, 'right');
-  const itemsLeftCombined = itemsLeft ? [...itemsLeft, ...copyItem] : copyItem;
+  const itemsRightCombined = itemsRight ? [...itemsRight, ...copyItem] : copyItem;
 
+  console.log(itemsRightCombined, 'irc')
   return (
     <ThemeProvider theme={theme}>
       <div>
@@ -94,11 +95,11 @@ export const FooterTemplate = ({
                   }
                 }}
               >
-                {itemsLeftCombined.map(item =>
+                {itemsLeft.map(item =>
                   <FooterItem item={item} key={item.body} />
                 )}
               </div>
-              {itemsRight && (
+              {itemsRightCombined && (
                 <div
                 css={{
                   [theme.mq('sm')]: {
@@ -106,7 +107,7 @@ export const FooterTemplate = ({
                   }
                 }}
               >
-                  {group(items, 'right').map(item =>
+                  {itemsRightCombined.map(item =>
                     <FooterItem item={item} key={item.body} />
                   )}
                 </div>
