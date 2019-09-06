@@ -6,6 +6,11 @@ buttons:
     url: contact
 items:
   - align: right
+    body: >-
+      <a target="_blank" href="https://www.onlinecounselling.com"><img
+      src="https://www.onlinecounselling.com/members/certified-member-widget-white.jpg"
+      alt="Online Counseling"></a>
+  - align: right
     body: '[(561) 536-3980](tel:1-561-536-3980)'
   - align: right
     body: '[malloriepotaznick@gmail.com](mailto:malloriepotaznick@gmail.com)'
