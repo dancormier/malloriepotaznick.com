@@ -25,17 +25,46 @@ const Page = ({
       <div
         css={{
           backgroundColor: theme.color('gray-ll'),
-          backgroundImage: `url(${headerImage})`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
           height: theme.size(14),
           marginBottom: theme.size(1),
+          overflow: 'hidden',
+          position: 'relative',
           [theme.mq('sm')]: {
             height: theme.size(19),
             marginBottom: theme.size(8),
           },
+        }}
+      >
+        <div
+          css={{
+            backgroundImage: `url(${headerImage})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            boxShadow: '0 0 20px rgba(0,0,0,.2)',
+            height: '100%',
+            margin: '0 auto',
+            maxWidth: '100%',
+            position: 'relative',
+            width: `calc(${theme.prop('max')} + 4rem)`,
+            zIndex: 1,
           }}
-      />
+        />
+        <div
+          css={{
+            backgroundImage: `url(${headerImage})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            filter: 'blur(10px)',
+            height: '120%',
+            margin: '-2.5%',
+            opacity: '0.8',
+            position: 'absolute',
+            top: 0,
+            width: '120%',
+            zIndex: 0,
+          }}
+        />
+      </div>
     )}
     <Container
       customCSS={{
