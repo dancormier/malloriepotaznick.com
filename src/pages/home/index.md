@@ -42,8 +42,7 @@ heroes:
           # Anxiety
 
 
-          <img src="/img/fernando-cferdo-627207-unsplash.jpg"
-          alt="image-description" />
+          <img src="/img/caleb-frith-129986-unsplash.jpg" alt="womenonrock" />
 
           Do you constantly feel worried, nervous, or unease over situations or
           events happening in your life? Are you always on edge? Do you struggle
