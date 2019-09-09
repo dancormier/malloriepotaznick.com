@@ -8,11 +8,18 @@ links:
     text: About
     url: about
   - enabled: true
-    text: Anxiety
-    url: anxiety
-  - enabled: true
-    text: Eating Disorders
-    url: eatingdisorders
+    text: Specialties
+    url: '#'
+    sublinks:
+      - enabled: true
+        text: Anxiety
+        url: anxiety
+      - enabled: true
+        text: Eating Disorders
+        url: eatingdisorders
+      - enabled: true
+        text: OCD
+        url: ocd
   - button: false
     enabled: true
     text: Online Therapy

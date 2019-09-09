@@ -221,7 +221,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "created-page"}
-      - {label: "URL", name: "title", widget: "string"}
+      - {label: "URL", name: "title", widget: "string", hint: 'Just what comes after https://malloriepotaznick.com/'}
       - {label: "Header Image", name: "image", widget: "image", allow_multiple: false, required: false}
       - {label: "Title", name: "heading", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown", hint: *body_hint}
