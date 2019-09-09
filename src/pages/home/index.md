@@ -47,11 +47,11 @@ heroes:
 
           Do you constantly feel worried, nervous, or unease over situations or
           events happening in your life? Are you always on edge? Do you struggle
-          with OCD, panic attacks, or socializing? Anxiety affects over 40
-          million people everyday. Don't let it consume your life any longer.
-          Counseling will provide you with the tools to be able to identify,
-          challenge, and change the thoughts and behaviors that trigger your
-          anxiety.
+          with constant worry, panic attacks, phobias, or socializing? Anxiety
+          affects over 40 million people everyday. Don't let it consume your
+          life any longer. Counseling will provide you with the tools to be able
+          to identify, challenge, and change the thoughts and behaviors that
+          trigger your anxiety.
 
 
           [Learn more about anxiety](/anxiety)
@@ -75,15 +75,18 @@ heroes:
 
           [Learn more about eating disorders](/eatingdisorders)
       - body: >-
-          # Other Disorders
+          # Obsessive Compulsive Disorder
 
 
           <img src="/img/ben-white-194220-unsplash.jpg" alt="image-description"
           />
 
-          In addition to anxiety and eating disorders, I have an extensive
-          background treating chronic stress, depression, substance abuse,
-          autism, and grief.
+          Do you have intrusive, unwanted thoughts that lead you to engaging in
+          compulsive behaviors in order to alleviate the distress caused by your
+          obsessive thoughts? If so, therapy can help!
+
+
+          Learn more about OCD
   - body: >-
       Now providing **online counseling** for those located throughout the state
       of **Florida**. Using a HIPPA compliant secure platform, I am able to
