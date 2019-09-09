@@ -42,7 +42,7 @@ heroes:
           # Anxiety
 
 
-          <img src="/img/caleb-frith-129986-unsplash.jpg" alt="womenonrock" />
+          <img src="/img/caleb-frith-129986-unsplash.jpg" alt="women on rock" />
 
           Do you constantly feel worried, nervous, or unease over situations or
           events happening in your life? Are you always on edge? Do you struggle
@@ -57,8 +57,7 @@ heroes:
           # Eating Disorders
 
 
-          <img src="/img/i-yunmai-617618-unsplash.jpg" alt="image-description"
-          />
+          <img src="/img/i-yunmai-617618-unsplash.jpg" alt="feet on scale" />
 
           Food and the way you look is a source of frustration and stress for
           you. You're constantly worrying about your size and shape, how much
@@ -73,8 +72,8 @@ heroes:
           # OCD
 
 
-          <img src="/img/artem-kovalev-86365-unsplash.jpg"
-          alt="image-description" />
+          <img src="/img/artem-kovalev-86365-unsplash.jpg" alt="women outside
+          sitting at sunset" />
 
           Do you have intrusive, unwanted thoughts that lead you to engaging in
           compulsive behaviors in order to alleviate the distress caused by your
