@@ -1,6 +1,6 @@
 ---
 templateKey: created-page
-title: 'https://malloriepotaznick.com/OCD'
+title: ocd
 image: /img/artem-kovalev-86365-unsplash.jpg
 heading: Obsessive Compulsive Disorder Therapy (also known as OCD)
 showFooterContact: true
