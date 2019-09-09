@@ -216,6 +216,7 @@ const NavMenu = ({ links, sublinksVisible, toggleSublinks }) => {
               {l.sublinks && (
                 <div
                   css={{
+                    display: 'none',
                     position: 'absolute',
                     right: 0,
                     transform: 'translateY(-50%)',
@@ -223,7 +224,7 @@ const NavMenu = ({ links, sublinksVisible, toggleSublinks }) => {
                   }}
                 >
                   {/* below, add some cool icon to show open/closed */}
-                  {false && sublinksVisible === idx ? 'x' : '+'}
+                  {sublinksVisible === idx ? 'x' : '+'}
                 </div>
               )}
             </Link>
