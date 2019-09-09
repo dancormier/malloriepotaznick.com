@@ -73,8 +73,8 @@ heroes:
           # OCD
 
 
-          <img src="/img/ben-white-194220-unsplash.jpg" alt="image-description"
-          />
+          <img src="/img/artem-kovalev-86365-unsplash.jpg"
+          alt="image-description" />
 
           Do you have intrusive, unwanted thoughts that lead you to engaging in
           compulsive behaviors in order to alleviate the distress caused by your
