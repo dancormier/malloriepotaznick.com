@@ -286,7 +286,6 @@ export const NavbarTemplate = class extends React.Component {
     } = this.props;
     const { menuVisible, sublinksVisible } = this.state;
 
-    console.log(sublinksVisible, 'slv')
     return (
       <nav
         role="navigation"

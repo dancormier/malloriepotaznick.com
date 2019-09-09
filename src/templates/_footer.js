@@ -53,7 +53,6 @@ export const FooterTemplate = ({
   const itemsRight = items && group(items, 'right');
   const itemsRightCombined = itemsRight ? [...itemsRight, ...copyItem] : copyItem;
 
-  console.log(itemsRightCombined, 'irc')
   return (
     <ThemeProvider theme={theme}>
       <div>
