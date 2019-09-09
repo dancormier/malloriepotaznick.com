@@ -76,8 +76,8 @@ heroes:
           sitting at sunset" />
 
           Do you have intrusive, unwanted thoughts that lead you to engaging in
-          compulsive behaviors in order to alleviate the distress caused by your
-          obsessive thoughts? If so, therapy can help!
+          compulsive behaviors or rituals in order to alleviate the distress
+          caused by your obsessive thoughts? If so, therapy can help!
 
 
           [Learn more about obsessive compulsive disorder](/ocd)
