@@ -75,7 +75,7 @@ heroes:
 
           [Learn more about eating disorders](/eatingdisorders)
       - body: >-
-          # Obsessive Compulsive Disorder
+          # OCD
 
 
           <img src="/img/ben-white-194220-unsplash.jpg" alt="image-description"
@@ -86,7 +86,7 @@ heroes:
           obsessive thoughts? If so, therapy can help!
 
 
-          [Learn more about OCD](/ocd)
+          [Learn more about Obsessive Compulsive Disorder](/ocd)
   - body: >-
       Now providing **online counseling** for those located throughout the state
       of **Florida**. Using a HIPPA compliant secure platform, I am able to
