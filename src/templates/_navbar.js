@@ -4,7 +4,7 @@ import { jsx } from '@emotion/core';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaAngleDown, FaAngleUp } from 'react-icons/fa';
 import ReactHoverObserver from 'react-hover-observer';
 import Button from '../components/Button';
 import Container from '../components/Container'
@@ -99,80 +99,99 @@ const NavLinks = ({ links, pathname }) => {
               position: 'relative',
             }}
           >
-            {({ isHovering }) => (
-              <div>
-                <Link
-                  key={l.url}
-                  to={l.url || '#'}
-                  title={l.text}
-                  css={{
-                    boxShadow: isHovering && l.sublinks && '0 0 20px rgba(0,0,0,.2)',
-                    color: theme.color(linkIsActive(l.url, pathname) ? 'accent' : 'primary'),
-                    display: 'block',
-                    fontSize: theme.size(2),
-                    margin: `-${theme.size(2)}`,
-                    marginLeft: theme.size(5),
-                    padding: theme.size(2),
-                    pointerEvents: linkIsActive(l.url, pathname) && 'none',
-                    position: 'relative',
-                    textDecoration: 'none',
-                    whiteSpace: 'nowrap',
-                    '&:hover': {
-                      color: theme.color('accent'),
-                    },
-                    '&:after': linkIsActive(l.url, pathname) && {
-                      background: theme.color('accent'),
-                      content: '""',
-                      display: 'block',
-                      height: theme.size(-8),
-                      marginTop: theme.size(-1),
-                      position: 'absolute',
-                      top: '100%',
-                      width: '100%',
-                    },
-                  }}
-                >
-                  {l.text}
-                </Link>
-                {isHovering && l.sublinks && l.sublinks.length > 0 && (
-                  <div
+            {({ isHovering }) => {
+              return (
+                <div>
+                  <Link
+                    key={`${l.text}-${l.url}`}
+                    to={l.url || '#'}
+                    title={l.text}
                     css={{
-                      background: theme.color('white'),
-                      boxShadow: '0 10px 10px rgba(0,0,0,.2)',
-                      left: theme.size(5),
-                      marginTop: theme.size(1),
-                      position: 'absolute',
-                      top: '100%',
-                      zIndex: 2,
+                      borderRadius: isHovering && l.sublinks && '3px 3px 0 0',
+                      boxShadow: isHovering && l.sublinks && '0 0 20px rgba(0,0,0,.2)',
+                      color: theme.color(linkIsActive(l.url, pathname) ? 'accent' : 'primary'),
+                      display: 'block',
+                      fontSize: theme.size(2),
+                      margin: `-${theme.size(2)}`,
+                      marginLeft: theme.size(5),
+                      padding: theme.size(2),
+                      pointerEvents: (linkIsActive(l.url, pathname) || !l.url) && 'none',
+                      position: 'relative',
+                      textDecoration: 'none',
+                      whiteSpace: 'nowrap',
+                      '&:hover': {
+                        color: theme.color('accent'),
+                      },
+                      '&:after': linkIsActive(l.url, pathname) && {
+                        background: theme.color('accent'),
+                        content: '""',
+                        display: 'block',
+                        height: theme.size(-8),
+                        marginTop: theme.size(-1),
+                        position: 'absolute',
+                        top: '100%',
+                        width: '100%',
+                      },
                     }}
                   >
-                    {l.sublinks.map(sl => (
-                      <Link
-                        key={sl.url}
-                        to={sl.url || '#'}
-                        title={sl.text}
+                    <span
+                      css={{
+                        color: isHovering && theme.color('accent'),
+                      }}
+                    >
+                      {l.text}
+                    </span>
+                    {l.sublinks && (
+                      <FaAngleDown
                         css={{
-                          borderBottom: '1px solid #eeeeee',
-                          color: theme.color(linkIsActive(sl.url, pathname) ? 'accent' : 'primary'),
-                          display: 'block',
-                          fontSize: theme.size(2),
-                          padding: `${theme.size(1)} ${theme.size(1)}`,
-                          pointerEvents: linkIsActive(sl.url, pathname) && 'none',
-                          position: 'relative',
-                          textDecoration: 'none',
-                          whiteSpace: 'nowrap',
-                          '&:hover': {
-                            color: theme.color('accent'),
-                          },
+                          color: theme.color(isHovering ? 'accent' : 'gray'),
+                          marginBottom: `-${theme.size(-6)}`,
+                          marginLeft: theme.size(-2),
+                          marginRight: `-${theme.size(-2)}`,
                         }}
-                      >
-                        {sl.text}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            )}
+                      />
+                    )}
+                  </Link>
+                  {isHovering && l.sublinks && (
+                    <div
+                      css={{
+                        background: theme.color('white'),
+                        boxShadow: '0 6px 6px rgba(0,0,0,.1)',
+                        left: theme.size(5),
+                        marginTop: theme.size(1),
+                        position: 'absolute',
+                        top: '100%',
+                        zIndex: 2,
+                      }}
+                    >
+                      {l.sublinks.map(sl => (
+                        <Link
+                          key={sl.url}
+                          to={sl.url || '#'}
+                          title={sl.text}
+                          css={{
+                            borderBottom: '1px solid #eeeeee',
+                            color: theme.color(linkIsActive(sl.url, pathname) ? 'accent' : 'primary'),
+                            display: 'block',
+                            fontSize: theme.size(2),
+                            padding: `${theme.size(1)} ${theme.size(1)}`,
+                            pointerEvents: linkIsActive(sl.url, pathname) && 'none',
+                            position: 'relative',
+                            textDecoration: 'none',
+                            whiteSpace: 'nowrap',
+                            '&:hover': {
+                              color: theme.color('accent'),
+                            },
+                          }}
+                        >
+                          {sl.text}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )
+            }}
           </ReactHoverObserver>
         )
       ))}
@@ -194,13 +213,18 @@ const NavMenu = ({ links, sublinksVisible, toggleSublinks }) => {
             borderTop: `1px solid ${theme.color(l.button ? 'accent' : 'gray-l' )}`,
             fontFamily: theme.font('sans'),
           }}
-          key={l.url}
-        >
+          key={`${l.text}-${l.url}`}
+          >
           <div>
             <Link
-              to={l.url}
+              to={l.url || ''}
               title={l.text}
-              onClick={() => toggleSublinks(sublinksVisible === idx ? null : idx)}
+              onClick={(e) => {
+                if (!l.url) {
+                  e.preventDefault();
+                }
+                toggleSublinks(sublinksVisible === idx ? null : idx)
+              }}
               css={{
                 color: theme.color(l.button ? 'white' : 'primary'),
                 display: 'block',
@@ -216,7 +240,6 @@ const NavMenu = ({ links, sublinksVisible, toggleSublinks }) => {
               {l.sublinks && (
                 <div
                   css={{
-                    display: 'none',
                     position: 'absolute',
                     right: 0,
                     transform: 'translateY(-50%)',
@@ -224,7 +247,25 @@ const NavMenu = ({ links, sublinksVisible, toggleSublinks }) => {
                   }}
                 >
                   {/* below, add some cool icon to show open/closed */}
-                  {sublinksVisible === idx ? 'x' : '+'}
+                  {sublinksVisible === idx ? (
+                    <FaAngleUp
+                      css={{
+                        color: theme.color('gray'),
+                        marginBottom: `-${theme.size(-6)}`,
+                        marginLeft: theme.size(-2),
+                        marginRight: `-${theme.size(-2)}`,
+                      }}
+                    />
+                  ) : (
+                    <FaAngleDown
+                      css={{
+                        color: theme.color('gray'),
+                        marginBottom: `-${theme.size(-6)}`,
+                        marginLeft: theme.size(-2),
+                        marginRight: `-${theme.size(-2)}`,
+                      }}
+                    />
+                  )}
                 </div>
               )}
             </Link>

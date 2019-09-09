@@ -9,7 +9,6 @@ links:
     url: about
   - enabled: true
     text: Specialties
-    url: '#'
     sublinks:
       - enabled: true
         text: Anxiety
