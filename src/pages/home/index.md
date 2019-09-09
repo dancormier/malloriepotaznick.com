@@ -86,7 +86,7 @@ heroes:
           obsessive thoughts? If so, therapy can help!
 
 
-          Learn more about OCD
+          [Learn more about OCD](/ocd)
   - body: >-
       Now providing **online counseling** for those located throughout the state
       of **Florida**. Using a HIPPA compliant secure platform, I am able to
