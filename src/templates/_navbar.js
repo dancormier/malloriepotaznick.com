@@ -100,6 +100,7 @@ const NavLinks = ({ links, pathname }) => {
             }}
           >
             {({ isHovering }) => {
+              const showSublinks = isHovering && l.sublinks;
               return (
                 <div>
                   <Link
@@ -107,14 +108,14 @@ const NavLinks = ({ links, pathname }) => {
                     to={l.url || '#'}
                     title={l.text}
                     css={{
-                      borderRadius: isHovering && l.sublinks && '3px 3px 0 0',
-                      boxShadow: isHovering && l.sublinks && '0 0 20px rgba(0,0,0,.2)',
+                      borderRadius: showSublinks && '3px 3px 0 0',
+                      boxShadow: showSublinks && '0 0 20px rgba(0,0,0,.2)',
                       color: theme.color(linkIsActive(l.url, pathname) ? 'accent' : 'primary'),
                       display: 'block',
                       fontSize: theme.size(2),
-                      margin: `-${theme.size(2)}`,
+                      margin: l.sublinks ? `-${theme.size(2)}` : theme.size(2),
                       marginLeft: theme.size(5),
-                      padding: theme.size(2),
+                      padding: l.sublinks ? theme.size(2) : `${theme.size(2)} 0`,
                       pointerEvents: (linkIsActive(l.url, pathname) || !l.url) && 'none',
                       position: 'relative',
                       textDecoration: 'none',
@@ -144,7 +145,7 @@ const NavLinks = ({ links, pathname }) => {
                     {l.sublinks && (
                       <FaAngleDown
                         css={{
-                          color: theme.color(isHovering ? 'accent' : 'gray'),
+                          color: theme.color(isHovering ? 'accent' : 'gray-l'),
                           marginBottom: `-${theme.size(-6)}`,
                           marginLeft: theme.size(-2),
                           marginRight: `-${theme.size(-2)}`,
@@ -174,7 +175,8 @@ const NavLinks = ({ links, pathname }) => {
                             color: theme.color(linkIsActive(sl.url, pathname) ? 'accent' : 'primary'),
                             display: 'block',
                             fontSize: theme.size(2),
-                            padding: `${theme.size(1)} ${theme.size(1)}`,
+                            padding: theme.size(1),
+                            paddingRight: theme.size(5),
                             pointerEvents: linkIsActive(sl.url, pathname) && 'none',
                             position: 'relative',
                             textDecoration: 'none',
@@ -206,96 +208,85 @@ const NavMenu = ({ links, sublinksVisible, toggleSublinks }) => {
         borderBottom: '1px solid #eeeeee',
       }}
     >
-      {links.map((l, idx) => l.enabled && (
-        <Container
-          customCSS={{
-            background: l.button && theme.color('accent'),
-            borderTop: `1px solid ${theme.color(l.button ? 'accent' : 'gray-l' )}`,
-            fontFamily: theme.font('sans'),
-          }}
-          key={`${l.text}-${l.url}`}
-          >
-          <div>
-            <Link
-              to={l.url || ''}
-              title={l.text}
-              onClick={(e) => {
-                if (!l.url) {
-                  e.preventDefault();
-                }
-                toggleSublinks(sublinksVisible === idx ? null : idx)
-              }}
-              css={{
-                color: theme.color(l.button ? 'white' : 'primary'),
-                display: 'block',
-                fontSize: theme.size(2),
-                paddingBottom: theme.size(3),
-                paddingTop: theme.size(3),
-                position: 'relative',
-                textAlign: 'center',
-                textDecoration: 'none',
-              }}
+      {links.map((l, idx) => {
+        const showSublinks = sublinksVisible === idx;
+        const Angle = showSublinks ? FaAngleUp : FaAngleDown;
+        return l.enabled && (
+          <Container
+            customCSS={{
+              background: l.button && theme.color('accent'),
+              borderTop: `1px solid ${theme.color(l.button ? 'accent' : 'gray-l' )}`,
+              fontFamily: theme.font('sans'),
+            }}
+            key={`${l.text}-${l.url}`}
             >
-              <span>{l.text}</span>
-              {l.sublinks && (
-                <div
-                  css={{
-                    position: 'absolute',
-                    right: 0,
-                    transform: 'translateY(-50%)',
-                    top: '50%',
-                  }}
-                >
-                  {/* below, add some cool icon to show open/closed */}
-                  {sublinksVisible === idx ? (
-                    <FaAngleUp
-                      css={{
-                        color: theme.color('gray'),
-                        marginBottom: `-${theme.size(-6)}`,
-                        marginLeft: theme.size(-2),
-                        marginRight: `-${theme.size(-2)}`,
-                      }}
-                    />
-                  ) : (
-                    <FaAngleDown
-                      css={{
-                        color: theme.color('gray'),
-                        marginBottom: `-${theme.size(-6)}`,
-                        marginLeft: theme.size(-2),
-                        marginRight: `-${theme.size(-2)}`,
-                      }}
-                    />
-                  )}
-                </div>
-              )}
-            </Link>
-            {sublinksVisible === idx && (
-              <div>
-                {l.sublinks && l.sublinks.map(sl => (
-                  <Link
-                    to={sl.url}
-                    title={sl.text}
+            <div>
+              <Link
+                to={l.url || ''}
+                title={l.text}
+                onClick={(e) => {
+                  if (!l.url) {
+                    e.preventDefault();
+                  }
+                  toggleSublinks(showSublinks ? null : idx)
+                }}
+                css={{
+                  color: theme.color(l.button ? 'white' : 'primary'),
+                  display: 'block',
+                  fontSize: theme.size(2),
+                  paddingBottom: theme.size(3),
+                  paddingTop: theme.size(3),
+                  position: 'relative',
+                  textAlign: 'center',
+                  textDecoration: 'none',
+                }}
+              >
+                <span>{l.text}</span>
+                {l.sublinks && (
+                  <div
                     css={{
-                      background: theme.color('gray-ll'),
-                      borderTop: `1px solid ${theme.color('gray-l')}`,
-                      color: theme.color('primary'),
-                      display: 'block',
-                      fontSize: theme.size(2),
-                      margin: `0 -${theme.size(3)}`,
-                      paddingBottom: theme.size(3),
-                      paddingTop: theme.size(3),
-                      textAlign: 'center',
-                      textDecoration: 'none',
+                      color: theme.color('gray'),
+                      display: 'inline-block',
+                      marginLeft: theme.size(-4),
+                      marginRight: `-${theme.size(2)}`,
                     }}
                   >
-                    {sl.text}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-        </Container>
-      ))}
+                    <Angle
+                      css={{
+                        marginBottom: `-${theme.size(-6)}`,
+                      }}
+                    />
+                  </div>
+                )}
+              </Link>
+              {showSublinks && (
+                <div>
+                  {l.sublinks && l.sublinks.map(sl => (
+                    <Link
+                      to={sl.url}
+                      title={sl.text}
+                      css={{
+                        background: theme.color('gray-ll'),
+                        borderTop: `1px solid ${theme.color('gray-l')}`,
+                        color: theme.color('accent'),
+                        display: 'block',
+                        fontSize: theme.size(2),
+                        margin: `0 -${theme.size(5)}`,
+                        paddingBottom: theme.size(3),
+                        paddingTop: theme.size(3),
+                        textAlign: 'center',
+                        textDecoration: 'none',
+                      }}
+                    >
+                      {sl.text}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          </Container>
+        )
+      })}
     </div>
   )
 };
