@@ -65,9 +65,9 @@ heroes:
           you. You're constantly worrying about your size and shape, how much
           and what you've eaten, and have resorted to restricting what you eat,
           binge eating, counting calories and/or purging. You feel like you've
-          tried everything to get your disordered eating habits under control to
-          no avail, and you're left with feelings of frustration, shame, and
-          guilt over your behaviors. 
+          tried everything to get your disordered eating habits under control,
+          and are desperate to find relief so you can learn how to heave a
+          healthy relationship with your body and food.
 
 
           [Learn more about eating disorders](/eatingdisorders)
