@@ -47,11 +47,10 @@ heroes:
 
           Do you constantly feel worried, nervous, or unease over situations or
           events happening in your life? Are you always on edge? Do you struggle
-          with constant worry, panic attacks, phobias, or socializing? Anxiety
-          affects over 40 million people everyday. Don't let it consume your
-          life any longer. Counseling will provide you with the tools to be able
-          to identify, challenge, and change the thoughts and behaviors that
-          trigger your anxiety.
+          with constant worry, panic attacks, phobias, or socializing?
+          Counseling will provide you with the tools to be able to identify,
+          challenge, and change the thoughts and behaviors that trigger your
+          anxiety.
 
 
           [Learn more about anxiety](/anxiety)
@@ -63,14 +62,12 @@ heroes:
           />
 
           Food and the way you look is a source of frustration and stress for
-          you. You're constantly worrying about your body size and shape, how
-          much and what you've eaten, and have resorted to restricting what you
-          eat, binge eating, counting calories and/or purging. You feel like
-          you've tried everything to get your disordered eating habits under
-          control to no avail, and you're left with feelings of frustration,
-          shame, and guilt over your behaviors. You're not alone! With the help
-          of counseling you can learn to gain back the control that eating
-          disorder voice has stolen from you, and attain freedom again!
+          you. You're constantly worrying about your size and shape, how much
+          and what you've eaten, and have resorted to restricting what you eat,
+          binge eating, counting calories and/or purging. You feel like you've
+          tried everything to get your disordered eating habits under control to
+          no avail, and you're left with feelings of frustration, shame, and
+          guilt over your behaviors. 
 
 
           [Learn more about eating disorders](/eatingdisorders)
