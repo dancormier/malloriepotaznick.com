@@ -84,7 +84,7 @@ const Hero = ({
         >
           {Heading && (
             <Heading
-              Tag='h2'
+              Tag={isFeatured ? 'h2' : 'h3'}
               accent={!isFeatured}
               customCSS={{
                 color: bgInvert && theme.color('white'),
