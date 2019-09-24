@@ -16,9 +16,9 @@ When you have an eating disorder the first thought you have each morning usually
 </div>
 ## You're not alone
 
-Many people **struggle** with issues concerning their **body image**, and **relationship to food**, they just don’t talk about it. It's not easy for people to discuss or even acknowledge they have an eating disorder. Who wants to admit they're struggling?** Fear** and **shame** often hold those with eating disorders back from seeking help or voicing that they are struggling with issues such as anorexia, bulimia, ARFID, body dysmorphia, or binge eating disorder. 
+Many people **struggle** with issues concerning their **body image**, and **relationship to food**, they just don’t talk about it. It's not easy for people to discuss or even acknowledge they have an eating disorder. Who wants to admit they're struggling? **Fear** and **shame** often hold those with eating disorders back from seeking help or voicing that they are struggling with issues such as anorexia, bulimia, ARFID, body dysmorphia, or binge eating disorder. 
 
-##  
+## 
 
 ## What do eating disorders look like?
 
