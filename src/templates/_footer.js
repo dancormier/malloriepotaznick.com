@@ -4,7 +4,6 @@ import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'emotion-theming';
 import Container from '../components/Container';
-import FooterContact from '../components/FooterContact';
 import Markdown from '../components/Utility/Markdown';
 import theme from '../components/Utility/theme';
 
@@ -36,11 +35,8 @@ const FooterItem = ({ item }) => {
 }
 
 export const FooterTemplate = ({
-  body,
-  buttons,
   copyright,
   items,
-  showFooterContact,
   isPreview,
 }) => {
   const year = new Date().getFullYear();
@@ -56,12 +52,6 @@ export const FooterTemplate = ({
   return (
     <ThemeProvider theme={theme}>
       <div>
-        {(showFooterContact || isPreview) && (
-          <FooterContact
-            body={body}
-            buttons={buttons}
-          />
-        )}
         <div
           css={{
             borderTop: `1px solid ${theme.color('gray-ll-alt')}`,
@@ -120,14 +110,11 @@ export const FooterTemplate = ({
 };
 
 FooterTemplate.propTypes = {
-  body: PropTypes.string,
-  buttons: PropTypes.any,
   copyright: PropTypes.string,
   items: PropTypes.any,
-  showContactFooter: PropTypes.bool,
 }
 
-const Footer = ({ showFooterContact }) => (
+const Footer = () => (
   <StaticQuery
     query={graphql`
       query Footer {
@@ -138,18 +125,12 @@ const Footer = ({ showFooterContact }) => (
           edges {
             node {
               frontmatter {
-                buttons {
-                  text
-                  type
-                  url
-                }
                 copyright
                 items {
                   align
                   body
                 }
               }
-              rawMarkdownBody
             }
           }
         }
@@ -157,20 +138,16 @@ const Footer = ({ showFooterContact }) => (
     `}
     render={data => {
       const { edges } = data.allMarkdownRemark;
-      const { rawMarkdownBody: body, frontmatter } = edges[0].node;
+      const { frontmatter } = edges[0].node;
       const {
-        buttons,
         copyright,
         items,
       } = frontmatter;
 
       return (
         <FooterTemplate
-          body={body}
-          buttons={buttons}
           copyright={copyright}
           items={items}
-          showFooterContact={showFooterContact}
         />
       )
     }}

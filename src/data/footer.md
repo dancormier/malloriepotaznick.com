@@ -1,9 +1,5 @@
 ---
 templateKey: _footer
-buttons:
-  - text: Contact Mallorie
-    type: primary
-    url: contact
 items:
   - align: right
     body: '[(561) 536-3980](tel:1-561-536-3980)'
@@ -25,5 +21,3 @@ items:
 
       </div>
 copyright: Mallorie Potaznick
----
-For more information, call Mallorie at [(561) 536-3980‬](tel:1-561-536-3980) or email [malloriepotaznick@gmail.com](mailto:malloriepotaznick@gmail.com).

@@ -116,11 +116,11 @@ collections:
   - name: "data"
     label: "Pieces"
     files:
-      - file: "src/data/footer.md"
-        label: "Footer"
-        name: "footer"
+      - file: "src/data/actionbar.md"
+        label: "Actionbar"
+        name: "actionbar"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_footer"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_actionbar"}
           - {label: "Contact Text", name: "body", widget: "markdown", hint: *body_hint}
           - {
               label: "Contact Buttons",
@@ -139,6 +139,11 @@ collections:
                 }
               ]
             }
+      - file: "src/data/footer.md"
+        label: "Footer"
+        name: "footer"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_footer"}
           - {
               label: "Items",
               name: "items",
