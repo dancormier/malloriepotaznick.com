@@ -1,9 +1,6 @@
 ---
 templateKey: _actionbar
 buttons:
-  - text: Contact Mallorie
-    type: primary
-    url: contact
   - text: Book a session
     type: primary
     url: >-
