@@ -98,7 +98,7 @@ const Actionbar = () => (
       query Actionbar {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] },
-          filter: { frontmatter: { templateKey: { eq: "_footer" } }}
+          filter: { frontmatter: { templateKey: { eq: "_actionbar" } }}
         ) {
           edges {
             node {
