@@ -30,8 +30,8 @@ const Page = ({
           overflow: 'hidden',
           position: 'relative',
           [theme.mq('sm')]: {
-            height: theme.size(19),
-            marginBottom: theme.size(8),
+            height: theme.size(16),
+            marginBottom: theme.size(6),
           },
         }}
       >
