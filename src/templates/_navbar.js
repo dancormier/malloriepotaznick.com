@@ -95,6 +95,7 @@ const NavLinks = ({ links, pathname }) => {
           </Button>
         ) : (
           <ReactHoverObserver
+            key={l.text}
             css={{
               position: 'relative',
             }}
@@ -263,6 +264,7 @@ const NavMenu = ({ links, sublinksVisible, toggleSublinks }) => {
                 <div>
                   {l.sublinks && l.sublinks.map(sl => (
                     <Link
+                      key={sl.text}
                       to={sl.url}
                       title={sl.text}
                       css={{

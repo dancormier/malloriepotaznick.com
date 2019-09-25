@@ -8,6 +8,7 @@ import theme from './Utility/theme'
 import Footer from '../templates/_footer'
 import Navbar from '../templates/_navbar'
 import Superbar from '../templates/_superbar'
+import Actionbar from '../templates/_actionbar'
 import './Utility/all.sass'
 
 const TemplateWrapper = ({ children, altBG, showFooterContact }) => (
@@ -55,18 +56,31 @@ const TemplateWrapper = ({ children, altBG, showFooterContact }) => (
                 />
               </Helmet>
               <ThemeProvider theme={theme}>
-                <div css={{
-                  backgroundColor: altBG && theme.color('gray-ll'),
-                  color: theme.color('primary'),
-                  fontFamily: theme.font('serif'),
-                  overflow: 'hidden',
-                }}>
-                  <Superbar />
-                  <Navbar pathname={location.pathname} />
-                  <div css={{ minHeight: '100vh' }}>
-                    {children}
+                <div
+                  css={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: '100vh',
+                  }}
+                >
+                  <div css={{
+                    backgroundColor: altBG && theme.color('gray-ll'),
+                    color: theme.color('primary'),
+                    fontFamily: theme.font('serif'),
+                    height: '100%',
+                    overflowX: 'hidden',
+                    overflowY: 'scroll',
+                  }}>
+                    <Superbar />
+                    <Navbar pathname={location.pathname} />
+                    <div css={{ minHeight: '100vh' }}>
+                      {children}
+                    </div>
+                    <Footer />
                   </div>
-                  <Footer showFooterContact={showFooterContact} />
+                  {showFooterContact && (
+                    <Actionbar />
+                  )}
                 </div>
               </ThemeProvider>
             </div>
