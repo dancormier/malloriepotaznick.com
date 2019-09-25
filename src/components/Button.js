@@ -79,6 +79,19 @@ const Button = ({
   >
     {children}
   </button>
+) : url.indexOf('//') > -1 ? (
+  <a
+    css={{
+      ...style,
+      ...styleByType(type),
+      ...customCSS
+    }}
+    onClick={onClick}
+    alt={children || 'Book a session'}
+    href={url}
+  >
+    {children || 'Book a session'}
+  </a>
 ) : (
   <Link
     css={{
