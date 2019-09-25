@@ -4,6 +4,7 @@ import { Location } from '@reach/router'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from "gatsby"
 import { ThemeProvider } from 'emotion-theming'
+import Div100vh from 'react-div-100vh'
 import theme from './Utility/theme'
 import Footer from '../templates/_footer'
 import Navbar from '../templates/_navbar'
@@ -56,7 +57,7 @@ const TemplateWrapper = ({ children, altBG, showFooterContact }) => (
                 />
               </Helmet>
               <ThemeProvider theme={theme}>
-                <div
+                <Div100vh
                   css={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -81,7 +82,7 @@ const TemplateWrapper = ({ children, altBG, showFooterContact }) => (
                   {showFooterContact && (
                     <Actionbar />
                   )}
-                </div>
+                </Div100vh>
               </ThemeProvider>
             </div>
           )}

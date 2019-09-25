@@ -64,6 +64,7 @@ export const ActionbarTemplate = ({
                     type={button.type}
                     url={button.url}
                     customCSS={{
+                      boxSizing: 'border-box',
                       display: 'block !important',
                       marginTop: idx > 0 && theme.size(-2),
                       width: '100%',
