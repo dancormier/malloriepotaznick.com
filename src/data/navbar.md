@@ -8,7 +8,6 @@ links:
     text: About
     url: about
   - enabled: true
-    text: Specialties
     sublinks:
       - enabled: true
         text: Anxiety
@@ -19,10 +18,11 @@ links:
       - enabled: true
         text: OCD
         url: ocd
+    text: Specialties
   - button: false
     enabled: true
     text: Online Therapy
-    url: '#online'
+    url: onlinetherapy
   - button: false
     enabled: true
     text: FAQ
