@@ -46,10 +46,9 @@ heroes:
 
           Do you constantly feel worried, nervous, or unease over situations or
           events happening in your life? Are you always on edge? Do you struggle
-          with constant worry, panic attacks, phobias, or socializing?
-          Counseling will provide you with the tools to be able to identify,
-          challenge, and change the thoughts and behaviors that trigger your
-          anxiety.
+          with constant worry, panic attacks, phobias, or socializing? Therapy
+          will provide you with the tools to be able to identify, challenge, and
+          change the thoughts and behaviors that trigger your anxiety.
 
 
           [Learn more about anxiety](/anxiety)
