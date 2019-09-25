@@ -1,6 +1,7 @@
 ---
 templateKey: created-page
 title: onlinetherapy
+image: /img/online.jpeg
 heading: Online Therapy in Florida
 showFooterContact: true
 ---
