@@ -22,6 +22,6 @@ Anxiety takes many forms and can be overwhelming. Whether you are experiencing g
   <img src="/img/rawpixel-315186-unsplash.jpg" alt="Women in Ocean happy and free from anxiety" width="600" />
 </div>
 
-## Counseling can help alleviate anxiety
+## Therapy can help alleviate anxiety
 
-Luckily, **counseling can help alleviate anxiety disorders such as OCD, generalized anxiety, social anxiety, trichotillomania and panic disorders**. You don't have to feel stuck anymore! Together, I will help you discover the underlying causes of your anxiety, provide you with effective coping tools, and help you change the way you think and experience your anxiety. If you're ready to find the relief you deserve from your anxiety, eliminate those pesky racing thoughts, and gain the skills to be able to face your worries and fears head on through the strategies therapy can provide, then call today to schedule a free 20 minute phone consultation.
+Luckily, **counseling can help alleviate anxiety disorders such as OCD, generalized anxiety, social anxiety, trichotillomania and panic disorders**. You don't have to feel stuck anymore! Together, I will help you discover the underlying causes of your anxiety, provide you with effective coping tools, and help you change the way you think and experience your anxiety. If you're ready to find the relief you deserve from your anxiety, eliminate those pesky racing thoughts, and gain the skills to be able to face your worries and fears head on through the strategies anxiety treatment can provide, then call today to schedule a free 20 minute phone consultation.
