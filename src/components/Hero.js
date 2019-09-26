@@ -206,8 +206,13 @@ const Hero = ({
                       url={button.url}
                       customCSS={{
                         marginTop: i > 0 && theme.size(0),
+                        [theme.mq('xs')]: {
+                          display: 'inline-block', // overrides button default styling
+                          marginLeft: isFeatured && theme.size(-1),
+                          marginRight: theme.size(-1),
+                        },
                         [theme.mq('sm')]: {
-                          marginLeft: i > 0 && theme.size(1),
+                          display: 'inline-block',
                           marginTop: 0,
                         },
                       }}
