@@ -5,6 +5,7 @@ import * as ColorWidget from "netlify-cms-widget-color";
 import CSSInjector from '../components/Utility/CSSInjector';
 
 // Data
+import ActionbarPreview from './preview-templates/ActionbarPreview';
 import FooterPreview from './preview-templates/FooterPreview';
 import NavbarPreview from './preview-templates/NavbarPreview';
 import SuperbarPreview from './preview-templates/SuperbarPreview';
@@ -18,6 +19,11 @@ import HomePagePreview from './preview-templates/HomePagePreview';
 CMS.registerWidget("color", ColorWidget.Control);
 
 // Data
+CMS.registerPreviewTemplate('actionbar', props => (
+  <CSSInjector>
+    <ActionbarPreview {...props} />
+  </CSSInjector>
+));
 CMS.registerPreviewTemplate('footer', props => (
   <CSSInjector>
     <FooterPreview {...props} />
