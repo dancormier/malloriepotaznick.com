@@ -206,7 +206,7 @@ const Hero = ({
                       url={button.url}
                       customCSS={{
                         marginTop: i > 0 && theme.size(0),
-                        [theme.mq('xs')]: {
+                        [theme.mq('sm')]: {
                           marginLeft: i > 0 && theme.size(1),
                           marginTop: 0,
                         },
