@@ -38,8 +38,8 @@ const style = (tag) => {
           lineHeight: theme.size(7),
         },
         [theme.mq('lg')]: {
-          fontSize: theme.size(9),
-          lineHeight: theme.size(9),
+          fontSize: theme.size(8),
+          lineHeight: theme.size(8),
         },
       }
     case 'h3':
