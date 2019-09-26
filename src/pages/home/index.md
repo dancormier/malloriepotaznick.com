@@ -10,6 +10,10 @@ heroes:
       - text: Contact Mallorie
         type: primary
         url: contact
+      - text: Book a session
+        type: secondary
+        url: >-
+          https://square.site/book/HB6MXAKR6P7Q0/mallorie-potaznick-lmhc-coral-springs-fl
     context: featured
     heading: Gain Emotional Freedom
   - body: >-
