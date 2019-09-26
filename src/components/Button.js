@@ -79,7 +79,7 @@ const Button = ({
   >
     {children}
   </button>
-) : url.indexOf('//') > -1 ? (
+) : url && url.indexOf('//') > -1 ? (
   <a
     css={{
       ...style,
