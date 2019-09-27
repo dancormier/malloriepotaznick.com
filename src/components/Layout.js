@@ -74,7 +74,7 @@ const TemplateWrapper = ({ children, altBG, showFooterContact }) => (
                   }}>
                     <Superbar />
                     <Navbar pathname={location.pathname} />
-                    <div css={{ minHeight: '100vh' }}>
+                    <div>
                       {children}
                     </div>
                     <Footer />
