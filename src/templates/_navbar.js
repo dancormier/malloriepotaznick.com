@@ -329,9 +329,13 @@ export const NavbarTemplate = class extends React.Component {
             alignItems: 'center',
             display: 'flex',
             justifyContent: 'space-between',
-            paddingTop: theme.size(2),
-            paddingBottom: theme.size(2),
+            paddingTop: theme.size(4),
+            paddingBottom: theme.size(4),
             position: 'relative',
+            [theme.mq('md')]: {
+              paddingTop: theme.size(2),
+              paddingBottom: theme.size(2),
+            },
           }}
         >
           <Logo
