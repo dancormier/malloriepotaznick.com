@@ -47,9 +47,6 @@ const Logo = ({ heading, subheading }) => {
           [theme.mq('lg')]: {
             fontSize: theme.size(5),
           },
-          [theme.mq('xl')]: {
-            fontSize: theme.size(6),
-          },
         }}
       >
         {heading}
@@ -60,9 +57,6 @@ const Logo = ({ heading, subheading }) => {
           fontSize: theme.size(0),
           [theme.mq('sm')]: {
             fontSize: theme.size(1),
-          },
-          [theme.mq('xl')]: {
-            fontSize: theme.size(2),
           },
         }}
       >
@@ -335,13 +329,9 @@ export const NavbarTemplate = class extends React.Component {
             alignItems: 'center',
             display: 'flex',
             justifyContent: 'space-between',
-            paddingTop: theme.size(4),
-            paddingBottom: theme.size(4),
+            paddingTop: theme.size(2),
+            paddingBottom: theme.size(2),
             position: 'relative',
-            [theme.mq('xl')]: {
-              paddingTop: theme.size(5),
-              paddingBottom: theme.size(5),
-            },
           }}
         >
           <Logo
