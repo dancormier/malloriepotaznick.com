@@ -123,7 +123,6 @@ const NavLinks = ({ links, pathname }) => {
                         content: '""',
                         display: 'block',
                         height: theme.size(-8),
-                        marginTop: theme.size(-1),
                         position: 'absolute',
                         top: '100%',
                         width: '100%',
