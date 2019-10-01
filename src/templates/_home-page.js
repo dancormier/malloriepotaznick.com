@@ -40,6 +40,7 @@ export const HomePageTemplate = ({ heroes, isPreview = false }) => (
             image={img}
             imageAlign={image && image.align}
             subsections={subsections}
+            isPreview={isPreview}
           >
             {body}
           </Hero>
@@ -97,6 +98,14 @@ const HomePage = () => (
                   }
                   subsections {
                     body
+                    title
+                    image {
+                      childImageSharp {
+                        fixed(width: 600) {
+                          src
+                        }
+                      }
+                    }
                   }
                 }
               }

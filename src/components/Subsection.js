@@ -3,14 +3,19 @@
 import { jsx } from '@emotion/core'
 import theme from './Utility/theme'
 import Markdown from './Utility/Markdown'
+import Heading from './Heading'
 
 const Subsection = ({
   customCSS,
   children,
+  image,
+  title,
 }) => (
   <div
     css={{
+      borderTop: `1px solid ${theme.color('gray-ll-alt')}`,
       marginBottom: theme.size(4),
+      paddingTop: theme.size(2),
       'p': {
         fontSize: theme.size(1),
         lineHeight: theme.size(3),
@@ -21,9 +26,44 @@ const Subsection = ({
           lineHeight: theme.size(5),
         }
       },
+      [theme.mq('lg')]: {
+        borderTop: 'none',
+        paddingTop: 0,
+      },
       ...customCSS,
     }}
   >
+    {image && (
+      <div
+        css={{
+          backgroundImage: `url(${image})`,
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          borderRadius: '3px',
+          display: 'none',
+          height: theme.size(14),
+          marginTop: theme.size(2),
+          marginBottom: theme.size(5),
+          [theme.mq('lg')]: {
+            display: 'block',
+          }
+        }}
+      />
+    )}
+    {title && (
+      <Heading
+        Tag="h6"
+        customCSS={{
+          marginBottom: theme.size(2),
+          [theme.mq('lg')]: {
+            color: theme.color('accent'),
+            marginBottom: theme.size(3),
+          }
+        }}
+      >
+        {title}
+      </Heading>
+    )}
     <Markdown>
       {children}
     </Markdown>

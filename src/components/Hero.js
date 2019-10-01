@@ -21,6 +21,7 @@ const Hero = ({
   heading,
   image,
   imageAlign,
+  isPreview,
   subsections,
 }) => {
   const isAbout = context === 'about';
@@ -185,16 +186,24 @@ const Hero = ({
                     }
                   }}
                 >
-                  {subsections.map((sub) => (
-                    <Subsection
-                      key={sub.body}
-                      customCSS={{
-                        width: '100%',
-                      }}
-                    >
-                      {sub.body}
-                    </Subsection>
-                  ))}
+                  {subsections.map((sub) => {
+                    const subImage = sub.image && (
+                      isPreview ? sub.image : sub.image.childImageSharp.fixed.src
+                    );
+
+                    return (
+                      <Subsection
+                        key={sub.body}
+                        customCSS={{
+                          width: '100%',
+                        }}
+                        title={sub.title}
+                        image={subImage}
+                      >
+                        {sub.body}
+                      </Subsection>
+                    )
+                  })}
                 </div>
               )}
               {buttons && buttons.length && (

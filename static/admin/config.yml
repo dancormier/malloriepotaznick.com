@@ -100,6 +100,8 @@ collections:
                   widget: "list",
                   required: false,
                   fields: [
+                    {label: "Title", name: "title", widget: "string"},
+                    {label: "Image", name: "image", widget: "image", allow_multiple: false},
                     {label: "Body", name: "body", widget: "markdown"},
                   ]
                 },
