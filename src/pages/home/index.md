@@ -42,9 +42,7 @@ heroes:
   - context: specialties
     heading: Mallorie's Counseling Specialties
     subsections:
-      - title: Anxiety
-        image: /img/caleb-frith-129986-unsplash.jpg
-        body: >-
+      - body: >-
           Do you constantly feel worried, nervous, or unease over situations or
           events happening in your life? Are you always on edge? Do you struggle
           with constant worry, panic attacks, phobias, or socializing? Therapy
@@ -53,9 +51,9 @@ heroes:
 
 
           [Learn more about anxiety](/anxiety)
-      - title: Eating Disorders
-        image: /img/i-yunmai-617618-unsplash.jpg
-        body: >-
+        image: /img/caleb-frith-129986-unsplash.jpg
+        title: Anxiety
+      - body: >-
           Food and the way you look is a source of frustration and stress for
           you. You're constantly worrying about your size and shape, how much
           and what you've eaten, and have resorted to restricting what you eat,
@@ -65,15 +63,17 @@ heroes:
 
 
           [Learn more about eating disorders](/eatingdisorders)
-      - title: OCD
-        image: /img/artem-kovalev-86365-unsplash.jpg
-        body: >-
+        image: /img/i-yunmai-617618-unsplash.jpg
+        title: Eating Disorder Treatment
+      - body: >-
           Do you have intrusive, unwanted thoughts that lead you to engaging in
           compulsive behaviors or rituals in order to alleviate the distress
           caused by your obsessive thoughts? If so, therapy can help!
 
 
           [Learn more about obsessive compulsive disorder](/ocd)
+        image: /img/artem-kovalev-86365-unsplash.jpg
+        title: OCD
   - body: >-
       Now providing **online counseling** for those located throughout the state
       of **Florida**. Using a HIPPA compliant secure platform, I am able to
