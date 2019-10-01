@@ -18,7 +18,6 @@ const TemplateWrapper = ({ children, altBG, showFooterContact }) => {
   let size = useComponentSize(actionbarRef);
   let { height: actionbarHeight } = size;
 
-  console.log(actionbarHeight, 'h')
   return (
     <StaticQuery
       query={graphql`
