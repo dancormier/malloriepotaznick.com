@@ -52,7 +52,7 @@ heroes:
 
           [Learn more about anxiety](/anxiety)
         image: /img/caleb-frith-129986-unsplash.jpg
-        title: Anxiety
+        title: Anxiety Treatment
       - body: >-
           Food and the way you look is a source of frustration and stress for
           you. You're constantly worrying about your size and shape, how much
@@ -73,7 +73,7 @@ heroes:
 
           [Learn more about obsessive compulsive disorder](/ocd)
         image: /img/artem-kovalev-86365-unsplash.jpg
-        title: OCD
+        title: OCD Treatment
   - body: >-
       Now providing **online counseling** for those located throughout the state
       of **Florida**. Using a HIPPA compliant secure platform, I am able to
