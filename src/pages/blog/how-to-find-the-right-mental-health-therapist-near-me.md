@@ -30,9 +30,9 @@ Licensed Clinical Social Workers (LCSW) hold a masters degree in clinical social
 
 Licensed Marriage and Family Counselors (LMFT) hold a masters degree in marriage and family counseling and specialize in interpersonal relationships such as couples and family issues. You are looking for an LMFT if you have relationship or family problems you want help with. 
 
-##  How to find the right therapist online
+## How to find the right therapist online
 
-Many people have trouble knowing what to search for when looking for a therapist online. When searching, it's important to get specific with what you're looking for. For instance, say you’re struggling with an eating disorder. Searching for “therapist near me” will not necessarily get you closer to finding the best therapist for you. For issues such as eating disorders, anxiety, OCD, or PTSD, it’s important to find a therapist that specializes in your disorder. Therapist with specialties have the training necessary to help you with your specific issues. When searching through Google, adding specific keywords such as “eating disorder therapist near me,”  “anxiety therapist near me,” or more specific keywords like “panic attack therapy” “binge eating therapy” will produce better results in finding the right therapist. 
+Many people have trouble knowing what to search for when looking for a therapist online. When searching, it's important to get specific with what you're looking for. For instance, say you’re struggling with an eating disorder. Searching for “therapist near me” will not necessarily get you closer to finding the best therapist for you. For issues such as eating disorders, anxiety, OCD, or PTSD, it’s important to find a therapist that specializes in your disorder. Therapist with specialties have the training necessary to help you with your specific issues. When searching through Google, adding specific keywords such as “eating disorder therapist near me,” “anxiety therapist near me,” or more specific keywords like “panic attack therapy” “binge eating therapy” will produce better results in finding the right therapist. 
 
 ## Free Consultation
 
