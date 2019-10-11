@@ -35,6 +35,9 @@ const Markdown = ({
           fontSize: '1.75em',
           fontWeight: 400,
         },
+        'h3': {
+          fontWeight: 400,
+        },
         'img': {
           margin: `${theme.size(1)} 0`,
         },
