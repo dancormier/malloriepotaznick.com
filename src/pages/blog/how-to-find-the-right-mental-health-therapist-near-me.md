@@ -20,7 +20,7 @@ Psychiatrists are medical doctors who specialize in diagnosing and treating ment
 
 ### Licensed Mental Health Counselors/LMHC
 
-Licensed Mental Health Counselors (LMHC) hold a master degree in clinical mental health counseling and are considered experts in the field of mental health. LMHCs are able to expertly diagnose and treat mental illnesses by considering social development and psychological factors. You are looking for an LMHC if you have a emotional or mental health disorder i.e. anxiety, ocd, eating disorder, body image issues, or depression.
+Licensed Mental Health Counselors (LMHC) hold a master degree in clinical mental health counseling and are considered experts in the field of mental health. LMHCs are able to expertly diagnose and treat mental illnesses by considering social development and psychological factors. You are looking for an LMHC if you have an emotional or mental health disorder i.e. anxiety, ocd, eating disorder, body image issues, or depression.
 
 ### Licensed Social Workers/LCSW
 
