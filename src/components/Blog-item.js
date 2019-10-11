@@ -37,6 +37,7 @@ const BlogItem = ({
           backgroundImage: `url(${thumb})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
+          border: `1px solid ${theme.color('white')}`,
           borderRadius: '3px',
           flexShrink: 0,
           height: theme.size(15),
@@ -53,15 +54,6 @@ const BlogItem = ({
       />
     )}
     <div>
-      <div
-        css={{
-          color: theme.color('gray'),
-          fontSize: theme.size(0),
-          marginBottom: theme.size(0),
-        }}
-      >
-        {date}
-      </div>
       <Heading
         Tag="h4"
         customCSS={{
@@ -71,6 +63,7 @@ const BlogItem = ({
         <Link
           css={{
             color: theme.color('accent'),
+            lineHeight: theme.size(7),
             textDecoration: 'none',
             '&:hover': {
               textDecoration: 'underline',
@@ -82,6 +75,15 @@ const BlogItem = ({
           {title}
         </Link>
       </Heading>
+      <div
+        css={{
+          color: theme.color('gray'),
+          fontSize: theme.size(0),
+          marginBottom: theme.size(0),
+        }}
+      >
+        {date}
+      </div>
       <div
         css={{
           fontSize: theme.size(1),
