@@ -25,16 +25,45 @@ export default class BlogPage extends React.Component {
           <Helmet title={`Blog | ${siteTitle}: ${siteDescription}`} />
           <Page heading="Latest Blog Posts">
             <div css={{ marginTop: theme.size(4) }}>
-              {posts.map(({ node: post }) => (
-                <BlogItem
-                  key={post.id}
-                  date={post.frontmatter.date}
-                  excerpt={post.excerpt}
-                  id={post.id}
-                  slug={post.fields.slug}
-                  title={post.frontmatter.title}
-                />
-              ))}
+              <div
+                css={{
+                  [theme.mq('md')]: {
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    justifyContent: 'space-between',
+                    paddingTop: theme.size(4),
+                  },
+                }}
+              >
+                {posts.map(({ node: post }) => {
+                  const {
+                    excerpt,
+                    fields,
+                    frontmatter,
+                    id,
+                  } = post;
+
+                  const {
+                    date,
+                    image,
+                    title,
+                  } = frontmatter;
+                  const thumb = image && image.childImageSharp.fixed.src;
+
+                  console.log(post, thumb, 'p')
+                  return (
+                    <BlogItem
+                      key={id}
+                      date={date}
+                      excerpt={excerpt}
+                      id={id}
+                      thumb={thumb}
+                      slug={fields.slug}
+                      title={title}
+                    />
+                  )
+                })}
+              </div>
             </div>
           </Page>
         </Layout>
@@ -74,6 +103,13 @@ export const pageQuery = graphql`
             title
             templateKey
             date(formatString: "MMMM DD, YYYY")
+            image {
+              childImageSharp {
+                fixed(width: 1200) {
+                  src
+                }
+              }
+            }
           }
         }
       }
