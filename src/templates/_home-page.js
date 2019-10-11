@@ -99,6 +99,7 @@ const HomePage = () => (
                   subsections {
                     body
                     title
+                    url
                     image {
                       childImageSharp {
                         fixed(width: 600) {

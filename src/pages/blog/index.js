@@ -50,7 +50,6 @@ export default class BlogPage extends React.Component {
                   } = frontmatter;
                   const thumb = image && image.childImageSharp.fixed.src;
 
-                  console.log(post, thumb, 'p')
                   return (
                     <BlogItem
                       key={id}

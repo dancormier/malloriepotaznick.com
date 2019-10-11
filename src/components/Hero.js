@@ -199,6 +199,7 @@ const Hero = ({
                         }}
                         title={sub.title}
                         image={subImage}
+                        slug={sub.url}
                       >
                         {sub.body}
                       </Subsection>

@@ -4,6 +4,7 @@ import { jsx } from '@emotion/core'
 import { Link } from 'gatsby'
 import theme from './Utility/theme'
 import Heading from './Heading'
+import ImageHeading from './Image-heading'
 
 const style = {
   display: 'flex',
@@ -32,25 +33,10 @@ const BlogItem = ({
     css={{ ...style, ...customCSS }}
   >
     {thumb && (
-      <Link
-        css={{
-          backgroundImage: `url(${thumb})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          border: `1px solid ${theme.color('white')}`,
-          borderRadius: '3px',
-          flexShrink: 0,
-          height: theme.size(15),
-          marginBottom: theme.size(4),
-          position: 'relative',
-          transition: '.2s',
-          '&:hover': {
-            boxShadow: '0 0 20px rgba(0,0,0,.2)',
-            transform: 'scale(1.02)',
-          }
-        }}
+      <ImageHeading
         onClick={onClick}
-        to={slug}
+        slug={slug}
+        thumb={thumb}
       />
     )}
     <div>

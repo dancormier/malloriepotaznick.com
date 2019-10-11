@@ -4,11 +4,13 @@ import { jsx } from '@emotion/core'
 import theme from './Utility/theme'
 import Markdown from './Utility/Markdown'
 import Heading from './Heading'
+import ImageHeading from './Image-heading'
 
 const Subsection = ({
   customCSS,
   children,
   image,
+  slug,
   title,
 }) => (
   <div
@@ -34,20 +36,9 @@ const Subsection = ({
     }}
   >
     {image && (
-      <div
-        css={{
-          backgroundImage: `url(${image})`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          borderRadius: '3px',
-          display: 'none',
-          height: theme.size(14),
-          marginTop: theme.size(2),
-          marginBottom: theme.size(5),
-          [theme.mq('lg')]: {
-            display: 'block',
-          }
-        }}
+      <ImageHeading
+        thumb={image}
+        slug={slug}
       />
     )}
     {title && (
