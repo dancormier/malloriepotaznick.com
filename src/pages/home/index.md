@@ -9,9 +9,9 @@ heroes:
     buttons:
       - text: Contact Mallorie
         type: primary
-        url: contact
+        url: /contact
       - text: Book a session
-        type: secondary
+        type: primary
         url: >-
           https://square.site/book/HB6MXAKR6P7Q0/mallorie-potaznick-lmhc-coral-springs-fl
     context: featured
@@ -87,6 +87,10 @@ heroes:
       to have **therapy** **online** has never been easier.
     context: online
     heading: Online Therapy
+    buttons:
+      - text: Learn about online therapy
+        type: primary
+        url: /onlinetherapy
   - body: >-
       ## Have Questions?
 
