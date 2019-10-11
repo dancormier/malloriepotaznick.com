@@ -86,6 +86,10 @@ const BlogItem = ({
       <Link
         css={{
           color: theme.color('accent'),
+          textDecoration: 'none',
+          '&:hover': {
+            textDecoration: 'underline',
+          }
         }}
         onClick={onClick}
         to={slug}
