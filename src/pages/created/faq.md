@@ -23,7 +23,7 @@ Payment is collected at the time of the appointment. I accept payment by cash or
 
 ## Do you accept insurance?
 
-At this time, I do not accept insurance. However, I can provide those with out of network benefits a superbill to submit to your insurance. If you have met your out of network deductible, most insurance companies will reimburse you for a portion of your session fee.
+While I don't accept most insurances, if you have a PPO policy and have out of network benefits I can provide you with a superbill to submit to your insurance. If you have met your out of network deductible, most insurance companies will reimburse you for a portion of your session fee.
 
 ## Do you have a cancellation policy?
 
