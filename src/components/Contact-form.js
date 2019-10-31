@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import { navigate } from "gatsby-link";
+import { event } from 'react-ga'
+import { navigate } from "gatsby-link"
 import Button from './Button'
 import theme from './Utility/theme'
 
@@ -57,6 +58,11 @@ export default class ContactForm extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
+    event({
+      category: 'contact-form',
+      action: 'submit',
+      label: 'send',
+    });
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -65,8 +71,22 @@ export default class ContactForm extends React.Component {
         ...this.state
       })
     })
-      .then(() => navigate(form.getAttribute("action")))
-      .catch(error => alert(error));
+      .then(() => {
+        navigate(form.getAttribute("action"));
+        event({
+          category: 'contact-form',
+          action: 'submit',
+          label: 'success',
+        });
+      })
+      .catch(error => {
+        alert(error);
+        event({
+          category: 'contact-form',
+          action: 'submit',
+          label: 'failure',
+        });
+      });
   };
 
   render() {
@@ -81,7 +101,6 @@ export default class ContactForm extends React.Component {
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={(e) => {
-          console.log('submit?')
           if (onClick) {
             onClick();
           }
