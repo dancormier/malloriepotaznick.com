@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
+import ReactGA from 'react-ga';
 import { useRef } from 'react'
 import useComponentSize from '@rehooks/component-size'
 import { Location } from '@reach/router'
@@ -12,6 +13,8 @@ import Navbar from '../templates/_navbar'
 import Superbar from '../templates/_superbar'
 import Actionbar from '../templates/_actionbar'
 import './Utility/all.sass'
+
+ReactGA.initialize('UA-132742457-1');
 
 const TemplateWrapper = ({ children, altBG, showFooterContact }) => {
   let actionbarRef = useRef(null);

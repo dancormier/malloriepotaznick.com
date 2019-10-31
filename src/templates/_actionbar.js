@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { event } from 'react-ga';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'emotion-theming';
@@ -62,6 +63,11 @@ export const ActionbarTemplate = ({
                   key={button.text}
                   type={button.type}
                   url={button.url}
+                  onClick={() => event({
+                    category: 'actionbar.button',
+                    action: 'click',
+                    label: button.text && button.text.replace(/\s+/g, '-').toLowerCase(),
+                  })}
                   customCSS={{
                     boxSizing: 'border-box',
                     display: 'block !important',
