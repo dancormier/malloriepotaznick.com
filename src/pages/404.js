@@ -1,18 +1,44 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx } from '@emotion/core'
+import { event } from 'react-ga'
 import Layout from '../components/Layout'
 import Container from '../components/Container'
-import theme from '../components/Utility/theme';
+import Button from '../components/Button'
+import Heading from '../components/Heading'
+import theme from '../components/Utility/theme'
 
 const NotFoundPage = () => (
   <Layout>
     <Container
       customCSS={{
-        fontSize: theme.size(4),
+        paddingBottom: theme.size(12),
         paddingTop: theme.size(8),
         textAlign: 'center',
       }}
     >
-      <h2>Sorry! We couldn't find that page.</h2>
+      <Heading
+        Tag="h3"
+      >
+        Sorry! We couldn't find that page.
+      </Heading>
+      <div
+        css={{
+          marginTop: theme.size(4),
+        }}
+      >
+        <Button
+          href="/"
+          onClick={() => {
+            event({
+              category: '404',
+              action: 'click',
+              label: 'return-home',
+            });
+          }}
+        >
+          Return home
+        </Button>
+      </div>
     </Container>
   </Layout>
 )
