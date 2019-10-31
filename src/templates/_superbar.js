@@ -1,12 +1,12 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
-import { StaticQuery, graphql } from 'gatsby';
-import PropTypes from 'prop-types';
-import { ThemeProvider } from 'emotion-theming';
+import { jsx } from '@emotion/core'
+import { StaticQuery, graphql } from 'gatsby'
+import PropTypes from 'prop-types'
+import { ThemeProvider } from 'emotion-theming'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
-import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
-import Container from '../components/Container';
-import theme from '../components/Utility/theme';
+import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa'
+import Container from '../components/Container'
+import theme from '../components/Utility/theme'
 
 const icons = (name) => {
   switch (name) {
@@ -19,7 +19,7 @@ const icons = (name) => {
     default:
       return null;
   }
-};
+}
 
 const group = (items, grouping) => items.filter(item => item.align === grouping);
 const SuperbarItem = ({ item }) => {
