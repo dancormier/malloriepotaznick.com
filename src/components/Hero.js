@@ -1,6 +1,7 @@
 // import React from 'react'
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
+import { event } from 'react-ga'
 import theme from './Utility/theme'
 import Button from './Button'
 import ContactForm from './Contact-form'
@@ -225,6 +226,13 @@ const Hero = ({
                           display: 'inline-block',
                           marginTop: 0,
                         },
+                      }}
+                      onClick={() => {
+                        event({
+                          category: 'hero.button',
+                          action: 'click',
+                          label: button.text && `${context}-${button.text.replace(/\s+/g, '-')}` || context,
+                        });
                       }}
                     >
                       {button.text}
