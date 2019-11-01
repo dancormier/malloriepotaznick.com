@@ -10,7 +10,7 @@ import ReactHoverObserver from 'react-hover-observer';
 import Button from '../components/Button';
 import Container from '../components/Container'
 import theme from '../components/Utility/theme';
-import { formatInternalLink } from '../components/Utility/util';
+import { formatInternalLink, replaceSpaceWithString } from '../components/Utility/util';
 
 const linkIsActive = (slug, pathname) => {
   let path = pathname;
@@ -92,6 +92,13 @@ const NavLinks = ({ links, pathname }) => {
             url={formatInternalLink(l.url)}
             customCSS={{
               marginLeft: theme.size(4),
+            }}
+            onClick={() => {
+              event({
+                category: 'header.button',
+                action: formatInternalLink(l.url),
+                label: replaceSpaceWithString(l.text),
+              });
             }}
           >
             {l.text}
@@ -176,7 +183,7 @@ const NavLinks = ({ links, pathname }) => {
                       {l.sublinks.map(sl => (
                         <Link
                           key={sl.url}
-                          to={formatInternalLink(sl.url) || '#'}
+                          to={formatInternalLink(sl.url)}
                           title={sl.text}
                           css={{
                             borderBottom: '1px solid #eeeeee',
@@ -193,6 +200,13 @@ const NavLinks = ({ links, pathname }) => {
                               color: theme.color('accent'),
                             },
                           }}
+                          onClick={() => {
+                            event({
+                              category: 'header.link',
+                              action: formatInternalLink(sl.url),
+                              label: replaceSpaceWithString(sl.text),
+                            });
+                          }}
                         >
                           {sl.text}
                         </Link>
@@ -207,6 +221,13 @@ const NavLinks = ({ links, pathname }) => {
                     to={formatInternalLink(l.url) || '#'}
                     title={l.text}
                     css={linkStyle}
+                    onClick={() => {
+                      event({
+                        category: 'header.link',
+                        action: formatInternalLink(l.url),
+                        label: replaceSpaceWithString(l.text),
+                      });
+                    }}
                   >
                     <span
                       css={{

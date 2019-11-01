@@ -8,6 +8,7 @@ import Button from '../components/Button'
 import Container from '../components/Container'
 import Markdown from '../components/Utility/Markdown'
 import theme from '../components/Utility/theme'
+import { replaceSpaceWithString } from '../components/Utility/util';
 
 export const ActionbarTemplate = ({
   body,
@@ -66,7 +67,7 @@ export const ActionbarTemplate = ({
                   onClick={() => event({
                     category: 'actionbar.button',
                     action: button.url,
-                    label: button.text && button.text.replace(/\s+/g, '-').toLowerCase(),
+                    label: replaceSpaceWithString(button.text),
                   })}
                   customCSS={{
                     boxSizing: 'border-box',

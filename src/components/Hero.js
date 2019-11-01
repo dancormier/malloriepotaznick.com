@@ -9,7 +9,7 @@ import Container from './Container'
 import Heading from './Heading'
 import Subsection from './Subsection'
 import Markdown from './Utility/Markdown'
-import { formatInternalLink } from './Utility/util';
+import { formatInternalLink, replaceSpaceWithString } from './Utility/util';
 
 const Hero = ({
   customCSS,
@@ -228,7 +228,7 @@ const Hero = ({
                         event({
                           category: 'hero.button',
                           action: formatInternalLink(button.url),
-                          label: (button.text && `${context}-${button.text.replace(/\s+/g, '-')}`) || context,
+                          label: `${context}-${replaceSpaceWithString(button.text)}`,
                         });
                       }}
                     >
