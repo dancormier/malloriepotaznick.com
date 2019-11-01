@@ -9,6 +9,7 @@ import Container from './Container'
 import Heading from './Heading'
 import Subsection from './Subsection'
 import Markdown from './Utility/Markdown'
+import { formatInternalLink } from './Utility/util';
 
 const Hero = ({
   customCSS,
@@ -134,11 +135,7 @@ const Hero = ({
                     },
                   }}
                 >
-                  <ContactForm
-                    onClick={() => {
-                      console.log('Contact form submitted');
-                    }}
-                  />
+                  <ContactForm/>
                 </div>
               )}
               {children && (
@@ -200,7 +197,7 @@ const Hero = ({
                         }}
                         title={sub.title}
                         image={subImage}
-                        slug={sub.url}
+                        slug={formatInternalLink(sub.url)}
                       >
                         {sub.body}
                       </Subsection>
@@ -214,7 +211,7 @@ const Hero = ({
                     <Button
                       key={button.text}
                       type={button.type}
-                      url={button.url}
+                      url={formatInternalLink(button.url)}
                       customCSS={{
                         marginTop: i > 0 && theme.size(0),
                         [theme.mq('xs')]: {
@@ -230,7 +227,7 @@ const Hero = ({
                       onClick={() => {
                         event({
                           category: 'hero.button',
-                          action: button.url,
+                          action: formatInternalLink(button.url),
                           label: (button.text && `${context}-${button.text.replace(/\s+/g, '-')}`) || context,
                         });
                       }}
