@@ -230,7 +230,7 @@ const Hero = ({
                       onClick={() => {
                         event({
                           category: 'hero.button',
-                          action: 'click',
+                          action: button.url,
                           label: button.text && `${context}-${button.text.replace(/\s+/g, '-')}` || context,
                         });
                       }}

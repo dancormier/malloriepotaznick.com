@@ -65,7 +65,7 @@ export const ActionbarTemplate = ({
                   url={button.url}
                   onClick={() => event({
                     category: 'actionbar.button',
-                    action: 'click',
+                    action: button.url,
                     label: button.text && button.text.replace(/\s+/g, '-').toLowerCase(),
                   })}
                   customCSS={{

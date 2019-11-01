@@ -31,7 +31,7 @@ const NotFoundPage = () => (
           onClick={() => {
             event({
               category: '404',
-              action: 'click',
+              action: '/',
               label: 'return-home',
             });
           }}

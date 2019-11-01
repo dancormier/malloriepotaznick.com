@@ -37,7 +37,7 @@ export default () => (
         onClick={() => {
           event({
             category: 'contact-thanks',
-            action: 'click',
+            action: '/',
             label: 'return-home',
           });
         }}
