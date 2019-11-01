@@ -247,7 +247,7 @@ const NavLinks = ({ links, pathname }) => {
   )
 };
 
-const NavMenu = ({ links, sublinksVisible, toggleSublinks }) => {
+const NavMenu = ({ links, pathname, sublinksVisible, toggleSublinks }) => {
   return (
     <div
       css={{
@@ -257,6 +257,16 @@ const NavMenu = ({ links, sublinksVisible, toggleSublinks }) => {
       {links.map((l, idx) => {
         const showSublinks = sublinksVisible === idx;
         const Angle = showSublinks ? FaAngleUp : FaAngleDown;
+        const linkStyle = {
+          color: theme.color(l.button ? 'white' : theme.color(linkIsActive(l.url, pathname) ? 'accent' : 'primary')),
+          display: 'block',
+          fontSize: theme.size(2),
+          paddingBottom: theme.size(3),
+          paddingTop: theme.size(3),
+          position: 'relative',
+          textAlign: 'center',
+          textDecoration: 'none',
+        }
         return l.enabled && (
           <Container
             customCSS={{
@@ -265,72 +275,86 @@ const NavMenu = ({ links, sublinksVisible, toggleSublinks }) => {
               fontFamily: theme.font('sans'),
             }}
             key={`${l.text}-${l.url}`}
-            >
-            <div>
-              <Link
-                to={l.url || ''}
-                title={l.text}
-                onClick={(e) => {
-                  if (!l.url) {
-                    e.preventDefault();
-                  }
-                  toggleSublinks(showSublinks ? null : idx)
-                }}
-                css={{
-                  color: theme.color(l.button ? 'white' : 'primary'),
-                  display: 'block',
-                  fontSize: theme.size(2),
-                  paddingBottom: theme.size(3),
-                  paddingTop: theme.size(3),
-                  position: 'relative',
-                  textAlign: 'center',
-                  textDecoration: 'none',
-                }}
-              >
-                <span>{l.text}</span>
-                {l.sublinks && (
-                  <div
-                    css={{
-                      color: theme.color('gray'),
-                      display: 'inline-block',
-                      marginLeft: theme.size(-4),
-                      marginRight: `-${theme.size(2)}`,
-                    }}
-                  >
-                    <Angle
+          >
+            {l.sublinks ? (
+              <div>
+                <div
+                  onClick={() => {
+                    toggleSublinks(showSublinks ? null : idx);
+                    event({
+                      category: 'header.button',
+                      action: showSublinks ? 'sublinks.open' : 'sublinks.close',
+                      label: `toggle-sublinks`,
+                    });
+                  }}
+                  css={linkStyle}
+                >
+                  <span>{l.text}</span>
+                  {l.sublinks && (
+                    <div
                       css={{
-                        marginBottom: `-${theme.size(-6)}`,
-                      }}
-                    />
-                  </div>
-                )}
-              </Link>
-              {showSublinks && (
-                <div>
-                  {l.sublinks && l.sublinks.map(sl => (
-                    <Link
-                      key={sl.text}
-                      to={sl.url}
-                      title={sl.text}
-                      css={{
-                        background: theme.color('gray-ll'),
-                        borderTop: `1px solid ${theme.color('gray-l')}`,
-                        color: theme.color('accent'),
-                        display: 'block',
-                        fontSize: theme.size(2),
-                        margin: `0 -${theme.size(5)}`,
-                        paddingBottom: theme.size(3),
-                        paddingTop: theme.size(3),
-                        textAlign: 'center',
-                        textDecoration: 'none',
+                        color: theme.color('gray'),
+                        display: 'inline-block',
+                        marginLeft: theme.size(-4),
+                        marginRight: `-${theme.size(2)}`,
                       }}
                     >
-                      {sl.text}
-                    </Link>
-                  ))}
+                      <Angle
+                        css={{
+                          marginBottom: `-${theme.size(-6)}`,
+                        }}
+                      />
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
+                {showSublinks && (
+                  <div>
+                    {l.sublinks && l.sublinks.map(sl => (
+                      <Link
+                        key={sl.text}
+                        to={formatInternalLink(sl.url)}
+                        title={sl.text}
+                        css={{
+                          ...linkStyle,
+                          background: theme.color('gray-ll'),
+                          borderTop: `1px solid ${theme.color('gray-l')}`,
+                          color: theme.color('accent'),
+                          margin: `0 -${theme.size(5)}`,
+                        }}
+                        onClick={() => {
+                          event({
+                            category: 'header.link',
+                            action: formatInternalLink(sl.url),
+                            label: replaceSpaceWithString(sl.text),
+                          });
+                        }}
+                      >
+                        {sl.text}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div>
+                <Link
+                  to={formatInternalLink(l.url)}
+                  title={l.text}
+                  onClick={() => {
+                    toggleSublinks(showSublinks ? null : idx);
+                    event({
+                      category: 'header.link',
+                      action: formatInternalLink(l.url),
+                      label: replaceSpaceWithString(l.text),
+                    });
+                  }}
+                  css={linkStyle}
+                >
+                  <span>{l.text}</span>
+                </Link>
+              </div>
+
+            )}
           </Container>
         )
       })}
@@ -350,6 +374,11 @@ export const NavbarTemplate = class extends React.Component {
 
   toggleMenu = (isVisible) => {
     this.setState({ menuVisible: !isVisible });
+    event({
+      category: 'header.button',
+      action: isVisible ? 'menu.close' : 'menu.open',
+      label: `toggle-menu`,
+    });
   }
 
   toggleSublinks = (sublinkID) => {
@@ -442,6 +471,7 @@ export const NavbarTemplate = class extends React.Component {
               links={links}
               sublinksVisible={sublinksVisible}
               toggleSublinks={toggleSublinks}
+              pathname={pathname}
             />
           </div>
         )}
