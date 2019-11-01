@@ -9,7 +9,7 @@ heroes:
     buttons:
       - text: Contact Mallorie
         type: primary
-        url: /contact
+        url: contact
       - text: Book a session
         type: secondary
         url: >-
@@ -33,7 +33,7 @@ heroes:
     buttons:
       - text: Can you benefit?
         type: primary
-        url: /blog/gain-emotional-freedom/
+        url: blog/gain-emotional-freedom/
     context: about
     heading: About Mallorie
     image:
@@ -85,12 +85,12 @@ heroes:
       or tablet, and a quiet, private location to talk in to begin receiving the
       same benefits of in-person therapy without leaving your home! Being able
       to have **therapy** **online** has never been easier.
-    context: online
-    heading: Online Therapy
     buttons:
       - text: Learn about online therapy
         type: primary
-        url: /onlinetherapy
+        url: onlinetherapy
+    context: online
+    heading: Online Therapy
   - body: >-
       ## Have Questions?
 
