@@ -231,7 +231,7 @@ const Hero = ({
                         event({
                           category: 'hero.button',
                           action: button.url,
-                          label: button.text && `${context}-${button.text.replace(/\s+/g, '-')}` || context,
+                          label: (button.text && `${context}-${button.text.replace(/\s+/g, '-')}`) || context,
                         });
                       }}
                     >
