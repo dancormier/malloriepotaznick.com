@@ -14,7 +14,9 @@ import Superbar from '../templates/_superbar'
 import Actionbar from '../templates/_actionbar'
 import './Utility/all.sass'
 
-ReactGA.initialize('UA-132742457-1');
+ReactGA.initialize('UA-132742457-1', {
+  titleCase: false,
+});
 
 const TemplateWrapper = ({ children, altBG, showFooterContact }) => {
   let actionbarRef = useRef(null);
