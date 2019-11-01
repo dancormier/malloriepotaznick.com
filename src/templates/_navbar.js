@@ -1,6 +1,8 @@
 import React from 'react';
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { event } from 'react-ga'
+
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
@@ -23,6 +25,13 @@ const Logo = ({ heading, subheading }) => {
     <Link
       to="/"
       title={`${heading} | Home`}
+      onClick={() => {
+        event({
+          category: 'header',
+          action: '/',
+          label: 'logo',
+        });
+      }}
       css={{
         color: theme.color('primary'),
         paddingRight: theme.size(2),
