@@ -65,7 +65,7 @@ const Button = ({
   onClick,
   children,
   type,
-  url,
+  href,
 }) => type === 'submit' ? (
   <button
     css={{
@@ -79,7 +79,7 @@ const Button = ({
   >
     {children}
   </button>
-) : url && url.indexOf('//') > -1 ? (
+) : href && href.indexOf('//') > -1 ? (
   <a
     css={{
       ...style,
@@ -88,7 +88,7 @@ const Button = ({
     }}
     onClick={onClick}
     alt={children || 'Book a session'}
-    href={url}
+    href={href}
   >
     {children || 'Book a session'}
   </a>
@@ -101,7 +101,7 @@ const Button = ({
     }}
     onClick={onClick}
     title={children || 'Book a session'}
-    to={url}
+    to={href}
   >
     {children || 'Book a session'}
   </Link>

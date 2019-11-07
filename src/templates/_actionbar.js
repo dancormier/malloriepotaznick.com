@@ -63,7 +63,7 @@ export const ActionbarTemplate = ({
                 <Button
                   key={button.text}
                   type={button.type}
-                  url={button.url}
+                  href={button.url}
                   onClick={() => event({
                     category: 'actionbar.button',
                     action: button.url,

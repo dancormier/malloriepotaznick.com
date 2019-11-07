@@ -24,7 +24,7 @@ const Tag = ({
   <Button
     customCSS={{...style, ...customCSS}}
     onClick={onClick}
-    url={`/tags/${kebabCase(tag)}/`}
+    href={`/tags/${kebabCase(tag)}/`}
     type='secondary'
   >
     {children || tag}

@@ -89,7 +89,7 @@ const NavLinks = ({ links, pathname }) => {
         l.button ? (
           <Button
             key={l.text}
-            url={formatInternalLink(l.url)}
+            href={formatInternalLink(l.url)}
             customCSS={{
               marginLeft: theme.size(4),
             }}

@@ -211,7 +211,7 @@ const Hero = ({
                     <Button
                       key={button.text}
                       type={button.type}
-                      url={formatInternalLink(button.url)}
+                      href={formatInternalLink(button.url)}
                       customCSS={{
                         marginTop: i > 0 && theme.size(0),
                         [theme.mq('xs')]: {
