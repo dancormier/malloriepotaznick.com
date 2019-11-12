@@ -1,13 +1,15 @@
 import React from 'react';
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { event } from 'react-ga'
 import Helmet from 'react-helmet';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import { ThemeProvider } from 'emotion-theming';
 import theme from '../components/Utility/theme';
+import Button from '../components/Button'
+import BlogItem from '../components/Blog-item';
 import Layout from '../components/Layout'
 import Page from '../components/Page';
-import BlogItem from '../components/Blog-item';
 
 class TagRoute extends React.Component {
   render() {
@@ -30,24 +32,47 @@ class TagRoute extends React.Component {
             heading={tagHeader}
           >
             <div>
-              {posts.map(({ node: post }) => (
-                <BlogItem
-                  key={post.id}
-                  date={post.frontmatter.date}
-                  excerpt={post.excerpt}
-                  id={post.id}
-                  slug={post.fields.slug}
-                  title={post.frontmatter.title}
-                />
-              ))}
-              <Link
-                to="/tags/"
-                css={{
-                  color: theme.color('accent'),
+              {posts.map(({ node: post }) => {
+                const {
+                  excerpt,
+                  fields,
+                  frontmatter,
+                  id,
+                } = post;
+
+
+                const {
+                  date,
+                  image,
+                  title,
+                } = frontmatter;
+                const thumb = image && image.childImageSharp.fixed.src;
+
+                return (
+                  <BlogItem
+                    key={id}
+                    date={date}
+                    excerpt={excerpt}
+                    id={id}
+                    slug={fields.slug}
+                    title={title}
+                    thumb={thumb}
+                    type="tags"
+                  />
+                )
+              })}
+              <Button
+                href="/tags"
+                onClick={() => {
+                  event({
+                    category: 'tags',
+                    action: '/tags',
+                    label: 'browse-all-tags',
+                  });
                 }}
               >
                 Browse all tags
-              </Link>
+              </Button>
             </div>
           </Page>
         </Layout>
@@ -83,6 +108,13 @@ export const tagPageQuery = graphql`
             title
             templateKey
             date(formatString: "MMMM DD, YYYY")
+            image {
+              childImageSharp {
+                fixed(width: 1200) {
+                  src
+                }
+              }
+            }
           }
         }
       }

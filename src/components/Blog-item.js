@@ -1,8 +1,10 @@
 // import React from 'react'
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
+import { event } from 'react-ga'
 import { Link } from 'gatsby'
 import theme from './Utility/theme'
+import Button from './Button'
 import Heading from './Heading'
 import ImageHeading from './Image-heading'
 
@@ -19,6 +21,7 @@ const style = {
 };
 
 const BlogItem = ({
+  type = 'blogs',
   customCSS,
   date,
   excerpt,
@@ -34,7 +37,14 @@ const BlogItem = ({
   >
     {thumb && (
       <ImageHeading
-        onClick={onClick}
+        onClick={() => {
+          event({
+            category: type,
+            action: slug,
+            label: 'thumb',
+          });
+          onClick();
+        }}
         slug={slug}
         thumb={thumb}
       />
@@ -55,8 +65,15 @@ const BlogItem = ({
               textDecoration: 'underline',
             }
           }}
-          onClick={onClick}
-          to={slug}
+          onClick={() => {
+            event({
+              category: type,
+              action: slug,
+              label: 'title-link',
+            });
+            onClick();
+          }}
+            to={slug}
         >
           {title}
         </Link>
@@ -83,19 +100,20 @@ const BlogItem = ({
       >
         {excerpt}
       </div>
-      <Link
-        css={{
-          color: theme.color('accent'),
-          textDecoration: 'none',
-          '&:hover': {
-            textDecoration: 'underline',
-          }
+      <Button
+        href={slug}
+        type='secondary'
+        onClick={() => {
+          event({
+            category: type,
+            action: slug,
+            label: 'read-more',
+          });
+          onClick();
         }}
-        onClick={onClick}
-        to={slug}
       >
         Read more →
-      </Link>
+      </Button>
     </div>
   </div>
 );
