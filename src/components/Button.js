@@ -9,14 +9,16 @@ const styleByType = (type) => {
     case 'secondary':
       return {
         backgroundColor: theme.color('white'),
-        border: `2px solid ${theme.color('accent')}`,
+        boxShadow: `0 3px 10px ${theme.color('black')}15, 0 8px 15px ${theme.color('black')}15`,
         color: theme.color('accent'),
         fontWeight: 700,
         transition: '.1s',
         '&:hover': {
-          backgroundColor: theme.color('accent'),
-          color: theme.color('white'),
-        }
+          boxShadow: `0 3px 10px ${theme.color('black')}20`,
+        },
+        '&:active': {
+          boxShadow: `0 2px 3px ${theme.color('black')}40`,
+        },
       }
     case 'link':
       return {
@@ -32,12 +34,14 @@ const styleByType = (type) => {
     default:
       return {
         backgroundColor: theme.color('accent'),
-        border: `2px solid ${theme.color('accent')}`,
-        transition: '.1s',
+        boxShadow: `0 3px 10px ${theme.color('accent')}30, 0 8px 15px ${theme.color('accent')}30`,
+        transition: '.2s',
         '&:hover': {
-          backgroundColor: theme.color('white'),
-          color: theme.color('accent'),
-        }
+          boxShadow: `0 3px 10px ${theme.color('accent')}90`,
+        },
+        '&:active': {
+          boxShadow: `0 2px 3px ${theme.color('accent')}90`,
+        },
       }
   }
 }

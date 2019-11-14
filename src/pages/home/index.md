@@ -32,7 +32,7 @@ heroes:
       figure out where your journey begins.
     buttons:
       - text: Can you benefit?
-        type: primary
+        type: secondary
         url: blog/gain-emotional-freedom/
     context: about
     heading: About Mallorie
@@ -87,7 +87,7 @@ heroes:
       to have **therapy** **online** has never been easier.
     buttons:
       - text: Learn about online therapy
-        type: primary
+        type: secondary
         url: onlinetherapy
     context: online
     heading: Online Therapy
