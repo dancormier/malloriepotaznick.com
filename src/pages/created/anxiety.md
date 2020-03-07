@@ -16,7 +16,7 @@ Anxiety often happens during the worst possible times, and can be quite difficul
 </div>
 ## Anxiety takes many forms
 
-Anxiety takes many forms and can be overwhelming. Whether you are experiencing general anxiety, social anxiety, obsessive compulsive disorder, panic disorder, or a specific phobia, living with an anxiety disorder can make you feel like a prisoner trapped in your own life.
+Anxiety takes many forms and can be overwhelming. Whether you are experiencing general anxiety, social anxiety, obsessive compulsive disorder, panic disorder, or a specific phobia such as fear of flying or public speaking, living with an anxiety disorder can make you feel like a prisoner trapped in your own life.
 
 <div align="center">
   <img src="/img/rawpixel-315186-unsplash.jpg" alt="Women in Ocean happy and free from anxiety" width="600" />
