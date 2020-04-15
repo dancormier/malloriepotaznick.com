@@ -15,7 +15,7 @@ During the first session, we will begin to get to know one another and I will le
 
 ## How much does therapy cost?
 
-The initial intake session is $150. Individual 50-minute sessions are $125. I have a limited amount of sliding scale openings based on financial need.
+The initial intake session is $150. Individual 50-minute sessions are $125. I have a limited amount of sliding scale openings based on financial need, and for those impacted by Covid-19.
 
 ## How does payment work?
 
