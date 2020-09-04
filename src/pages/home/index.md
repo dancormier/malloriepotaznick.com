@@ -78,12 +78,13 @@ heroes:
         url: /ocd
   - body: >-
       Now providing **online counseling** for those located throughout the state
-      of **Florida**. Using a HIPPA compliant secure platform, I am able to
-      provide counseling both **confidentially** and **conveniently** within
-      ones own home. All you need is internet, a device such as a laptop, phone
-      or tablet, and a quiet, private location to talk in to begin receiving the
-      same benefits of in-person therapy without leaving your home! Being able
-      to have **therapy** **online** has never been easier.
+      of **Florida and New Jersey**. Using a HIPAA compliant secure platform, I
+      am able to provide counseling both **confidentially** and **conveniently**
+      within ones own home. All you need is internet, a device such as a laptop,
+      phone or tablet, and a quiet, private location to talk in to begin
+      receiving the same benefits of in-person therapy without leaving your
+      home! Being able to have **therapy** **online** has never been easier.
+      \*Due to Covid-19 all sessions are currently being conducted online\*
     buttons:
       - text: Learn about online therapy
         type: secondary
