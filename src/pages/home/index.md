@@ -84,7 +84,7 @@ heroes:
       phone or tablet, and a quiet, private location to talk in to begin
       receiving the same benefits of in-person therapy without leaving your
       home! Being able to have **therapy** **online** has never been easier.
-      \*Due to Covid-19 all sessions are currently being conducted online\*
+      **\*Due to Covid-19 all sessions are currently being conducted online\***
     buttons:
       - text: Learn about online therapy
         type: secondary
