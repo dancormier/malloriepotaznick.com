@@ -1,5 +1,5 @@
 import React from 'react';
-import CMS from 'netlify-cms';
+import CMS from 'netlify-cms-app';
 import * as ColorWidget from "netlify-cms-widget-color";
 
 import CSSInjector from '../components/Utility/CSSInjector';

@@ -54,7 +54,8 @@ module.exports = {
         fonts: [
           `lora\:,400,400i,700,700i`,
           `sarabun`,
-        ]
+        ],
+        display: 'swap',
       }
     },
     'gatsby-plugin-sharp',

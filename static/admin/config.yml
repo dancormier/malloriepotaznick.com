@@ -6,7 +6,7 @@ media_folder: static/img
 public_folder: /img
 
 body_hint: &body_hint
-  - 'For inline images, use `<img src="/img/default-image.jpg" alt="image-description" width="200" align="left" />`'
+  'For inline images, use `<img src="/img/default-image.jpg" alt="image-description" width="200" align="left" />`'
 
 collections:
   - name: "blog"
