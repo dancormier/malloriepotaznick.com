@@ -1,8 +1,7 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core'
+import { jsx, ThemeProvider } from '@emotion/react'
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types'
-import { ThemeProvider } from 'emotion-theming'
 import theme from '../components/Utility/theme'
 import Markdown from '../components/Utility/Markdown'
 import ContactForm from '../components/Contact-form'

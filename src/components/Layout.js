@@ -1,12 +1,11 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core'
+import { jsx, ThemeProvider } from '@emotion/react'
 import ReactGA from 'react-ga';
 import { useRef } from 'react'
 import useComponentSize from '@rehooks/component-size'
 import { Location } from '@reach/router'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from "gatsby"
-import { ThemeProvider } from 'emotion-theming'
 import theme from './Utility/theme'
 import Footer from '../templates/_footer'
 import Navbar from '../templates/_navbar'

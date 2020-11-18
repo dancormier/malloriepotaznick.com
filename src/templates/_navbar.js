@@ -1,6 +1,6 @@
 import React from 'react';
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx } from '@emotion/react';
 import { event } from 'react-ga';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';

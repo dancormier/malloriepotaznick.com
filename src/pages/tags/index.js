@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
-import { ThemeProvider } from 'emotion-theming'
+import { ThemeProvider } from '@emotion/react'
 import theme from '../../components/Utility/theme'
 import Layout from '../../components/Layout'
 import Page from '../../components/Page'

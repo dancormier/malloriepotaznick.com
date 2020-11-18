@@ -1,8 +1,7 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core'
+import { jsx, ThemeProvider } from '@emotion/react'
 import { StaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
-import { ThemeProvider } from 'emotion-theming'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa'
 import Container from '../components/Container'

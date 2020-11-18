@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx } from '@emotion/react';
 import { Link } from 'gatsby';
 import { event } from 'react-ga';
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa';

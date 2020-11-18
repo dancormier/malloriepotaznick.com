@@ -1,6 +1,6 @@
 // import React from 'react'
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx } from '@emotion/react';
 import { Link } from 'gatsby';
 import Markdown from './Utility/Markdown';
 import theme from './Utility/theme';

@@ -1,6 +1,6 @@
 // import React from 'react'
 /** @jsx jsx */
-import { jsx } from '@emotion/core'
+import { jsx } from '@emotion/react'
 import { event } from 'react-ga'
 import theme from './Utility/theme'
 import Button from './Button'

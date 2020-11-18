@@ -1,9 +1,8 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx, ThemeProvider } from '@emotion/react';
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
-import { ThemeProvider } from 'emotion-theming';
 import theme from '../components/Utility/theme';
 import Layout from '../components/Layout'
 import Page from '../components/Page';

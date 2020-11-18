@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core'
+import { jsx } from '@emotion/react'
 import React from 'react'
 import Layout from '../components/Layout'
 import HomePage from '../templates/_home-page'

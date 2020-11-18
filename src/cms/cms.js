@@ -16,6 +16,8 @@ import ContactPagePreview from './preview-templates/ContactPagePreview';
 import CreatedPagePreview from './preview-templates/CreatedPagePreview';
 import HomePagePreview from './preview-templates/HomePagePreview';
 
+CMS.init();
+
 CMS.registerWidget("color", ColorWidget.Control);
 
 // Data
