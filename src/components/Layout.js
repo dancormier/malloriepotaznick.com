@@ -13,6 +13,7 @@ import Navbar from '../templates/_navbar'
 import Superbar from '../templates/_superbar'
 import Actionbar from '../templates/_actionbar'
 import './Utility/all.sass'
+import "github-markdown-css/github-markdown.css"
 
 ReactGA.initialize('UA-132742457-1', {
   titleCase: false,
