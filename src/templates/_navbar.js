@@ -1,6 +1,6 @@
 import React from 'react';
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx } from '@emotion/react';
 import { event } from 'react-ga';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
@@ -74,8 +74,9 @@ export const NavbarTemplate = class extends React.Component {
               heading={heading}
               subheading={subheading}
             />
-            <div
+            <button
               onClick={() => toggleMenu(menuVisible)}
+              aria-label="site navigation"
               css={{
                 color: theme.color('black'),
                 display: 'flex',
@@ -89,7 +90,7 @@ export const NavbarTemplate = class extends React.Component {
               }}
             >
               {menuVisible ? <FaTimes /> : <FaBars />}
-            </div>
+            </button>
           </div>
           <div
             css={{

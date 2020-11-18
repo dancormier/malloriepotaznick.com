@@ -1,9 +1,8 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core'
+import { jsx, ThemeProvider } from '@emotion/react'
 import { event } from 'react-ga'
 import { StaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
-import { ThemeProvider } from 'emotion-theming'
 import Button from '../components/Button'
 import Container from '../components/Container'
 import Markdown from '../components/Utility/Markdown'

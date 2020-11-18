@@ -1,18 +1,18 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core'
+import { jsx, ThemeProvider } from '@emotion/react'
 import ReactGA from 'react-ga';
 import { useRef } from 'react'
 import useComponentSize from '@rehooks/component-size'
 import { Location } from '@reach/router'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from "gatsby"
-import { ThemeProvider } from 'emotion-theming'
 import theme from './Utility/theme'
 import Footer from '../templates/_footer'
 import Navbar from '../templates/_navbar'
 import Superbar from '../templates/_superbar'
 import Actionbar from '../templates/_actionbar'
 import './Utility/all.sass'
+import "github-markdown-css/github-markdown.css"
 
 ReactGA.initialize('UA-132742457-1', {
   titleCase: false,

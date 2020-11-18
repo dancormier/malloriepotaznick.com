@@ -1,10 +1,9 @@
 import React from 'react';
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx, ThemeProvider } from '@emotion/react';
 import { event } from 'react-ga'
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-import { ThemeProvider } from 'emotion-theming';
 import theme from '../components/Utility/theme';
 import Button from '../components/Button'
 import BlogItem from '../components/Blog-item';

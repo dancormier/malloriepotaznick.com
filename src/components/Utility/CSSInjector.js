@@ -1,6 +1,6 @@
 import React from 'react'
 import createCache from '@emotion/cache'
-import { CacheProvider } from '@emotion/core'
+import { CacheProvider } from '@emotion/react'
 
 class CSSInjector extends React.Component {
   constructor() {

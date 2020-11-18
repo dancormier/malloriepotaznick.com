@@ -1,6 +1,6 @@
 import React from 'react';
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx } from '@emotion/react';
 import { Link } from 'gatsby';
 import { event } from 'react-ga';
 import { FaAngleDown } from 'react-icons/fa';

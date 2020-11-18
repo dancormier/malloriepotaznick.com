@@ -1,6 +1,6 @@
 // import React from 'react'
 /** @jsx jsx */
-import { jsx } from '@emotion/core'
+import { jsx } from '@emotion/react'
 import theme from './Utility/theme'
 import Markdown from './Utility/Markdown'
 import Heading from './Heading'

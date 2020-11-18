@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core'
+import { jsx } from '@emotion/react'
 import { event } from 'react-ga'
 import Layout from '../components/Layout'
 import Container from '../components/Container'
