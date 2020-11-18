@@ -9,9 +9,9 @@ items:
     body: >-
       <div style="display: flex; align-items: center;">
 
-      <a target="_blank" href="https://www.onlinecounselling.com"><img
-      src="https://www.onlinecounselling.com/members/certified-member-widget-white.jpg"
-      alt="Online Counseling"></a>
+      <a target="_blank" href="https://www.onlinetherapy.com"><img
+      src="https://www.onlinetherapy.com/members/certified-member-widget-white.jpg"
+      alt="Online Therapy"></a>
 
       <a href="https://www.psychologytoday.com/profile/429831"
       class="sx-verified-seal"><script type="text/javascript"
