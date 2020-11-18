@@ -1,6 +1,5 @@
 import React from 'react';
 import CMS from 'netlify-cms-app';
-import * as ColorWidget from "netlify-cms-widget-color";
 
 import CSSInjector from '../components/Utility/CSSInjector';
 
@@ -17,8 +16,6 @@ import CreatedPagePreview from './preview-templates/CreatedPagePreview';
 import HomePagePreview from './preview-templates/HomePagePreview';
 
 CMS.init();
-
-CMS.registerWidget("color", ColorWidget.Control);
 
 // Data
 CMS.registerPreviewTemplate('actionbar', props => (

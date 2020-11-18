@@ -5,7 +5,6 @@
   "author": "Austin Green",
   "dependencies": {
     "@emotion/react": "^11.1.1",
-    "@pake/react-color": "^3.0.0",
     "@rehooks/component-size": "^1.0.3",
     "bulma": "^0.9.1",
     "gatsby": "^2.26.1",
@@ -29,7 +28,6 @@
     "lodash": "^4.17.19",
     "lodash-webpack-plugin": "^0.11.4",
     "netlify-cms-app": "^2.13.3",
-    "netlify-cms-widget-color": "^3.0.1",
     "node-sass": "4.14.1",
     "object-path": "0.11.5",
     "parcel-bundler": "^1.9.4",
@@ -39,7 +37,6 @@
     "react-dom": "^17.0.1",
     "react-ga": "^3.2.1",
     "react-helmet": "^6.1.0",
-    "react-hover-observer": "^2.1.1",
     "react-icons": "^3.3.0",
     "showdown": "^1.9.1",
     "uuid": "^8.3.1"
