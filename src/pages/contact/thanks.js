@@ -1,19 +1,19 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/react'
-import { event } from 'react-ga'
-import Layout from '../../components/Layout'
-import Button from '../../components/Button'
-import Container from '../../components/Container'
-import Heading from '../../components/Heading'
-import theme from "../../components/Utility/theme"
+import { jsx } from "@emotion/react";
+import { event } from "react-ga";
+import Layout from "../../components/Layout";
+import Button from "../../components/Button";
+import Container from "../../components/Container";
+import Heading from "../../components/Heading";
+import theme from "../../components/Utility/theme";
 
-export default () => (
+const Thanks = () => (
   <Layout>
     <Container
       customCSS={{
         paddingBottom: theme.size(12),
         paddingTop: theme.size(8),
-        textAlign: 'center',
+        textAlign: "center",
       }}
     >
       <Heading
@@ -36,9 +36,9 @@ export default () => (
         href="/"
         onClick={() => {
           event({
-            category: 'contact-thanks',
-            action: '/',
-            label: 'return-home',
+            category: "contact-thanks",
+            action: "/",
+            label: "return-home",
           });
         }}
       >
@@ -47,3 +47,5 @@ export default () => (
     </Container>
   </Layout>
 );
+
+export default Thanks;
