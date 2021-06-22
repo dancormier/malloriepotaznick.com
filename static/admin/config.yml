@@ -5,8 +5,7 @@ backend:
 media_folder: static/img
 public_folder: /img
 
-body_hint: &body_hint
-  'For inline images, use `<img src="/img/default-image.jpg" alt="image-description" width="200" align="left" />`'
+body_hint: &body_hint 'For inline images, use `<img src="/img/default-image.jpg" alt="image-description" width="200" align="left" />`'
 
 collections:
   - name: "blog"
@@ -15,13 +14,13 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text", required: false}
-      - {label: "Header Image", name: "image", widget: "image", allow_multiple: false, required: false}
-      - {label: "Body", name: "body", widget: "markdown", hint: *body_hint}
-      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Header Image", name: "image", widget: "image", allow_multiple: false, required: false }
+      - { label: "Body", name: "body", widget: "markdown", hint: *body_hint }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
 
   - name: "custom-pages"
     label: "Custom Pages"
@@ -30,90 +29,96 @@ collections:
         label: "Contact"
         name: "contact"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_contact-page"}
-          - {label: "Title", name: "heading", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown", hint: *body_hint}
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "_contact-page" }
+          - { label: "Title", name: "heading", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown", hint: *body_hint }
       - file: "src/pages/home/index.md"
         label: "Homepage"
         name: "home"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_home-page"}
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "_home-page" }
           - {
               label: "Home Sections",
               name: "heroes",
               widget: "list",
               fields:
-              [
-                {label: "Heading", name: "heading", widget: "string"},
-                {label: "Body", name: "body", widget: "markdown", hint: *body_hint},
-                {
-                  label: "Buttons",
-                  name: "buttons",
-                  required: false,
-                  widget: "list",
-                  fields: [
-                    {label: "Text", name: "text", widget: "string"},
-                    {label: "URL", name: "url", widget: "string"},
-                    {
-                      label: "Style",
-                      name: "type",
-                      widget: "select",
-                      default: "primary",
-                      options: ["primary", "secondary", "link"]
-                    }
-                  ]
-                },
-                {
-                  label: "Background",
-                  name: "background",
-                  widget: "object",
-                  required: false,
-                  fields: [
-                    {label: "Image", name: "image", widget: "image", allow_multiple: false},
-                    {
-                      label: "Alignment",
-                      name: "align",
-                      widget: "select",
-                      options: ["cover", "contain"]
-                    },
-                    {label: "Darken", name: "invert", widget: "boolean", default: false}
-                  ]
-                },
-                {
-                  label: "Image",
-                  name: "image",
-                  widget: "object",
-                  required: false,
-                  fields: [
-                    {label: "Image", name: "image", widget: "image", allow_multiple: false},
-                    {
-                      label: "Alignment",
-                      name: "align",
-                      widget: "select",
-                      options: ["above", "below", "before", "after",]
-                    }
-                  ]
-                },
-                {
-                  label: "Subsections",
-                  name: "subsections",
-                  widget: "list",
-                  required: false,
-                  fields: [
-                    {label: "Title", name: "title", widget: "string"},
-                    {label: "URL", name: "url", widget: "string"},
-                    {label: "Image", name: "image", widget: "image", allow_multiple: false},
-                    {label: "Body", name: "body", widget: "markdown"},
-                  ]
-                },
-                {
-                  label: "Context",
-                  name: "context",
-                  required: false,
-                  widget: "select",
-                  options: ["about", "contact", "featured", "online", "specialties"]
-                },
-              ]
+                [
+                  { label: "Heading", name: "heading", widget: "string" },
+                  { label: "Body", name: "body", widget: "markdown", hint: *body_hint },
+                  {
+                    label: "Buttons",
+                    name: "buttons",
+                    required: false,
+                    widget: "list",
+                    fields:
+                      [
+                        { label: "Text", name: "text", widget: "string" },
+                        { label: "URL", name: "url", widget: "string" },
+                        {
+                          label: "Style",
+                          name: "type",
+                          widget: "select",
+                          default: "primary",
+                          options: ["primary", "secondary", "link"],
+                        },
+                      ],
+                  },
+                  {
+                    label: "Background",
+                    name: "background",
+                    widget: "object",
+                    required: false,
+                    fields:
+                      [
+                        { label: "Image", name: "image", widget: "image", allow_multiple: false, required: false },
+                        {
+                          label: "Alignment",
+                          name: "align",
+                          widget: "select",
+                          options: ["cover", "contain"],
+                          required: false,
+                        },
+                        { label: "Darken", name: "invert", widget: "boolean", default: false, required: false },
+                      ],
+                  },
+                  {
+                    label: "Image",
+                    name: "image",
+                    widget: "object",
+                    required: false,
+                    fields:
+                      [
+                        { label: "Image", name: "image", widget: "image", allow_multiple: false, required: false },
+                        {
+                          label: "Alignment",
+                          name: "align",
+                          widget: "select",
+                          options: ["above", "below", "before", "after"],
+                          required: false,
+                        },
+                      ],
+                  },
+                  {
+                    label: "Subsections",
+                    name: "subsections",
+                    widget: "list",
+                    required: false,
+                    fields:
+                      [
+                        { label: "Title", name: "title", widget: "string" },
+                        { label: "URL", name: "url", widget: "string" },
+                        { label: "Image", name: "image", widget: "image", allow_multiple: false },
+                        { label: "Body", name: "body", widget: "markdown" },
+                      ],
+                  },
+                  {
+                    label: "Context",
+                    name: "context",
+                    required: false,
+                    widget: "select",
+                    options: ["about", "contact", "featured", "online", "specialties"],
+                  },
+                ],
             }
 
   - name: "data"
@@ -123,103 +128,89 @@ collections:
         label: "Actionbar"
         name: "actionbar"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_actionbar"}
-          - {label: "Contact Text", name: "body", widget: "markdown", hint: *body_hint}
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "_actionbar" }
+          - { label: "Contact Text", name: "body", widget: "markdown", hint: *body_hint }
           - {
               label: "Contact Buttons",
               name: "buttons",
               required: false,
               widget: "list",
-              fields: [
-                {label: "Text", name: "text", widget: "string"},
-                {label: "URL", name: "url", widget: "string"},
-                {
-                  label: "Style",
-                  name: "type",
-                  widget: "select",
-                  default: "primary",
-                  options: ["primary", "secondary", "link"]
-                }
-              ]
+              fields:
+                [
+                  { label: "Text", name: "text", widget: "string" },
+                  { label: "URL", name: "url", widget: "string" },
+                  {
+                    label: "Style",
+                    name: "type",
+                    widget: "select",
+                    default: "primary",
+                    options: ["primary", "secondary", "link"],
+                  },
+                ],
             }
       - file: "src/data/footer.md"
         label: "Footer"
         name: "footer"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_footer"}
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "_footer" }
           - {
               label: "Items",
               name: "items",
               widget: "list",
               required: false,
               fields:
-              [
-                {label: "Section", name: "body", widget: "markdown"},
-                {
-                  label: "Alignment",
-                  name: "align",
-                  widget: "select",
-                  options: ["left", "right"]
-                }
-              ]
+                [
+                  { label: "Section", name: "body", widget: "markdown" },
+                  { label: "Alignment", name: "align", widget: "select", options: ["left", "right"] },
+                ],
             }
-          - {label: "Copyright", name: "copyright", widget: "string"}
+          - { label: "Copyright", name: "copyright", widget: "string" }
       - file: "src/data/navbar.md"
         label: "Navbar"
         name: "navbar"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_navbar"}
-          - {label: "Main Heading", name: "heading", widget: "string"}
-          - {label: "Subheading", name: "subheading", widget: "string"}
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "_navbar" }
+          - { label: "Main Heading", name: "heading", widget: "string" }
+          - { label: "Subheading", name: "subheading", widget: "string" }
           - {
               label: "Links",
               name: "links",
               widget: "list",
               fields:
-              [
-                {label: "Text", name: "text", widget: "string"},
-                {label: "URL", name: "url", widget: "string"},
-                {label: "Apply Button Style", name: "button", widget: "boolean", default: false},
-                {label: "Show", name: "enabled", widget: "boolean", default: true},
-                {
-                  label: "Sublinks",
-                  name: "sublinks",
-                  widget: "list",
-                  fields:
-                  [
-                    {label: "Text", name: "text", widget: "string"},
-                    {label: "URL", name: "url", widget: "string"},
-                    {label: "Show", name: "enabled", widget: "boolean", default: true}
-                  ]
-                }
-              ]
+                [
+                  { label: "Text", name: "text", widget: "string" },
+                  { label: "URL", name: "url", widget: "string" },
+                  { label: "Apply Button Style", name: "button", widget: "boolean", default: false },
+                  { label: "Show", name: "enabled", widget: "boolean", default: true },
+                  {
+                    label: "Sublinks",
+                    name: "sublinks",
+                    widget: "list",
+                    fields:
+                      [
+                        { label: "Text", name: "text", widget: "string" },
+                        { label: "URL", name: "url", widget: "string" },
+                        { label: "Show", name: "enabled", widget: "boolean", default: true },
+                      ],
+                  },
+                ],
             }
       - file: "src/data/superbar.md"
         label: "Superbar"
         name: "superbar"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "_superbar"}
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "_superbar" }
           - {
               label: "Items",
               name: "items",
               widget: "list",
               fields:
-              [
-                {label: "Text", name: "text", widget: "string"},
-                {
-                  label: "Icon",
-                  name: "icon",
-                  widget: "select",
-                  options: ["envelope", "map", "phone"]
-                },
-                {
-                  label: "Alignment",
-                  name: "align",
-                  widget: "select",
-                  options: ["left", "right"]
-                },
-                {label: "URL", name: "url", widget: "string", required: false}
-              ]
+                [
+                  { label: "Text", name: "text", widget: "string" },
+                  { label: "Icon", name: "icon", widget: "select", options: ["envelope", "map", "phone"] },
+                  { label: "Alignment", name: "align", widget: "select", options: ["left", "right"] },
+                  { label: "URL", name: "url", widget: "string", required: false },
+                ],
             }
 
   - name: "pages"
@@ -228,9 +219,9 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "created-page"}
-      - {label: "URL", name: "title", widget: "string", hint: 'Just what comes after https://malloriepotaznick.com/'}
-      - {label: "Header Image", name: "image", widget: "image", allow_multiple: false, required: false}
-      - {label: "Title", name: "heading", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown", hint: *body_hint}
-      - {label: "Show Contact Footer", name: "showFooterContact", widget: "boolean", default: true}
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "created-page" }
+      - { label: "URL", name: "title", widget: "string", hint: "Just what comes after https://malloriepotaznick.com/" }
+      - { label: "Header Image", name: "image", widget: "image", allow_multiple: false, required: false }
+      - { label: "Title", name: "heading", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown", hint: *body_hint }
+      - { label: "Show Contact Footer", name: "showFooterContact", widget: "boolean", default: true }
