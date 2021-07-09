@@ -44,7 +44,13 @@ collections:
               fields:
                 [
                   { label: "Heading", name: "heading", widget: "string" },
-                  { label: "Body", name: "body", widget: "markdown", hint: *body_hint },
+                  {
+                    label: "Body",
+                    name: "body",
+                    required: false,
+                    widget: "markdown",
+                    hint: *body_hint
+                  },
                   {
                     label: "Buttons",
                     name: "buttons",
