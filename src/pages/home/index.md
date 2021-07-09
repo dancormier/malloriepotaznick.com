@@ -5,30 +5,29 @@ heroes:
       align: cover
       image: /img/freedom-woman-hero-cropped.jpg
       invert: false
-    body: '### Conquer your anxiety, OCD, or eating disorder through therapy.'
+    body: "### Conquer your anxiety, OCD, or eating disorder through therapy."
     buttons:
       - text: Contact Mallorie
         type: primary
         url: contact
       - text: Book a session
         type: secondary
-        url: 'https://mallorie-potaznick7240.clientsecure.me'
+        url: https://mallorie-potaznick7240.clientsecure.me
     context: featured
     heading: Gain Emotional Freedom
-  - body: >-
-      Hi, I’m Mallorie Potaznick, a Licensed Mental Health Counselor based out
-      of the Coral Springs and Parkland, FL area. For the last few years I’ve
-      worked with adolescents, young adults, adults and couples to transform
-      their anxiety, disordered eating patterns, depression, frustration, fears,
-      and emotional disconnection into opportunities for change. Change is tough
-      and making the choice to get out of your comfort zone and try something
-      new can be scary. As a therapist, I help people learn more about why they
-      do the things they do, what keeps them stuck, and why they cope in
-      sometimes unhealthy ways. Let me guide you on your journey and help you
-      move through your discomfort, and learn new coping skills, while helping
-      you process through your painful feelings. It’s time to make a change.
-      Call today for a free 20 minute therapy consultation and together we can
-      figure out where your journey begins.
+  - body: Hi, I’m Mallorie Potaznick, a Licensed Mental Health Counselor based out
+      of the Coral Springs, Parkland, Delray Beach, FL area. For the last few
+      years I’ve worked with adolescents, young adults, adults and couples to
+      transform their anxiety, disordered eating patterns, depression,
+      frustration, fears, and emotional disconnection into opportunities for
+      change. Change is tough and making the choice to get out of your comfort
+      zone and try something new can be scary. As a therapist, I help people
+      learn more about why they do the things they do, what keeps them stuck,
+      and why they cope in sometimes unhealthy ways. Let me guide you on your
+      journey and help you move through your discomfort, and learn new coping
+      skills, while helping you process through your painful feelings. It’s time
+      to make a change. Call today for a free 20 minute therapy consultation and
+      together we can figure out where your journey begins.
     buttons:
       - text: Can you benefit?
         type: secondary
@@ -76,8 +75,7 @@ heroes:
         image: /img/artem-kovalev-86365-unsplash.jpg
         title: OCD Treatment
         url: /ocd
-  - body: >-
-      Now providing **online counseling** for those located throughout the state
+  - body: Now providing **online counseling** for those located throughout the state
       of **Florida and New Jersey**. Using a HIPAA compliant secure platform, I
       am able to provide counseling both **confidentially** and **conveniently**
       within ones own home. All you need is internet, a device such as a laptop,
@@ -95,13 +93,7 @@ heroes:
       ## Have Questions?
 
 
-      If you have any questions, want to request a consultation, or would like
-      any additional information please feel free to use this form, call me at
-      [561-536-3980](tel:561-536-3980) or email me at
-      <mailto:malloriepotaznick@gmail.com>. I look forward to hearing from you!
-      Please provide your information and I’ll respond within one business day.
-      **Change** **starts now!**
+      If you have any questions, want to request a consultation, or would like any additional information please feel free to use this form, call me at [561-536-3980](tel:561-536-3980) or email me at <mailto:malloriepotaznick@gmail.com>. I look forward to hearing from you! Please provide your information and I’ll respond within one business day. **Change** **starts now!**
     context: contact
     heading: Contact Mallorie
 ---
-
